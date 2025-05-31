@@ -1,0 +1,81 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "adminTestABC",
+      "name": "Mr Quang",
+      "address": "Ha Noi City",
+      "phone": "09821018292",
+      "email": "quangfe@gmail.com",
+      "gender": "Man",
+      "avatar": "link",
+      "role": "admin",
+      "status": "Active"
+    },
+    {
+      "id": "2",
+      "username": "mantestA123",
+      "name": "Mr Hung",
+      "address": "Ho Chi Minh City",
+      "phone": "03521018922",
+      "email": "hungdo@gmail.com",
+      "gender": "Man",
+      "avatar": "link",
+      "role": "admin",
+      "status": "Active"
+    },
+    {
+      "id": "3",
+      "username": "girlTestA123",
+      "name": "Mr Tuan",
+      "address": "Phu My Hung, Quan7,Ho Chi Minh City",
+      "phone": "09123567322",
+      "email": "tuanhung@gmail.com",
+      "gender": "Man",
+      "avatar": "link",
+      "role": "user",
+      "status": "Block"
+    },
+    {
+      "id": "4",
+      "username": "babysharkAb2",
+      "name": "Mr Hoang",
+      "address": "Ha Noi City",
+      "phone": "0364835682",
+      "email": "hoang@gmail.com",
+      "gender": "Man",
+      "avatar": "link",
+      "role": "user",
+      "status": "Block"
+    },
+    {
+      "id": "5",
+      "username": "babysharkAb2",
+      "name": "Mr Hoang",
+      "address": "Cau Giay, Ha Noi City",
+      "phone": "0364835682",
+      "email": "hoang@gmail.com",
+      "gender": "Man",
+      "avatar": "link",
+      "role": "user",
+      "status": "Block"
+    },
+    {
+      "id": "6",
+      "username": "babysharkAb2",
+      "name": "Mr Hoang",
+      "address": "Ha Noi City",
+      "phone": "0982712312",
+      "email": "longle@gmail.com",
+      "gender": "Man",
+      "avatar": "link",
+      "role": "user",
+      "status": "Block"
+    }
+  ],
+  "pagination": {
+    "_limit": 5,
+    "_page": 1,
+    "_totalRows": 13
+  }
+}

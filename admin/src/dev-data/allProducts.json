@@ -1,0 +1,178 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "product": {
+        "productName": "Huawei MateBook X Pro Intel Core i7, 8th generation",
+        "image": "https://cdn.mos.cms.futurecdn.net/yqErW7TZkLzGMGpH2B9PaD-970-80.png.webp",
+        "category": "Laptop"
+      },
+      "stock": "12",
+      "orders": 48,
+      "published": "2019-11-18T21:31:17.178Z",
+      "rating": 4.2,
+      "price": "1499"
+    },
+    {
+      "id": "2",
+      "product": {
+        "productName": "Apple Macbook Pro 2018 6-core Intel i7, 8th generation",
+        "image": "https://cdn.mos.cms.futurecdn.net/ELhTyJsiDLfv7NE6VaFZrb-970-80.jpg.webp",
+        "category": "Laptop"
+      },
+      "stock": "30",
+      "orders": 100,
+      "published": "2020-01-28T09:15:04.904Z",
+      "rating": 4.8,
+      "price": "3199"
+    },
+    {
+      "id": "3",
+      "product": {
+        "productName": "Dell XPS 13 Intel Core i7, 8th generation",
+        "image": "https://cdn.mos.cms.futurecdn.net/28wkkvXvxFxTPwSspf3qsd.jpg",
+        "category": "Laptop"
+      },
+      "stock": "40",
+      "orders": 70,
+      "published": "2020-04-10T14:43:26.374Z",
+      "rating": 4.5,
+      "price": "1199"
+    },
+    {
+      "id": "4",
+      "product": {
+        "productName": "Asus ZenBook Flip S",
+        "image": "https://cdn.mos.cms.futurecdn.net/S3GquEhK7y6YednidhVF28-1200-80.jpg.webp",
+        "category": "Laptop"
+      },
+      "stock": "25",
+      "orders": 56,
+      "published": "2021-12-20T17:01:17.194Z",
+      "rating": 4.6,
+      "price": "1399"
+    },
+    {
+      "id": "5",
+      "product": {
+        "productName": "Samsung Notebook 9",
+        "image": "https://cdn.mos.cms.futurecdn.net/fQen93XfzaqeSfqC6HG8nM-970-80.jpg.webp",
+        "category": "Laptop"
+      },
+      "stock": "18",
+      "orders": 55,
+      "published": "2021-12-26T10:51:36.790Z",
+      "rating": 4.7,
+      "price": "1499"
+    },
+    {
+      "id": "6",
+      "product": {
+        "productName": "Samsung Notebook 9 5",
+        "image": "https://cdn.mos.cms.futurecdn.net/fQen93XfzaqeSfqC6HG8nM-970-80.jpg.webp",
+        "category": "Laptop"
+      },
+      "stock": "18",
+      "orders": 55,
+      "published": "2021-12-26T10:51:36.790Z",
+      "rating": 4.7,
+      "price": "1499"
+    },
+    {
+      "id": "7",
+      "product": {
+        "productName": "Samsung Notebook 9 6",
+        "image": "https://cdn.mos.cms.futurecdn.net/fQen93XfzaqeSfqC6HG8nM-970-80.jpg.webp",
+        "category": "Laptop"
+      },
+      "stock": "18",
+      "orders": 55,
+      "published": "2021-12-26T10:51:36.790Z",
+      "rating": 4.7,
+      "price": "1499"
+    },
+    {
+      "id": "8",
+      "product": {
+        "productName": "Samsung Notebook 9 7",
+        "image": "https://cdn.mos.cms.futurecdn.net/fQen93XfzaqeSfqC6HG8nM-970-80.jpg.webp",
+        "category": "Laptop"
+      },
+      "stock": "18",
+      "orders": 55,
+      "published": "2021-12-26T10:51:36.790Z",
+      "rating": 4.7,
+      "price": "1499"
+    },
+    {
+      "id": "9",
+      "product": {
+        "productName": "Samsung Notebook 9 8",
+        "image": "https://cdn.mos.cms.futurecdn.net/fQen93XfzaqeSfqC6HG8nM-970-80.jpg.webp",
+        "category": "Laptop"
+      },
+      "stock": "18",
+      "orders": 55,
+      "published": "2021-12-26T10:51:36.790Z",
+      "rating": 4.7,
+      "price": "1499"
+    },
+    {
+      "id": "10",
+      "product": {
+        "productName": "Samsung Notebook 9 9",
+        "image": "https://cdn.mos.cms.futurecdn.net/fQen93XfzaqeSfqC6HG8nM-970-80.jpg.webp",
+        "category": "Laptop"
+      },
+      "stock": "18",
+      "orders": 55,
+      "published": "2021-12-26T10:51:36.790Z",
+      "rating": 4.7,
+      "price": "1499"
+    },
+    {
+      "id": "11",
+      "product": {
+        "productName": "Samsung Notebook 9 10",
+        "image": "https://cdn.mos.cms.futurecdn.net/fQen93XfzaqeSfqC6HG8nM-970-80.jpg.webp",
+        "category": "Laptop"
+      },
+      "stock": "18",
+      "orders": 55,
+      "published": "2021-12-26T10:51:36.790Z",
+      "rating": 4.7,
+      "price": "1499"
+    },
+    {
+      "id": "12",
+      "product": {
+        "productName": "Samsung Notebook 9 11",
+        "image": "https://cdn.mos.cms.futurecdn.net/fQen93XfzaqeSfqC6HG8nM-970-80.jpg.webp",
+        "category": "Laptop"
+      },
+      "stock": "18",
+      "orders": 55,
+      "published": "2021-12-26T10:51:36.790Z",
+      "rating": 4.7,
+      "price": "1499"
+    },
+    {
+      "id": "13",
+      "product": {
+        "productName": "Samsung Notebook 9 12",
+        "image": "https://cdn.mos.cms.futurecdn.net/fQen93XfzaqeSfqC6HG8nM-970-80.jpg.webp",
+        "category": "Laptop"
+      },
+      "stock": "18",
+      "orders": 55,
+      "published": "2021-12-26T10:51:36.790Z",
+      "rating": 4.7,
+      "price": "1499"
+    }
+  ],
+  "pagination": {
+    "_limit": 5,
+    "_page": 1,
+    "_totalRows": 13
+  }
+}

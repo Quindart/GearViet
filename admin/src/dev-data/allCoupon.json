@@ -1,0 +1,54 @@
+{
+  "coupons": [
+    {
+      "id": "1",
+      "code": "Order1",
+      "discount": 50,
+      "startDate": "2019-11-18T21:31:17.178Z",
+      "endDate": "2019-11-18T21:31:17.178Z",
+      "available": 5,
+      "status": "Active"
+    },
+    {
+      "id": "2",
+      "code": "Order2",
+      "discount": 20,
+      "startDate": "2019-11-18T21:31:17.178Z",
+      "endDate": "2019-11-18T21:31:17.178Z",
+      "available": 14,
+      "status": "Block"
+    },
+    {
+      "id": "3",
+      "code": "Order2",
+      "discount": 50,
+      "startDate": "2019-11-18T21:31:17.178Z",
+      "endDate": "2019-11-18T21:31:17.178Z",
+      "available": 6,
+      "status": "Block"
+    },
+    {
+      "id": "4",
+      "code": "Order2",
+      "discount": 90,
+      "startDate": "2019-11-18T21:31:17.178Z",
+      "endDate": "2019-11-18T21:31:17.178Z",
+      "available": 28,
+      "status": "Active"
+    },
+    {
+      "id": "5",
+      "code": "Order1",
+      "discount": 25,
+      "startDate": "2019-11-18T21:31:17.178Z",
+      "endDate": "2019-11-18T21:31:17.178Z",
+      "available": 6,
+      "status": "Block"
+    }
+  ],
+  "pagination": {
+    "_limit": 5,
+    "_page": 1,
+    "_totalRows": 13
+  }
+}

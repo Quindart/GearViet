@@ -1,0 +1,69 @@
+{
+  "newestProduct": [
+    {
+      "id": "1",
+      "product": {
+        "name": "Branded T-Shirts",
+        "category": "May tinh",
+        "images": "https://themesbrand.com/velzon/html/default/assets/images/products/img-1.png"
+      },
+      "price": 29,
+      "brand": "Apple",
+      "stock": 510,
+      "code": "PRODUCT1"
+    },
+    {
+      "id": "2",
+      "product": {
+        "name": "Bentwood Chair",
+        "category": "Linh kien",
+        "images": "https://themesbrand.com/velzon/html/default/assets/images/products/img-2.png"
+      },
+      "price": 29,
+      "brand": "Huawei",
+      "stock": 510,
+      "code": "PRODUCT2"
+    },
+    {
+      "id": "3",
+      "product": {
+        "name": "Borosil Paper Cup",
+        "category": "Laptop",
+        "images": "https://themesbrand.com/velzon/html/default/assets/images/products/img-3.png"
+      },
+      "price": 29,
+      "brand": "Dell",
+      "stock": 510,
+      "code": "PRODUCT3"
+    },
+    {
+      "id": "4",
+      "product": {
+        "name": "One Seater Sofa",
+        "category": "Dien thoai",
+        "images": "https://themesbrand.com/velzon/html/default/assets/images/products/img-4.png"
+      },
+      "price": 29,
+      "brand": "Samsung",
+      "stock": 510,
+      "code": "PRODUCT4"
+    },
+    {
+      "id": "5",
+      "product": {
+        "name": "Branded T-Shirts",
+        "category": "Phu kien",
+        "images": "https://themesbrand.com/velzon/html/default/assets/images/products/img-5.png"
+      },
+      "price": 29,
+      "brand": "Xiaomi",
+      "stock": 510,
+      "code": "PRODUCT5"
+    }
+  ],
+  "pagination": {
+    "_limit": 5,
+    "_page": 1,
+    "_totalRows": 13
+  }
+}

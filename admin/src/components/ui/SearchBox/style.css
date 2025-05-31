@@ -1,0 +1,32 @@
+.search_box {
+  position: relative;
+  cursor: text;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  background-color: #fff;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem !important;
+  font-size: 0.8125rem;
+  align-items: center;
+}
+
+.search_input {
+  display: inline-block;
+  vertical-align: baseline;
+  background: none;
+  outline: none;
+  color: rgb(33, 37, 41);
+  font-size: 0.8125rem;
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0;
+  min-width: 1ch;
+  max-width: 100%;
+  padding: 2px 0 2px 2px;
+}
+
+/* .tag_input {
+  outline: none;
+} */
