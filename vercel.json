@@ -1,5 +1,4 @@
 {
-  "projects": [],
   "builds": [
     {
       "src": "admin/package.json",
