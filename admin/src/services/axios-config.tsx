@@ -4,7 +4,7 @@ import { APP_ROUTES } from 'utils/app-config';
 import { getValueFromLocalStorage, removeValueInLocalStorage } from 'utils/helper';
 
 const axiosConfig = axios.create({
-  baseURL: process.env.REACT_APP_BASE_URL || 'http://localhost:5000',
+  baseURL: process.env.REACT_APP_BASE_URL || 'https://gearvietserver.onrender.com',
   timeout: 30000,
   headers: {
     'Context-Type': 'application/json',
@@ -36,17 +36,17 @@ axiosConfig.interceptors.response.use(
   function (error: AxiosError<ResponseType>) {
     if (error.code === 'ECONNABORTED') {
       removeValueInLocalStorage('access_token');
-      window.location.assign('http://localhost:5000' + APP_ROUTES.LOGIN);
+      window.location.assign('https://gearvietserver.onrender.com' + APP_ROUTES.LOGIN);
       return;
     }
     if (error && error?.response?.data.msg === 'Unauthenticated') {
       removeValueInLocalStorage('access_token');
-      window.location.assign('http://localhost:5000' + APP_ROUTES.LOGIN);
+      window.location.assign('https://gearvietserver.onrender.com' + APP_ROUTES.LOGIN);
       return;
     }
 
     if (error && error?.response?.data.msg === 'Unauthorized') {
-      window.location.assign('http://localhost:5000/404');
+      window.location.assign('https://gearvietserver.onrender.com/404');
     }
     return Promise.reject(error?.response?.data);
   },
