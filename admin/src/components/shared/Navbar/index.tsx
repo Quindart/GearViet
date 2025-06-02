@@ -99,7 +99,7 @@ const Navbar: React.FC = () => {
               showDropDown.open && showDropDown.type === NavbarDropDownType.PROFILE ? 'active' : ''
             }`}
           >
-            <img src={adminDetail?.avatar.url} alt={adminDetail?.name} />
+            <img src={`${adminDetail?.avatar.url}`} alt={`${adminDetail?.name}`} />
             <Box className='ml-2'>
               <Typography variant='h6' className='avatar__name hidden xl:block'>
                 {adminDetail?.name ? adminDetail.name : adminDetail?.username}
