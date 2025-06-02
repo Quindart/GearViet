@@ -7,7 +7,7 @@ interface SelectOption {
   _id: string;
   subcategory?: SelectOption[];
 }
-interface CustomMuiDropDownPropsType extends SelectProps {
+interface CustomMuiDropDownPropsType extends Omit<SelectProps, 'ref'> {
   error?: boolean;
   helperText?: string;
   id?: string;

@@ -60,7 +60,9 @@ const Gallery = () => {
 
   const handleChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const { files } = e.target;
+    console.log("💲💲💲 ~ handleChange ~ files:", files)
     const selectedFiles = files as FileList;
+    console.log("💲💲💲 ~ handleChange ~ selectedFiles:", selectedFiles)
     await uploadProductImage(selectedFiles[0] as File);
     e.target.value = '';
   };

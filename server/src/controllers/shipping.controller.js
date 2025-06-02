@@ -1,3 +1,5 @@
+import dotenv from "dotenv"
+dotenv.config()
 import { sendError } from '../utils/response.js';
 import { HTTP_STATUS, ORDER_STATUS } from '../utils/constant.js';
 import axios from 'axios';
@@ -211,7 +213,7 @@ export const getFee = async (req, res) => {
     });
   } catch (error) {
     sendError(res, error);
-    console.log(error);
+    // console.log(error);
   }
 };
 

@@ -15,7 +15,7 @@ const useReview = () => {
         setReviewStats(response.stats);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 

@@ -90,7 +90,7 @@ router.post(
   isValidAvailable,
   isSubCategoryExist,
   validate,
-
+  createProduct
 );
 
 //Update product

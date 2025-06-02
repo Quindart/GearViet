@@ -61,6 +61,7 @@ export const login = async (req, res) => {
 //[POST] register
 export const register = async (req, res) => {
   const { username, password, email } = req.body;
+  console.log("💲💲💲 ~ register ~ username, password, email:", username, password, email)
 
   try {
     const encryptedPassword = encryptPassword(password);
@@ -212,7 +213,7 @@ const sendEmail = (email, subject, content) => {
 
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
-      console.log(error);
+      // console.log(error);
     } else {
       console.log("Email sent: " + info.response);
     }

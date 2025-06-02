@@ -1,4 +1,3 @@
-import Product from "../models/product.model.js";
 import User from "../models/user.model.js";
 import moment from "moment";
 import {
@@ -10,6 +9,7 @@ import {
 
 import { HTTP_STATUS, ROLE } from "../utils/constant.js";
 import { tokenDecode } from "../middlewares/tokenHandler.js";
+import Product from "../models/product.model.js";
 
 
 //[GET] /getAllProduct for admin

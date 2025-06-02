@@ -141,7 +141,7 @@ const useProduct = () => {
         setBestSellingProduct(response.products);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 

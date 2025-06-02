@@ -1,3 +1,5 @@
+import dotenv from "dotenv"
+dotenv.config()
 import jwt from "jsonwebtoken";
 import User from "../models/user.model.js";
 import { HTTP_STATUS } from "../utils/constant.js";
@@ -19,7 +21,7 @@ export const tokenDecode = async (req) => {
 };
 
 export const verifyToken = async (req, res, next) => {
-  const tokenDecoded = await this.tokenDecode(req);
+  const tokenDecoded = await tokenDecode(req);
   if (tokenDecoded) {
     const user = await User.findById(tokenDecoded.id);
     if (!user) return sendUnauthenticated(res);

@@ -123,7 +123,7 @@ export const paymentSuccess = async (req, res) => {
       );
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 

@@ -153,7 +153,7 @@ const useOrder = () => {
         setRecentOrder(response.orders);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
@@ -164,7 +164,7 @@ const useOrder = () => {
         setTotalRevenueByTime(response.totalRevenue);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
@@ -175,7 +175,7 @@ const useOrder = () => {
         setTotalOrderByTime(response.total);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
@@ -199,7 +199,7 @@ const useOrder = () => {
         dispatch(setTotalRows(0));
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 

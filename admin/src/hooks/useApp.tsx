@@ -22,7 +22,7 @@ const useApp = () => {
         }
       }
     } catch (error) {
-      console.log(error);
+      // // console.log(error);
     }
   };
 
@@ -37,7 +37,7 @@ const useApp = () => {
         dispatch(setBrands(res.brands));
       }
     } catch (error) {
-      console.log(error);
+      // // console.log(error);
     }
   };
 
