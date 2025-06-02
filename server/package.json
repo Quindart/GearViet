@@ -1,11 +1,11 @@
 {
-  "name": "gear-viet-server",
+  "name": "server",
   "version": "1.0.0",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "jest",
-    "dev": "nodemon src/index.js",
-    "start": "node src/index.js",
+    "start": "nodemon src/index.js",
     "seeder": "nodemon src/seed/index.js"
   },
   "keywords": [],

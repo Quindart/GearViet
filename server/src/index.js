@@ -21,9 +21,6 @@ const app = express();
 
 db.connect();
 
-app.get('/api/*', (req, res) => {
-    res.json({ message: 'API is working' });
-});
 
 app.use(cors());
 app.use(express.json());
