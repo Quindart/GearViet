@@ -68,7 +68,7 @@ export const getTotalUserByTime = async (req, res) => {
         $gte: moment().subtract(1, limit).toDate(),
       },
     };
-    const total = await User.find(query).count();
+    const total = await User.find(query).countDocuments();
 
     res.status(HTTP_STATUS.SUCCESS).json({
       success: true,
@@ -219,7 +219,7 @@ export const searchUser = async (req, res) => {
       .skip((page - 1) * limit)
       .sort({ createdAt: -1 })
       .lean();
-    const totalRows = await User.find(name ? nameRegex : regex).count();
+    const totalRows = await User.find(name ? nameRegex : regex).countDocuments();
 
     res.status(HTTP_STATUS.SUCCESS).json({
       success: true,
@@ -247,7 +247,7 @@ export const filterUser = async (req, res) => {
       .skip((page - 1) * limit)
       .sort({ createdAt: -1 })
       .lean();
-    const totalRows = await User.find(query).count();
+    const totalRows = await User.find(query).countDocuments();
 
     res.status(HTTP_STATUS.SUCCESS).json({
       success: true,

@@ -59,7 +59,7 @@ export const getTotalProductByTime = async (req, res) => {
         $gte: moment().subtract(1, limit).toDate(),
       },
     };
-    const total = await Product.find(query).count();
+    const total = await Product.find(query).countDocuments();
 
     res.status(HTTP_STATUS.SUCCESS).json({
       success: true,
@@ -79,7 +79,7 @@ export const getAllProduct = async (req, res) => {
       .populate("subcategory")
       .limit(limit)
       .skip((page - 1) * limit)
-      .sort({ [sortField]: sortType })
+      //.sort({ [sortField]: sortType })
       .sort({ createdAt: -1 })
       .lean();
 
@@ -131,7 +131,7 @@ export const getProductBySubcategory = async (req, res) => {
       .populate("subcategory")
       .limit(limit)
       .skip((page - 1) * limit)
-      .sort({ [sortField]: sortType })
+      //.sort({ [sortField]: sortType })
       .sort({ createdAt: -1 })
       .lean();
 
@@ -164,7 +164,7 @@ export const getNewestProduct = async (req, res) => {
       .limit(limit)
       .skip((page - 1) * limit)
       .sort({ createdAt: -1 })
-      .sort({ [sortField]: sortType })
+      //.sort({ [sortField]: sortType })
       .lean();
     if (products) {
       res.status(HTTP_STATUS.SUCCESS).json({
@@ -191,7 +191,7 @@ export const getBestSellingProduct = async (req, res) => {
       .limit(limit)
       .skip((page - 1) * limit)
       .sort({ selling: -1 })
-      .sort({ [sortField]: sortType })
+      //.sort({ [sortField]: sortType })
       .lean();
     if (products) {
       res.status(HTTP_STATUS.SUCCESS).json({
@@ -434,10 +434,10 @@ export const searchProduct = async (req, res) => {
       .populate("subcategory")
       .limit(limit)
       .skip((page - 1) * limit)
-      .sort({ [sortField]: sortType })
+      //.sort({ [sortField]: sortType })
       .sort({ createdAt: -1 })
       .lean();
-    const totalRows = await Product.find(regex).count();
+    const totalRows = await Product.find(regex).countDocuments();
 
     res.status(HTTP_STATUS.SUCCESS).json({
       success: true,
@@ -451,11 +451,8 @@ export const searchProduct = async (req, res) => {
 };
 
 export const filterProduct = async (req, res) => {
-  const { page, limit, sortField, sortType } = Object.assign({}, req.query);
-  const { subCategoryId, brand, discount, rating } = Object.assign(
-    {},
-    req.query
-  );
+  const { page, limit, sortField, sortType } = req.query
+  const { subCategoryId, brand, discount, rating } = req.query
   var query = {};
   if (subCategoryId !== undefined) query["subcategory"] = subCategoryId;
   if (brand !== undefined) {
@@ -482,10 +479,9 @@ export const filterProduct = async (req, res) => {
       .populate("subcategory")
       .limit(limit)
       .skip((page - 1) * limit)
-      .sort({ [sortField]: sortType })
       .sort({ createdAt: -1 })
       .lean();
-    const totalRows = await Product.find(query).count();
+    const totalRows = await Product.find(query).countDocuments();
 
     res.status(HTTP_STATUS.SUCCESS).json({
       success: true,

@@ -152,7 +152,7 @@ export const searchCoupon = async (req, res) => {
       .skip((page - 1) * limit)
       .sort({ createdAt: -1 })
       .lean();
-    const totalRows = await Coupon.find(regex).count();
+    const totalRows = await Coupon.find(regex).countDocuments();
 
     res.status(HTTP_STATUS.SUCCESS).json({
       success: true,
@@ -187,7 +187,7 @@ export const filterCoupon = async (req, res) => {
       .skip((page - 1) * limit)
       .sort({ createdAt: -1 })
       .lean();
-    const totalRows = await Coupon.find(regex).count();
+    const totalRows = await Coupon.find(regex).countDocuments();
 
     res.status(HTTP_STATUS.SUCCESS).json({
       success: true,

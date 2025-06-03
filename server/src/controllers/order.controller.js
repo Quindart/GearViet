@@ -93,7 +93,7 @@ export const getTotalOrderByTime = async (req, res) => {
         $gte: moment().subtract(1, limit).toDate(),
       },
     };
-    const total = await Order.find(query).count();
+    const total = await Order.find(query).countDocuments();
 
     res.status(HTTP_STATUS.SUCCESS).json({
       success: true,
@@ -336,7 +336,7 @@ export const searchOrder = async (req, res) => {
       .skip((page - 1) * limit)
       .sort({ createdAt: -1 })
       .lean();
-    const totalRows = await Order.find(regex).count();
+    const totalRows = await Order.find(regex).countDocuments();
 
     res.status(HTTP_STATUS.SUCCESS).json({
       success: true,
@@ -458,7 +458,7 @@ export const filterOrder = async (req, res) => {
       .skip((page - 1) * limit)
       .sort({ createdAt: -1 })
       .lean();
-    const totalRows = await Order.find(query).count();
+    const totalRows = await Order.find(query).countDocuments();
 
     res.status(HTTP_STATUS.SUCCESS).json({
       success: true,
