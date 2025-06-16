@@ -1,227 +1,132 @@
-import { isAxiosError } from 'axios';
 import { useSnackbar } from 'notistack';
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import {
-  creatingShippingOrder,
-  fetchAllOrder,
-  fetchTotalOrderByTime,
-  fetchTotalRevenueByTime,
-  searchingOrder,
-} from 'services/orderApi';
-import { RootState } from 'store';
-import { setOrderList, setOrderRenderType, setTotalRows } from 'store/slices/orderSlice';
-
-import { ResponseType } from 'types';
-import { IOrder, ShippingOrderType } from 'types/order';
-import { renderType } from 'utils/app-config';
-import { formatOrderList } from 'utils/helper';
-import { fetchFilterOrder } from './../services/orderApi';
-import { IUser } from './../types/user';
-import { FilterOrderType } from '../types/order';
+import { useOrderStore } from '../store';
+import type { FilterOrderParams, ShippingOrderData } from '../store/useOrderStore';
+import type { User } from '../store';
 
 const useOrder = () => {
-  const orderList = useSelector((state: RootState) => state.order.orderList);
-  const totalRows = useSelector((state: RootState) => state.order.totalRows);
+  const {
+    orders: orderList,
+    totalPages: totalRows,
+    currentPage: page,
+    isLoading,
+    limit,
+    recentOrders,
+    totalRevenueByTime,
+    totalOrderByTime,
+    setLimit,
+    setPage,
+    fetchOrders: getAllOrder,
+    search,
+    createShippingOrder,
+    getRecentOrders,
+    searchAssignedOrder,
+    getAllAssignedOrder,
+    handleFilterOrder,
+    fetchRevenue,
+    fetchOrderCount,
+  } = useOrderStore();
+
   const { enqueueSnackbar } = useSnackbar();
-  const dispatch = useDispatch();
-  const [page, setPage] = useState<number>(1);
-  const [limit, setLimit] = useState<number>(5);
-  const [recentOrder, setRecentOrder] = useState<IOrder[]>();
-  const [totalRevenueByTime, setTotalRevenueByTime] = useState<number>(0);
-  const [totalOrderByTime, setTotalOrderByTime] = useState<number>(0);
 
-  const getAllOrder = async (page?: number, limit?: number) => {
-    dispatch(setOrderList([]));
-    dispatch(setOrderRenderType(renderType.ALL));
-
+  const handleSearchOrder = async (key: string, value: string) => {
     try {
-      const res: ResponseType = await fetchAllOrder(page, limit);
-      if (res.success && res.orders && res.totalRows) {
-        const orderList = formatOrderList(res.orders);
-        dispatch(setOrderList(orderList));
-        dispatch(setTotalRows(res.totalRows));
-      }
-    } catch (error) {
-      if (isAxiosError(error)) {
-        console.log(error.message);
-      }
+      await search(`${key}=${value}&page=${page}&limit=${limit}`);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Error searching orders';
+      enqueueSnackbar(message, { variant: 'error' });
     }
   };
 
-  const searchOrder = async (key: string, value: string) => {
+  const handleGetAllAssignedOrder = async (currentUser: User) => {
     try {
-      const res: ResponseType = await searchingOrder(key, value, page, limit);
-      if (res.success && res.orders && res.totalRows) {
-        const orderList = formatOrderList(res.orders);
-        dispatch(setOrderRenderType(renderType.SEARCH));
-        dispatch(setOrderList(orderList));
-        dispatch(setTotalRows(res.totalRows));
-      } else {
-        dispatch(setOrderRenderType(renderType.SEARCH));
-        dispatch(setOrderList([]));
+      if (['owner', 'warehouse', 'admin'].includes(currentUser.role)) {
+        await getAllAssignedOrder(currentUser._id, currentUser.role);
       }
-    } catch (error) {
-      if (isAxiosError(error)) {
-        console.log(error.message);
-      }
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Error fetching assigned orders';
+      enqueueSnackbar(message, { variant: 'error' });
     }
   };
 
-  const getAllAssignedOrder = async (currentUser: IUser) => {
+  const handleSearchAssignedOrder = async (currentUser: User, code: string) => {
     try {
-      if (
-        currentUser.role === 'owner' ||
-        currentUser.role === 'warehouse' ||
-        currentUser.role === 'admin'
-      ) {
-        const res: ResponseType =
-          currentUser.role === 'owner' || currentUser.role === 'admin'
-            ? await fetchFilterOrder(`page=${page}&limit=${limit}&status=assigned`)
-            : await fetchFilterOrder(
-                `page=${page}&limit=${limit}&status=assigned&warehouseUser=${currentUser._id}`,
-              );
-        if (res.success && res.orders && res.totalRows) {
-          const orderList = formatOrderList(res.orders);
-          dispatch(setOrderRenderType(renderType.ALL));
-          dispatch(setOrderList(orderList));
-          dispatch(setTotalRows(res.totalRows));
-        }
-      } else {
-        dispatch(setOrderList([]));
+      if (['owner', 'warehouse', 'admin'].includes(currentUser.role)) {
+        await searchAssignedOrder(currentUser._id, code, currentUser.role);
       }
-    } catch (error) {
-      if (isAxiosError(error)) {
-        console.log(error.message);
-      }
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Error searching assigned orders';
+      enqueueSnackbar(message, { variant: 'error' });
     }
   };
 
-  const searchAssignedOrder = async (
-    currentUser: IUser,
-    code: string,
-    page: number,
-    limit: number,
-  ) => {
+  const handleCreateShippingOrder = async (orderId: string, data: ShippingOrderData) => {
     try {
-      if (
-        currentUser.role === 'owner' ||
-        currentUser.role === 'warehouse' ||
-        currentUser.role === 'admin'
-      ) {
-        const res: ResponseType =
-          currentUser.role === 'owner' || currentUser.role === 'admin'
-            ? await fetchFilterOrder(`page=${page}&limit=${limit}&status=assigned&code=${code}`)
-            : await fetchFilterOrder(
-                `page=${page}&limit=${limit}&status=assigned&warehouseUser=${currentUser._id}&code=${code}`,
-              );
-        if (res.success && res.orders && res.totalRows) {
-          const orderList = formatOrderList(res.orders);
-          dispatch(setOrderRenderType(renderType.SEARCH));
-          dispatch(setOrderList(orderList));
-          dispatch(setTotalRows(res.totalRows));
-        } else {
-          dispatch(setOrderList([]));
-        }
-      } else {
-        dispatch(setOrderList([]));
-      }
-    } catch (error) {
-      if (isAxiosError(error)) {
-        console.log(error.message);
-      }
+      await createShippingOrder(orderId, data);
+      enqueueSnackbar('Shipping order created successfully. Waiting for shipper', {
+        variant: 'success',
+      });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Error creating shipping order';
+      enqueueSnackbar(message, { variant: 'error' });
     }
   };
 
-  const createShippingOrder = async (orderId: string, data: ShippingOrderType) => {
+  const handleGetRecentOrder = async () => {
     try {
-      const response: ResponseType = await creatingShippingOrder(orderId, data);
-      if (response.success) {
-        enqueueSnackbar('Create shipping order successfully. Waiting for shipper', {
-          variant: 'success',
-        });
-      }
-    } catch (error: any) {
-      enqueueSnackbar(error.message, { variant: 'error' });
+      await getRecentOrders();
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Error fetching recent orders';
+      console.error(message);
     }
   };
 
-  const getRecentOrder = async () => {
+  const handleGetTotalRevenueByTime = async (time: string) => {
     try {
-      const response: ResponseType = await fetchAllOrder(1, 5);
-      if (response.success && response.orders) {
-        setRecentOrder(response.orders);
-      }
-    } catch (error) {
-      // console.log(error);
+      await fetchRevenue(time);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Error fetching total revenue';
+      console.error(message);
     }
   };
 
-  const getTotalRevenueByTime = async (time: string) => {
+  const handleGetTotalOrderByTime = async (time: string) => {
     try {
-      const response: ResponseType = await fetchTotalRevenueByTime(time);
-      if (response.success && response.totalRevenue) {
-        setTotalRevenueByTime(response.totalRevenue);
-      }
-    } catch (error) {
-      // console.log(error);
+      await fetchOrderCount(time);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Error fetching total orders';
+      console.error(message);
     }
   };
 
-  const getTotalOrderByTime = async (time: string) => {
+  const handleFilterOrders = async (filterData: FilterOrderParams) => {
     try {
-      const response: ResponseType = await fetchTotalOrderByTime(time);
-      if (response.success && response.total) {
-        setTotalOrderByTime(response.total);
-      }
-    } catch (error) {
-      // console.log(error);
-    }
-  };
-
-  const filterOrder = async (fitlerData: FilterOrderType) => {
-    try {
-      const { status, paymentStatus, paymentType } = fitlerData;
-      let query = `page=${page}&limit=${limit}`;
-      if (paymentStatus && paymentStatus !== 'all') query += `&paymentStatus=${paymentStatus}`;
-      if (paymentType && paymentType !== 'all') query += `&paymentType=${paymentType}`;
-      if (status && status !== 'all') query += `&status=${status}`;
-
-      const res: ResponseType = await fetchFilterOrder(query);
-
-      if (res.success && res.orders && res.totalRows) {
-        const orderList = formatOrderList(res.orders);
-        dispatch(setOrderRenderType(renderType.FILTER));
-        dispatch(setOrderList(orderList));
-        dispatch(setTotalRows(res.totalRows));
-      } else {
-        dispatch(setOrderList([]));
-        dispatch(setTotalRows(0));
-      }
-    } catch (error) {
-      // console.log(error);
+      await handleFilterOrder(filterData);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Error filtering orders';
+      console.error(message);
     }
   };
 
   return {
     orderList,
-    getAllOrder,
-    searchOrder,
     totalRows,
-    getAllAssignedOrder,
-    createShippingOrder,
     page,
+    isLoading,
+    getAllOrder,
+    searchOrder: handleSearchOrder,
+    getAllAssignedOrder: handleGetAllAssignedOrder,
+    createShippingOrder: handleCreateShippingOrder,
     setPage,
     limit,
     setLimit,
-    searchAssignedOrder,
-    getRecentOrder,
-    recentOrder,
+    searchAssignedOrder: handleSearchAssignedOrder,
+    getRecentOrder: handleGetRecentOrder,
+    recentOrders,
     totalOrderByTime,
-    getTotalOrderByTime,
+    getTotalOrderByTime: handleGetTotalOrderByTime,
     totalRevenueByTime,
-    getTotalRevenueByTime,
-    filterOrder,
+    getTotalRevenueByTime: handleGetTotalRevenueByTime,
+    filterOrder: handleFilterOrders,
   };
 };
 

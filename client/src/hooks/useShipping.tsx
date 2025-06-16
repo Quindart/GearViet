@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { fetchAllDistrictByProvince, fetchAllProvinces } from 'services/shippingApi';
-import { ResponseType } from 'types';
-import { formatProvinceDropDownList, formatWardDropdownList } from 'utils/helper';
-import { formatDistrictDropdownList } from '../utils/helper';
-import { DistrictType, ProvinceType } from 'types/shipping';
-import { fetchAllWardByDistrict } from '../services/shippingApi';
-import { WardType } from '../types/shipping';
+import { fetchAllDistrictByProvince, fetchAllProvinces } from '@/services/shippingApi';
+import { ResponseType } from '@/types';
+import { formatProvinceDropDownList, formatWardDropdownList } from '@/utils/helper';
+import { formatDistrictDropdownList } from '@/utils/helper';
+import { DistrictType, ProvinceType } from '@/types/shipping';
+import { fetchAllWardByDistrict } from '@/services/shippingApi';
+import { WardType } from '@/types/shipping';
 
 const useShipping = () => {
   const [provinceList, setProvinceList] = useState<any>([]);

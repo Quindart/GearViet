@@ -1,124 +1,96 @@
-import { useDispatch, useSelector } from 'react-redux';
-import {
-  addCategory,
-  addSubCategory,
-  deleteCategory,
-  deleteSubCategory,
-  updateCategory,
-  updateSubcategory,
-} from 'services/categoryApi';
-import axiosConfig from 'services/axios-config';
-import { RootState } from 'store';
-import { setCategories, setSidebar } from 'store/slices/appSlice';
-import { Categories, ResponseType } from 'types';
 import { useSnackbar } from 'notistack';
-interface CategoriesResponseType extends ResponseType {
-  categories: [Categories];
-}
+import { useCategoryStore } from '@/store';
 
 const useCategory = () => {
-  const categories = useSelector((state: RootState) => state.app.categories);
-  const hideSideBar = useSelector((state: RootState) => state.app.hideSideBar);
-  const dispatch = useDispatch();
+  const {
+    categories,
+    isLoading,
+    error,
+    fetchCategories,
+    addCategory,
+    updateCategory,
+    deleteCategory,
+    addSubcategory,
+    updateSubcategory,
+    deleteSubcategory,
+  } = useCategoryStore();
+
   const { enqueueSnackbar } = useSnackbar();
 
   const getCategories = async () => {
     try {
-      const res: CategoriesResponseType = await axiosConfig.get('/category');
-      if (res && res.success) {
-        dispatch(setCategories(res.categories));
-      }
-    } catch (error: any) {
-      console.log(error.message);
+      await fetchCategories();
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Error fetching categories';
+      enqueueSnackbar(message, { variant: 'error' });
     }
-  };
-
-  const success = (message: string) => {
-    enqueueSnackbar(message, { variant: 'success' });
-    getCategories();
   };
 
   const onAddCategory = async (name: string) => {
     try {
-      const res: ResponseType = await addCategory(name);
-      if (res.success) {
-        success('Tạo mới category thành công');
-        return;
-      }
-    } catch (error: any) {
-      enqueueSnackbar(error.message, { variant: 'error' });
+      await addCategory(name);
+      enqueueSnackbar('Category created successfully', { variant: 'success' });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Error creating category';
+      enqueueSnackbar(message, { variant: 'error' });
     }
   };
 
   const onAddSubcategory = async (categoryId: string, name: string) => {
     try {
-      const res: ResponseType = await addSubCategory(categoryId, name);
-      if (res.success) {
-        success('Tạo mới sub category thành công');
-        return;
-      }
-    } catch (error: any) {
-      enqueueSnackbar(error.message, { variant: 'error' });
+      await addSubcategory(categoryId, name);
+      enqueueSnackbar('Subcategory created successfully', { variant: 'success' });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Error creating subcategory';
+      enqueueSnackbar(message, { variant: 'error' });
     }
   };
 
   const onUpdateCategory = async (categoryId: string, name: string) => {
     try {
-      const res: ResponseType = await updateCategory(categoryId, name);
-      if (res.success) {
-        success('Sửa category name thành công');
-        return;
-      }
-    } catch (error: any) {
-      enqueueSnackbar(error.message, { variant: 'error' });
+      await updateCategory(categoryId, name);
+      enqueueSnackbar('Category updated successfully', { variant: 'success' });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Error updating category';
+      enqueueSnackbar(message, { variant: 'error' });
     }
   };
 
   const onUpdateSubcategory = async (subcategoryId: string, name: string) => {
     try {
-      const res: ResponseType = await updateSubcategory(subcategoryId, name);
-      if (res.success) {
-        success('Sửa subcategory name thành công');
-        return;
-      }
-    } catch (error: any) {
-      enqueueSnackbar(error.message, { variant: 'error' });
+      await updateSubcategory(subcategoryId, name);
+      enqueueSnackbar('Subcategory updated successfully', { variant: 'success' });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Error updating subcategory';
+      enqueueSnackbar(message, { variant: 'error' });
     }
   };
 
   const onDeleteCategory = async (categoryId: string) => {
     try {
-      const res: ResponseType = await deleteCategory(categoryId);
-      if (res.success) {
-        success('Xóa category thành công');
-        return;
-      }
-    } catch (error: any) {
-      enqueueSnackbar(error.message, { variant: 'error' });
+      await deleteCategory(categoryId);
+      enqueueSnackbar('Category deleted successfully', { variant: 'success' });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Error deleting category';
+      enqueueSnackbar(message, { variant: 'error' });
     }
   };
 
   const onDeleteSubcategory = async (subcategoryId: string) => {
     try {
-      const res: ResponseType = await deleteSubCategory(subcategoryId);
-      if (res.success) {
-        success('Xóa sub category thành công');
-        return;
-      }
-    } catch (error: any) {
-      enqueueSnackbar(error.message, { variant: 'error' });
+      await deleteSubcategory(subcategoryId);
+      enqueueSnackbar('Subcategory deleted successfully', { variant: 'success' });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Error deleting subcategory';
+      enqueueSnackbar(message, { variant: 'error' });
     }
-  };
-
-  const setShowSideBar = (value: boolean) => {
-    dispatch(setSidebar(value));
   };
 
   return {
     categories,
-    hideSideBar,
+    isLoading,
+    error,
     getCategories,
-    setShowSideBar,
     onUpdateCategory,
     onDeleteCategory,
     onDeleteSubcategory,

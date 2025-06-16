@@ -1,4 +1,4 @@
-import { Subcategory } from 'types';
+import { Subcategory } from '@/types';
 import { IUser } from './user';
 
 export type ImageType = {
