@@ -1,0 +1,616 @@
+[
+  {
+    "name": "Bộ Vi Xử Lý - CPU AMD Ryzen 5 5500GT / 3.6GHz Boost 4.4GHz / 6 nhân 12 luồng / 19MB / AM4",
+    "code": "8ca32001-2f85",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_amd-5000_5ca1c76f2263434fb506e0b2d8c8024a_grande.jpg",
+        "public_id": "9db322df"
+      }
+    ],
+    "price": 3750000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<p><span style=\"font-size:15px\"><strong>Thông số kỹ thuật:</strong></span></p><table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" id=\"tblGeneralAttribute\" style=\"width:802px\"><tbody><tr><td style=\"width:341px\"><p><span style=\"font-size:15px\"><strong>Kiến trúc</strong></span></p></td><td style=\"width:441px\"><p><span style=\"font-size:15px\">\"Zen 3\"</span></p></td></tr><tr><td style=\"width:341px\"><p><span style=\"font-size:15px\"><strong>Số nhân (Cores)</strong></span></p></td><td style=\"width:441px\"><p><span style=\"font-size:15px\">6</span></p></td></tr><tr><td style=\"width:341px\"><p><span style=\"font-size:15px\"><strong>Số luồng (Threads)</strong></span></p></td><td style=\"width:441px\"><p><span style=\"font-size:15px\">12</span></p></td></tr><tr><td style=\"width:341px\"><p><span style=\"font-size:15px\"><strong>Tốc độ xử lý</strong></span></p></td><td style=\"width:441px\"><p><span style=\"font-size:15px\">3.6GHz Up to 4.4GHz</span></p></td></tr><tr><td style=\"width:341px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ đệm L2</strong></span></p></td><td style=\"width:441px\"><p><span style=\"font-size:15px\">3MB</span></p></td></tr><tr><td style=\"width:341px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ đệm L3</strong></span></p></td><td style=\"width:441px\"><p><span style=\"font-size:15px\">16MB</span></p></td></tr><tr><td style=\"width:341px\"><p><span style=\"font-size:15px\"><strong>Công nghệ xử lý cho lõi CPU</strong></span></p></td><td style=\"width:441px\"><p><span style=\"font-size:15px\">TSMC 7nm FinFET</span></p></td></tr><tr><td style=\"width:341px\"><p><span style=\"font-size:15px\"><strong>Socket</strong></span></p></td><td style=\"width:441px\"><p><span style=\"font-size:15px\">AM4</span></p></td></tr><tr><td style=\"width:341px\"><p><span style=\"font-size:15px\"><strong>Phiên bản PCI Express </strong></span></p></td><td style=\"width:441px\"><p><span style=\"font-size:15px\">PCIe® 3.0</span></p></td></tr><tr><td style=\"width:341px\"><p><span style=\"font-size:15px\"><strong>Giải pháp tản nhiệt (PIB)</strong></span></p></td><td style=\"width:441px\"><p><span style=\"font-size:15px\">AMD Wraith Stealth</span></p></td></tr><tr><td style=\"width:341px\"><p><span style=\"font-size:15px\"><strong>Điện năng tiêu thụ mặc định</strong></span></p></td><td style=\"width:441px\"><p><span style=\"font-size:15px\">65W</span></p></td></tr><tr><td style=\"width:341px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ hỗ trợ</strong></span></p></td><td style=\"width:441px\"><p><span style=\"font-size:15px\"><strong>Loại:</strong> DDR4 - Tối đa 128GB<br/><strong>Kênh:</strong> 2<br/><strong>Tốc độ bộ nhớ tối đa: </strong></span></p><ul><li><p><span style=\"font-size:15px\">2x1R DDR4-3200</span></p></li><li><p><span style=\"font-size:15px\">2x2R DDR4-3200</span></p></li><li><p><span style=\"font-size:15px\">4x1R DDR4-2933</span></p></li><li><p><span style=\"font-size:15px\">4x2R DDR4-2667</span></p></li></ul></td></tr><tr><td style=\"width:341px\"><p><span style=\"font-size:15px\"><strong>Tính năng đồ họa</strong></span></p></td><td style=\"width:441px\"><p><span style=\"font-size:15px\"><strong>Graphics Model:</strong> Radeon™ Graphics<br/><strong>Graphics Core Count:</strong> 7<br/><strong>Graphics Frequency:</strong> 1900MHz</span></p></td></tr></tbody></table>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "Bộ Vi Xử Lý - CPU AMD Ryzen 5 5600GT / 3.6GHz Boost 4.6GHz / 6 nhân 12 luồng / 19MB / AM4",
+    "code": "57ff44f1-9739",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_amd-5000_c72b872d6018405a9926820a63142940_grande.jpg",
+        "public_id": "03b0707b"
+      }
+    ],
+    "price": 3890000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<p><span style=\"font-size:15px\"><strong>Thông số kỹ thuật:</strong></span></p><table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" id=\"tblGeneralAttribute\" style=\"width:817px\"><tbody><tr><td style=\"width:404px\"><p><span style=\"font-size:15px\"><strong>Kiến trúc</strong></span></p></td><td style=\"width:393px\"><p><span style=\"font-size:15px\">\"Zen 3\"</span></p></td></tr><tr><td style=\"width:404px\"><p><span style=\"font-size:15px\"><strong>Số nhân (Cores)</strong></span></p></td><td style=\"width:393px\"><p><span style=\"font-size:15px\">6</span></p></td></tr><tr><td style=\"width:404px\"><p><span style=\"font-size:15px\"><strong>Số luồng (Threads)</strong></span></p></td><td style=\"width:393px\"><p><span style=\"font-size:15px\">12</span></p></td></tr><tr><td style=\"width:404px\"><p><span style=\"font-size:15px\"><strong>Tốc độ xử lý</strong></span></p></td><td style=\"width:393px\"><p><span style=\"font-size:15px\">3.6GHz Up to 4.6GHz</span></p></td></tr><tr><td style=\"width:404px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ đệm L2</strong></span></p></td><td style=\"width:393px\"><p><span style=\"font-size:15px\">3MB</span></p></td></tr><tr><td style=\"width:404px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ đệm L3</strong></span></p></td><td style=\"width:393px\"><p><span style=\"font-size:15px\">16MB</span></p></td></tr><tr><td style=\"width:404px\"><p><span style=\"font-size:15px\"><strong>Công nghệ xử lý cho lõi CPU</strong></span></p></td><td style=\"width:393px\"><p><span style=\"font-size:15px\">TSMC 7nm FinFET</span></p></td></tr><tr><td style=\"width:404px\"><p><span style=\"font-size:15px\"><strong>Socket</strong></span></p></td><td style=\"width:393px\"><p><span style=\"font-size:15px\">AM4</span></p></td></tr><tr><td style=\"width:404px\"><p><span style=\"font-size:15px\"><strong>Phiên bản PCI Express </strong></span></p></td><td style=\"width:393px\"><p><span style=\"font-size:15px\">PCIe® 3.0</span></p></td></tr><tr><td style=\"width:404px\"><p><span style=\"font-size:15px\"><strong>Giải pháp tản nhiệt (PIB)</strong></span></p></td><td style=\"width:393px\"><p><span style=\"font-size:15px\">AMD Wraith Stealth</span></p></td></tr><tr><td style=\"width:404px\"><p><span style=\"font-size:15px\"><strong>Điện năng tiêu thụ mặc định</strong></span></p></td><td style=\"width:393px\"><p><span style=\"font-size:15px\">65W</span></p></td></tr><tr><td style=\"width:404px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ hỗ trợ</strong></span></p></td><td style=\"width:393px\"><p><span style=\"font-size:15px\"><strong>Loại:</strong> DDR4 - Tối đa 128GB<br/><strong>Kênh:</strong> 2<br/><strong>Tốc độ bộ nhớ tối đa: </strong></span></p><ul><li><p><span style=\"font-size:15px\">2x1R DDR4-3200</span></p></li><li><p><span style=\"font-size:15px\">2x2R DDR4-3200</span></p></li><li><p><span style=\"font-size:15px\">4x1R DDR4-2933</span></p></li><li><p><span style=\"font-size:15px\">4x2R DDR4-2667</span></p></li></ul></td></tr><tr><td style=\"width:404px\"><p><span style=\"font-size:15px\"><strong>Tính năng đồ họa</strong></span></p></td><td style=\"width:393px\"><p><span style=\"font-size:15px\"><strong>Graphics Model:</strong> Radeon™ Graphics<br/><strong>Graphics Core Count:</strong> 7<br/><strong>Graphics Frequency:</strong> 1900MHz</span></p></td></tr></tbody></table>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "Bộ Vi Xử Lý - CPU AMD Ryzen 5 7500F (3.7 GHz Upto 5.0 GHz / 38MB / 6 Cores, 12 Threads / 65W / AM5)",
+    "code": "04b27454-d369",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/250-6032-250-4410-1_7ef865f91279_3ebcd4a8891e4127ab31b90637e47976_grande.jpg",
+        "public_id": "0f2a8c28"
+      }
+    ],
+    "price": 5490000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<p><strong><span style=\"font-size:15px\">Thông số kỹ thuật</span></strong></p><table style=\"width:708px\"><tbody><tr><td style=\"width:225px\"><p><span style=\"font-size:15px\">Hãng sản xuất</span></p></td><td style=\"width:473px\"><p><span style=\"font-size:15px\">ASUS</span></p></td></tr><tr><td style=\"width:225px\"><p><span style=\"font-size:15px\">Dòng CPU</span></p></td><td style=\"width:473px\"><p><span style=\"font-size:15px\">AMD Ryzen 5</span></p></td></tr><tr><td style=\"width:225px\"><p><span style=\"font-size:15px\">Socket</span></p></td><td style=\"width:473px\"><p><span style=\"font-size:15px\">AM5</span></p></td></tr><tr><td style=\"width:225px\"><p><span style=\"font-size:15px\">Loại Ram</span></p></td><td style=\"width:473px\"><p><span style=\"font-size:15px\">DDR5</span></p></td></tr><tr><td style=\"width:225px\"><p><span style=\"font-size:15px\">Số nhân</span></p></td><td style=\"width:473px\"><p><span style=\"font-size:15px\">6</span></p></td></tr><tr><td style=\"width:225px\"><p><span style=\"font-size:15px\">Số luồng</span></p></td><td style=\"width:473px\"><p><span style=\"font-size:15px\">12</span></p></td></tr><tr><td style=\"width:225px\"><p><span style=\"font-size:15px\">Bộ nhớ đệm</span></p></td><td style=\"width:473px\"><p><span style=\"font-size:15px\">38MB</span></p></td></tr><tr><td style=\"width:225px\"><p><span style=\"font-size:15px\">TDP</span></p></td><td style=\"width:473px\"><p><span style=\"font-size:15px\">65W</span></p></td></tr><tr><td style=\"width:225px\"><p><span style=\"font-size:15px\">Bảo hành</span></p></td><td style=\"width:473px\"><p><span style=\"font-size:15px\">36 tháng</span></p></td></tr></tbody></table>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "Bộ Vi Xử Lý - CPU AMD Ryzen 5 8500G / 3.5GHz Boost 5.0GHz / 6 nhân 12 luồng / 22MB / AM5",
+    "code": "7c8b9a17-8120",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/remove-bg.ai_1716356774359_89873c0628fb4ce68b69d26ebb37baaf_grande.png",
+        "public_id": "6ca3d08d"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_amd_8000_4_f2f3d05ec1344d44a523b993caca404b_grande.jpg",
+        "public_id": "a435ea66"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_amd_8000_3_53384dd130344d478e7771fff24ea527_grande.jpg",
+        "public_id": "d1ab83ea"
+      }
+    ],
+    "price": 4990000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<p><span style=\"font-size:15px\"><strong>Thông số kỹ thuật:</strong></span></p><table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" id=\"tblGeneralAttribute\" style=\"width:829px\"><tbody><tr><td style=\"width:425px\"><p><span style=\"font-size:15px\"><strong>Kiến trúc</strong></span></p></td><td style=\"width:384px\"><p><span style=\"font-size:15px\">\"Zen 4\"</span></p></td></tr><tr><td style=\"width:425px\"><p><span style=\"font-size:15px\"><strong>Số nhân (Cores)</strong></span></p></td><td style=\"width:384px\"><p><span style=\"font-size:15px\">6</span></p></td></tr><tr><td style=\"width:425px\"><p><span style=\"font-size:15px\"><strong>Số luồng (Threads)</strong></span></p></td><td style=\"width:384px\"><p><span style=\"font-size:15px\">12</span></p></td></tr><tr><td style=\"width:425px\"><p><span style=\"font-size:15px\"><strong>Tốc độ xử lý</strong></span></p></td><td style=\"width:384px\"><p><span style=\"font-size:15px\">3.5GHz Up to 5.0GHz</span></p></td></tr><tr><td style=\"width:425px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ đệm L2</strong></span></p></td><td style=\"width:384px\"><p><span style=\"font-size:15px\">6MB</span></p></td></tr><tr><td style=\"width:425px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ đệm L3</strong></span></p></td><td style=\"width:384px\"><p><span style=\"font-size:15px\">16MB</span></p></td></tr><tr><td style=\"width:425px\"><p><span style=\"font-size:15px\"><strong>Công nghệ xử lý cho lõi CPU</strong></span></p></td><td style=\"width:384px\"><p><span style=\"font-size:15px\">TSMC 4nm FinFET</span></p></td></tr><tr><td style=\"width:425px\"><p><span style=\"font-size:15px\"><strong>Socket</strong></span></p></td><td style=\"width:384px\"><p><span style=\"font-size:15px\">AM5</span></p></td></tr><tr><td style=\"width:425px\"><p><span style=\"font-size:15px\"><strong>Phiên bản PCI Express </strong></span></p></td><td style=\"width:384px\"><p><span style=\"font-size:15px\">PCIe® 4.0</span></p></td></tr><tr><td style=\"width:425px\"><p><span style=\"font-size:15px\"><strong>Giải pháp tản nhiệt (PIB)</strong></span></p></td><td style=\"width:384px\"><p><span style=\"font-size:15px\">AMD Wraith Stealth</span></p></td></tr><tr><td style=\"width:425px\"><p><span style=\"font-size:15px\"><strong>Điện năng tiêu thụ mặc định</strong></span></p></td><td style=\"width:384px\"><p><span style=\"font-size:15px\">65W</span></p></td></tr><tr><td style=\"width:425px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ hỗ trợ</strong></span></p></td><td style=\"width:384px\"><p><span style=\"font-size:15px\"><strong>Loại:</strong> DDR5 - Tối đa 256GB<br/><strong>Kênh:</strong> 2<br/><strong>Tốc độ bộ nhớ tối đa: </strong></span></p><ul><li><p><span style=\"font-size:15px\">2x1R DDR5-5200</span></p></li><li><p><span style=\"font-size:15px\">2x2R DDR5-5200</span></p></li><li><p><span style=\"font-size:15px\">4x1R DDR5-3600</span></p></li><li><p><span style=\"font-size:15px\">4x2R DDR5-3600</span></p></li></ul></td></tr><tr><td style=\"width:425px\"><p><span style=\"font-size:15px\"><strong>Tính năng đồ họa</strong></span></p></td><td style=\"width:384px\"><p><span style=\"font-size:15px\"><strong>Graphics Model:</strong> AMD RadeonTM 740M Graphics<br/><strong>Graphics Core Count: </strong>4<br/><strong>Graphics Frequency:</strong> 2400MHz</span></p></td></tr></tbody></table>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "Bộ Vi Xử Lý - CPU AMD Ryzen 5 8600G / 4.3GHz Boost 5.0GHz / 6 nhân 12 luồng / 22MB / AM5",
+    "code": "084fa709-5c49",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/remove-bg.ai_1716356774359_2f91ca05039341e9b3aa9ceb4b3a4ac5_grande.png",
+        "public_id": "fadb9873"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_amd_8000_4_a0307041045a45e18546d16e4b61c963_grande.jpg",
+        "public_id": "3e873a7a"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_amd_8000_3_6d03e50c08224c589e97613afdd3792d_grande.jpg",
+        "public_id": "ab246b57"
+      }
+    ],
+    "price": 6390000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<p><span style=\"font-size:15px\"><strong>Thông số kỹ thuật:</strong></span></p><table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" id=\"tblGeneralAttribute\" style=\"width:815px\"><tbody><tr><td style=\"width:463px\"><p><span style=\"font-size:15px\"><strong>Kiến trúc</strong></span></p></td><td style=\"width:332px\"><p><span style=\"font-size:15px\">\"Zen 4\"</span></p></td></tr><tr><td style=\"width:463px\"><p><span style=\"font-size:15px\"><strong>Số nhân (Cores)</strong></span></p></td><td style=\"width:332px\"><p><span style=\"font-size:15px\">6</span></p></td></tr><tr><td style=\"width:463px\"><p><span style=\"font-size:15px\"><strong>Số luồng (Threads)</strong></span></p></td><td style=\"width:332px\"><p><span style=\"font-size:15px\">12</span></p></td></tr><tr><td style=\"width:463px\"><p><span style=\"font-size:15px\"><strong>Tốc độ xử lý</strong></span></p></td><td style=\"width:332px\"><p><span style=\"font-size:15px\">4.3GHz Up to 5.0GHz</span></p></td></tr><tr><td style=\"width:463px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ đệm L2</strong></span></p></td><td style=\"width:332px\"><p><span style=\"font-size:15px\">6MB</span></p></td></tr><tr><td style=\"width:463px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ đệm L3</strong></span></p></td><td style=\"width:332px\"><p><span style=\"font-size:15px\">16MB</span></p></td></tr><tr><td style=\"width:463px\"><p><span style=\"font-size:15px\"><strong>Công nghệ xử lý cho lõi CPU</strong></span></p></td><td style=\"width:332px\"><p><span style=\"font-size:15px\">TSMC 4nm FinFET</span></p></td></tr><tr><td style=\"width:463px\"><p><span style=\"font-size:15px\"><strong>Socket</strong></span></p></td><td style=\"width:332px\"><p><span style=\"font-size:15px\">AM5</span></p></td></tr><tr><td style=\"width:463px\"><p><span style=\"font-size:15px\"><strong>Phiên bản PCI Express </strong></span></p></td><td style=\"width:332px\"><p><span style=\"font-size:15px\">PCIe® 4.0</span></p></td></tr><tr><td style=\"width:463px\"><p><span style=\"font-size:15px\"><strong>Giải pháp tản nhiệt (PIB)</strong></span></p></td><td style=\"width:332px\"><p><span style=\"font-size:15px\">AMD Wraith Stealth</span></p></td></tr><tr><td style=\"width:463px\"><p><span style=\"font-size:15px\"><strong>Điện năng tiêu thụ mặc định</strong></span></p></td><td style=\"width:332px\"><p><span style=\"font-size:15px\">65W</span></p></td></tr><tr><td style=\"width:463px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ hỗ trợ</strong></span></p></td><td style=\"width:332px\"><p><span style=\"font-size:15px\"><strong>Loại:</strong> DDR5 - Tối đa 256GB<br/><strong>Kênh:</strong> 2<br/><strong>Tốc độ bộ nhớ tối đa: </strong></span></p><ul><li><p><span style=\"font-size:15px\">2x1R DDR5-5200</span></p></li><li><p><span style=\"font-size:15px\">2x2R DDR5-5200</span></p></li><li><p><span style=\"font-size:15px\">4x1R DDR5-3600</span></p></li><li><p><span style=\"font-size:15px\">4x2R DDR5-3600</span></p></li></ul></td></tr><tr><td style=\"width:463px\"><p><span style=\"font-size:15px\"><strong>Tính năng đồ họa</strong></span></p></td><td style=\"width:332px\"><p><span style=\"font-size:15px\"><strong>Graphics Model:</strong> AMD RadeonTM 760M Graphics<br/><strong>Graphics Core Count: </strong>8<br/><strong>Graphics Frequency:</strong> 2800MHz</span></p></td></tr><tr><td style=\"width:463px\"><p><span style=\"font-size:15px\"><strong>AI Engine</strong></span></p></td><td style=\"width:332px\"><p><span style=\"font-size:15px\">AMD Ryzen™ AI (Up to 16 TOPS)</span></p></td></tr></tbody></table>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "Bộ Vi Xử Lý - CPU AMD Ryzen 7 5700 / 3.7GHz Boost 4.6GHz / 8 nhân 16 luồng / 20MB / AM4",
+    "code": "dc50948f-d9b3",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear5700_3f9f18e4caed4106a1120a455911ab55_grande.png",
+        "public_id": "8e90ed74"
+      }
+    ],
+    "price": 4790000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<p><span style=\"font-size:15px\"><strong>Thông số kỹ thuật:</strong></span></p><table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" id=\"tblGeneralAttribute\" style=\"width:814px\"><tbody><tr><td style=\"width:336px\"><p><span style=\"font-size:15px\"><strong>Kiến trúc</strong></span></p></td><td style=\"width:458px\"><p><span style=\"font-size:15px\">\"Zen 3\"</span></p></td></tr><tr><td style=\"width:336px\"><p><span style=\"font-size:15px\"><strong>Số nhân (Cores)</strong></span></p></td><td style=\"width:458px\"><p><span style=\"font-size:15px\">8</span></p></td></tr><tr><td style=\"width:336px\"><p><span style=\"font-size:15px\"><strong>Số luồng (Threads)</strong></span></p></td><td style=\"width:458px\"><p><span style=\"font-size:15px\">16</span></p></td></tr><tr><td style=\"width:336px\"><p><span style=\"font-size:15px\"><strong>Tốc độ xử lý</strong></span></p></td><td style=\"width:458px\"><p><span style=\"font-size:15px\">3.7GHz Up to 4.6GHz</span></p></td></tr><tr><td style=\"width:336px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ đệm L2</strong></span></p></td><td style=\"width:458px\"><p><span style=\"font-size:15px\">4MB</span></p></td></tr><tr><td style=\"width:336px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ đệm L3</strong></span></p></td><td style=\"width:458px\"><p><span style=\"font-size:15px\">16MB</span></p></td></tr><tr><td style=\"width:336px\"><p><span style=\"font-size:15px\"><strong>Công nghệ xử lý cho lõi CPU</strong></span></p></td><td style=\"width:458px\"><p><span style=\"font-size:15px\">TSMC 7nm FinFET</span></p></td></tr><tr><td style=\"width:336px\"><p><span style=\"font-size:15px\"><strong>Socket</strong></span></p></td><td style=\"width:458px\"><p><span style=\"font-size:15px\">AM4</span></p></td></tr><tr><td style=\"width:336px\"><p><span style=\"font-size:15px\"><strong>Phiên bản PCI Express </strong></span></p></td><td style=\"width:458px\"><p><span style=\"font-size:15px\">PCIe® 4.0</span></p></td></tr><tr><td style=\"width:336px\"><p><span style=\"font-size:15px\"><strong>Giải pháp tản nhiệt (PIB)</strong></span></p></td><td style=\"width:458px\"><p><span style=\"font-size:15px\">AMD Wraith Stealth</span></p></td></tr><tr><td style=\"width:336px\"><p><span style=\"font-size:15px\"><strong>Điện năng tiêu thụ mặc định</strong></span></p></td><td style=\"width:458px\"><p><span style=\"font-size:15px\">65W</span></p></td></tr><tr><td style=\"width:336px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ hỗ trợ</strong></span></p></td><td style=\"width:458px\"><p><span style=\"font-size:15px\"><strong>Loại:</strong> DDR4 - Tối đa 128GB<br/><strong>Kênh:</strong> 2<br/><strong>Tốc độ bộ nhớ tối đa: </strong></span></p><ul><li><p><span style=\"font-size:15px\">2x1R DDR4-3200</span></p></li><li><p><span style=\"font-size:15px\">2x2R DDR4-3200</span></p></li><li><p><span style=\"font-size:15px\">4x1R DDR4-2933</span></p></li><li><p><span style=\"font-size:15px\">4x2R DDR4-2667</span></p></li></ul></td></tr><tr><td style=\"width:336px\"><p><span style=\"font-size:15px\"><strong>Tính năng đồ họa</strong></span></p></td><td style=\"width:458px\"><p><span style=\"font-size:15px\">Không</span></p></td></tr></tbody></table>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "Bộ Vi Xử Lý - CPU AMD Ryzen 7 7800X3D / 4.2GHz Boost 5.0GHz / 8 nhân 16 luồng / 104MB / AM5",
+    "code": "03bdbaf7-5f63",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/z4241970272305_4cd37c7d4e2981e7e544587c1d9f24df_16257a1eb0bc44a79aac6206434b500e_grande.jpg",
+        "public_id": "0c62543f"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/z4241970272685_df9ba4fde1669108e7d6d55913fc0f7a_fd2e6b224a224fdcba4db9b0370c38c1_grande.jpg",
+        "public_id": "a77ed4a3"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/z4241970271769_2300c6aa82178efae93a4031a11f89de_42a219307db944c497ab1f837d45a70c_grande.jpg",
+        "public_id": "e0e16475"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/z4241970272611_781c6886e74519a99b42b0a169ccac2b_5271a500e6d34c3096c69f6f10f8fc59_grande.jpg",
+        "public_id": "3c5ef11f"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/7800x3d_6d992cd4e3d945b7ae4484056e558dba_grande.png",
+        "public_id": "6f2ec572"
+      }
+    ],
+    "price": 12890000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<h1 style=\"text-align: center;\"><strong>Bộ Vi Xử Lý - CPU AMD Ryzen 7 7800X3D / 4.2GHz Boost 5.0GHz / 8 nhân 16 luồng / 104MB / AM5</strong></h1><p><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Thông số kỹ thuật:</strong></span></p><table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" id=\"tblGeneralAttribute\" style=\"width:833px\"><tbody><tr><td style=\"width:368px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Số nhân (Cores)</strong></span></p></td><td style=\"width:447px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">8</span></p></td></tr><tr><td style=\"width:368px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Số luồng (Threads)</strong></span></p></td><td style=\"width:447px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">16</span></p></td></tr><tr><td style=\"width:368px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Tốc độ xử lý</strong></span></p></td><td style=\"width:447px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">Xung cơ bản 4.0GHz, xung tối đa 5.0GHz</span></p></td></tr><tr><td style=\"width:368px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Bộ nhớ đệm L1</strong></span></p></td><td style=\"width:447px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">512 KB</span></p></td></tr><tr><td style=\"width:368px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Bộ nhớ đệm L2</strong></span></p></td><td style=\"width:447px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">8 MB</span></p></td></tr><tr><td style=\"width:368px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Bộ nhớ đệm L3</strong></span></p></td><td style=\"width:447px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">96 MB</span></p></td></tr><tr><td style=\"width:368px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Công nghệ xử lý cho lõi CPU</strong></span></p></td><td style=\"width:447px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">TSMC 5nm FinFET</span></p></td></tr><tr><td style=\"width:368px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Socket</strong></span></p></td><td style=\"width:447px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">AM5</span></p></td></tr><tr><td style=\"width:368px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Phiên bản PCI Express </strong></span></p></td><td style=\"width:447px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">PCIe® 5.0</span></p></td></tr><tr><td style=\"width:368px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Giải pháp tản nhiệt (PIB)</strong></span></p></td><td style=\"width:447px\"><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"><span style=\"font-size:15px\">Không có sẵn</span></p><p style=\"text-align: center;\"> </p></td></tr><tr><td style=\"width:368px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Điện năng tiêu thụ mặc định</strong></span></p></td><td style=\"width:447px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">120 W</span></p></td></tr><tr><td style=\"width:368px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Bộ nhớ hỗ trợ</strong></span></p></td><td style=\"width:447px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Loại:</strong> DDR5<br/><strong>Kênh:</strong> 2<br/><strong>Tốc độ bộ nhớ tối đa: </strong></span></p><ul><li><p style=\"text-align: center;\"><span style=\"font-size:15px\">2x1R DDR5-5200</span></p></li><li><p style=\"text-align: center;\"><span style=\"font-size:15px\">2x2R DDR5-5200</span></p></li><li><p style=\"text-align: center;\"><span style=\"font-size:15px\">4x1R DDR5-3600</span></p></li><li><p style=\"text-align: center;\"><span style=\"font-size:15px\">4x2R DDR5-3600</span></p></li></ul></td></tr><tr><td style=\"width:368px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Tính năng đồ họa</strong></span></p></td><td style=\"width:447px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Graphics Model:</strong> AMD Radeon™ Graphics<br/><strong>Graphics Core Count: </strong>2<br/><strong>Graphics Frequency:</strong> 2200 MHz<br/><strong>GPU Base: </strong>400 MHz</span></p></td></tr><tr><td style=\"width:368px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Công nghệ hỗ trợ</strong></span></p></td><td style=\"width:447px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">AMD EXPO™ Technology<br/>AMD Ryzen™ Technologies</span></p></td></tr></tbody></table></p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "Bộ Vi Xử Lý - CPU AMD Ryzen 7 8700G / 4.2GHz Boost 5.1GHz / 8 nhân 16 luồng / 24MB / AM5",
+    "code": "ec93e479-fda0",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/remove-bg.ai_1716356626032_35b3e05b35da434f85b889421382a3c1_grande.png",
+        "public_id": "d54bf779"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_amd_8000_2_28a23200092c4c57a932f2856e979dd9_grande.jpg",
+        "public_id": "ea17bb55"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_amd_8000_1c7b1223fb9148e19c3483811a0b67c2_grande.jpg",
+        "public_id": "55266fd8"
+      }
+    ],
+    "price": 9190000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<p><span style=\"font-size:15px\"><strong>Thông số kỹ thuật:</strong></span></p><table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" id=\"tblGeneralAttribute\" style=\"width:786px\"><tbody><tr><td style=\"width:401px\"><p><span style=\"font-size:15px\"><strong>Kiến trúc</strong></span></p></td><td style=\"width:365px\"><p><span style=\"font-size:15px\">\"Zen 4\"</span></p></td></tr><tr><td style=\"width:401px\"><p><span style=\"font-size:15px\"><strong>Số nhân (Cores)</strong></span></p></td><td style=\"width:365px\"><p><span style=\"font-size:15px\">8</span></p></td></tr><tr><td style=\"width:401px\"><p><span style=\"font-size:15px\"><strong>Số luồng (Threads)</strong></span></p></td><td style=\"width:365px\"><p><span style=\"font-size:15px\">16</span></p></td></tr><tr><td style=\"width:401px\"><p><span style=\"font-size:15px\"><strong>Tốc độ xử lý</strong></span></p></td><td style=\"width:365px\"><p><span style=\"font-size:15px\">4.2GHz Up to 5.1GHz</span></p></td></tr><tr><td style=\"width:401px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ đệm L2</strong></span></p></td><td style=\"width:365px\"><p><span style=\"font-size:15px\">8MB</span></p></td></tr><tr><td style=\"width:401px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ đệm L3</strong></span></p></td><td style=\"width:365px\"><p><span style=\"font-size:15px\">16MB</span></p></td></tr><tr><td style=\"width:401px\"><p><span style=\"font-size:15px\"><strong>Công nghệ xử lý cho lõi CPU</strong></span></p></td><td style=\"width:365px\"><p><span style=\"font-size:15px\">TSMC 4nm FinFET</span></p></td></tr><tr><td style=\"width:401px\"><p><span style=\"font-size:15px\"><strong>Socket</strong></span></p></td><td style=\"width:365px\"><p><span style=\"font-size:15px\">AM5</span></p></td></tr><tr><td style=\"width:401px\"><p><span style=\"font-size:15px\"><strong>Phiên bản PCI Express </strong></span></p></td><td style=\"width:365px\"><p><span style=\"font-size:15px\">PCIe® 4.0</span></p></td></tr><tr><td style=\"width:401px\"><p><span style=\"font-size:15px\"><strong>Giải pháp tản nhiệt (PIB)</strong></span></p></td><td style=\"width:365px\"><p><span style=\"font-size:15px\">AMD Wraith Spire</span></p></td></tr><tr><td style=\"width:401px\"><p><span style=\"font-size:15px\"><strong>Điện năng tiêu thụ mặc định</strong></span></p></td><td style=\"width:365px\"><p><span style=\"font-size:15px\">65W</span></p></td></tr><tr><td style=\"width:401px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ hỗ trợ</strong></span></p></td><td style=\"width:365px\"><p><span style=\"font-size:15px\"><strong>Loại:</strong> DDR5 - Tối đa 256GB<br/><strong>Kênh:</strong> 2<br/><strong>Tốc độ bộ nhớ tối đa: </strong></span></p><ul><li><p><span style=\"font-size:15px\">2x1R DDR5-5200</span></p></li><li><p><span style=\"font-size:15px\">2x2R DDR5-5200</span></p></li><li><p><span style=\"font-size:15px\">4x1R DDR5-3600</span></p></li><li><p><span style=\"font-size:15px\">4x2R DDR5-3600</span></p></li></ul></td></tr><tr><td style=\"width:401px\"><p><span style=\"font-size:15px\"><strong>Tính năng đồ họa</strong></span></p></td><td style=\"width:365px\"><p><span style=\"font-size:15px\"><strong>Graphics Model:</strong> AMD RadeonTM 780M Graphics<br/><strong>Graphics Core Count: </strong>12<br/><strong>Graphics Frequency:</strong> 2900MHz</span></p></td></tr><tr><td style=\"width:401px\"><p><span style=\"font-size:15px\"><strong>AI Engine</strong></span></p></td><td style=\"width:365px\"><p><span style=\"font-size:15px\">AMD Ryzen™ AI (Up to 16 TOPS)</span></p></td></tr></tbody></table>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "Bộ Vi Xử Lý - CPU AMD Ryzen 9 7900X3D - 4.4GHz boost 5.6GHz - 12 nhân 24 luồng - Socket AM5",
+    "code": "c72d9d26-b465",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/231804950-c_ryzen9_7900x3d_3dpib_front_pr_a62e0c5ba1aa4b65b3045f697ee87632_grande.png",
+        "public_id": "bd31fe7f"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/231804950-b_ryzen9_7900x3d_3dpib_front_a64d77286b884551aef93eca353f4f75_grande.png",
+        "public_id": "9393c2e6"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/231804950-a_ryzen9_7900x3d_3dpib_front_pl_0be7f220f3b4451e8a4d10001ec91d9a_grande.png",
+        "public_id": "9c66fd81"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/231804950-d_ryzen9_7900x3d_3dpib_back_09aa4aa6511a402a80703964e5b6cb35_grande.png",
+        "public_id": "ce6027cc"
+      }
+    ],
+    "price": 13990000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<h1 style=\"text-align: center;\"><strong>Bộ Vi Xử Lý - CPU AMD Ryzen 9 7900X3D | 4.4GHz boost 5.6GHz | 12 nhân 24 luồng | Socket AM5</strong></h1><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>- Thông số kĩ thuật</strong></span></p><p><p style=\"text-align: center;\"><span style=\"font-size:15px\">Thương hiệu: AMD</span></p><p style=\"text-align: center;\"><span style=\"font-size:15px\">Socket: AMD AM5</span></p><p style=\"text-align: center;\"><span style=\"font-size:15px\">Số nhân/luồng: 12/24</span></p><p style=\"text-align: center;\"><span style=\"font-size:15px\">Tốc độ cơ bản: 4.4GHz</span></p><p style=\"text-align: center;\"><span style=\"font-size:15px\">Tốc độ tối đa: 5.6GHz</span></p><p style=\"text-align: center;\"><span style=\"font-size:15px\">Cache: 140MB</span></p><p style=\"text-align: center;\"><span style=\"font-size:15px\">Điện năng tiêu thụ: 120W</span></p></p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "Bộ Vi Xử Lý - CPU AMD Ryzen 9 7950X3D - 4.2GHz boost 5.7GHz - 16 nhân 32 luồng - Socket AM5",
+    "code": "139ac8ba-b94b",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/231804952-a_ryzen9_7950x3d_3dpib_front_pl_6de05d06128c4929a3d85970f39c6ab7_grande.png",
+        "public_id": "864e34d0"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/231804952-c_ryzen9_7950x3d_3dpib_front_pr_810fe742ac8b4a26b28c71615ae68fd6_grande.png",
+        "public_id": "63bf80b0"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/231804952-b_ryzen9_7950x3d_3dpib_front_6d389f7c2cbe4295867328dffb5abd93_grande.png",
+        "public_id": "b6802a0b"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/231804952-d_ryzen9_7950x3d_3dpib_back_89c5750c84184fcf80db8ca5f1e1ffd5_grande.png",
+        "public_id": "2134e569"
+      }
+    ],
+    "price": 18290000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<h1 style=\"text-align: center;\"><strong>Bộ Vi Xử Lý - CPU AMD Ryzen 9 7950X3D | 4.2GHz boost 5.7GHz | 16 nhân 32 luồng | Socket AM5</strong></h1><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>- Thông số kĩ thuật</strong></span></p><p><p style=\"text-align: center;\"><span style=\"font-size:15px\">Thương hiệu: AMD</span></p><p style=\"text-align: center;\"><span style=\"font-size:15px\">Socket: AMD AM5</span></p><p style=\"text-align: center;\"><span style=\"font-size:15px\">Số nhân/luồng: 16/32</span></p><p style=\"text-align: center;\"><span style=\"font-size:15px\">Tốc độ cơ bản: 4.2GHz</span></p><p style=\"text-align: center;\"><span style=\"font-size:15px\">Tốc độ tối đa: 5.7GHz</span></p><p style=\"text-align: center;\"><span style=\"font-size:15px\">Cache: 144MB</span></p><p style=\"text-align: center;\"><span style=\"font-size:15px\">Điện năng tiêu thụ: 120W</span></p></p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "Bộ Vi Xử Lý - CPU AMD Ryzen 9 9950X | 4.3 GHz Boost 5.7 GHz | 16 Cores / 32 Threads | 64 MB | AM5",
+    "code": "e7aba098-fef2",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/250-26730-ryzen-9-9950x-1_a053c9_3de6cfa06fda407b8b129ae8f679ac61_grande.jpg",
+        "public_id": "422886c2"
+      }
+    ],
+    "price": 16690000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<p><strong><span style=\"font-size:15px\">Thông số kỹ thuật</span></strong></p><table border=\"1\"><tbody><tr><td><p><strong><span style=\"font-size:15px\">Hãng sản xuất</span></strong></p></td><td><p><span style=\"font-size:15px\">AMD</span></p></td></tr><tr><td><p><strong><span style=\"font-size:15px\">Model</span></strong></p></td><td><p><span style=\"font-size:15px\">AMD Ryzen 9 9950X</span></p></td></tr><tr><td><p><strong><span style=\"font-size:15px\">Số nhân</span></strong></p></td><td><p><span style=\"font-size:15px\">16</span></p></td></tr><tr><td><p><strong><span style=\"font-size:15px\">Số luồng</span></strong></p></td><td><p><span style=\"font-size:15px\">32</span></p></td></tr><tr><td><p><strong><span style=\"font-size:15px\">Tốc độ cơ bản</span></strong></p></td><td><p><span style=\"font-size:15px\">4.3 Ghz </span></p></td></tr><tr><td><p><strong><span style=\"font-size:15px\">Tốc độ tối đa (Max Boost)</span></strong></p></td><td><p><span style=\"font-size:15px\">5.7 GHz</span></p></td></tr><tr><td><p><strong><span style=\"font-size:15px\">Bộ nhớ đệm</span></strong></p></td><td><p><span style=\"font-size:15px\">16MB (L2) + 64MB (L3)</span></p></td></tr><tr><td><p><strong><span style=\"font-size:15px\">Công nghệ ép xung bộ nhớ AMD EXPO</span></strong></p></td><td><p><span style=\"font-size:15px\">Có</span></p></td></tr><tr><td><p><strong><span style=\"font-size:15px\">Socket</span></strong></p></td><td><p><span style=\"font-size:15px\">AM5</span></p></td></tr><tr><td><p><strong><span style=\"font-size:15px\">Phiên bản PCI Express</span></strong></p></td><td><p><span style=\"font-size:15px\">5.0</span></p></td></tr><tr><td><p><strong><span style=\"font-size:15px\">TDP mặc định</span></strong></p></td><td><p><span style=\"font-size:15px\">170W</span></p></td></tr><tr><td><p><strong><span style=\"font-size:15px\">Tiện ích mở rộng được hỗ trợ </span></strong></p></td><td><p><span style=\"font-size:15px\">AES , AMD-V , AVX , AVX2 , AVX512 , FMA3 , MMX-plus , SHA , SSE , SSE2 , SSE3 , SSE4.1 , SSE4.2 , SSE4A , SSSE3 , x86-64</span></p></td></tr><tr><td><p><strong><span style=\"font-size:15px\">Công nghệ bộ xử lý cho lõi CPU</span></strong></p></td><td><p><span style=\"font-size:15px\">TSMC FinFET 4nm</span></p></td></tr><tr><td><p><strong><span style=\"font-size:15px\">Loại bộ nhớ hệ thống</span></strong></p></td><td><p><span style=\"font-size:15px\">DDR5</span></p></td></tr></tbody></table>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "Bộ vi xử lý - Intel Core i5 14400 / Turbo up to 4.7GHz / 10 Nhân 16 Luồng / 20MB / LGA 1700",
+    "code": "524a7784-5292",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/1_f768d2a0cc6a4502b3fa023482074588_grande.png",
+        "public_id": "515419b8"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/2_191929f836f540ff9050feea83af36e7_grande.png",
+        "public_id": "912327e5"
+      }
+    ],
+    "price": 4590000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<p><strong><span style=\"font-size:15px\">Bộ vi xử lý - Intel Core i5 14400 / Turbo up to 4.7GHz / 10 Nhân 16 Luồng / 20MB / LGA 1700<br/><br/>Thông Số Kỹ Thuật</span></strong></p><table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:680px\"><tbody><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Hãng sản xuất</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">Intel</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Socket</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">FCLGA1700</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Dòng CPU</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">Core i5</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">CPU</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">Intel® Core® i5-14400 (Raptor Lake)</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Số nhân</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">10 (6 Performance-cores/ 4 Efficient-cores)</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Số luồng</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">16</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Tốc độ Turbo tối đa của P-core</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">4.7 GHz</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Tốc độ Turbo tối đa của E-core </span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">3.5 GHz</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Tốc độ cơ bản của P-core</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">2.5 GHz</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Tốc độ cơ bản của E-core</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">1.8 GHz</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Điện năng tiêu thụ</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">65W - 148W</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Bộ nhớ đệm</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">20MB Intel® Smart Cache</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Bo mạch chủ tương thích</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">600 và 700 series</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Bộ nhớ hỗ trợ tối đa</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">192GB</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Loại bộ nhớ</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">DDR5, DDR4</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Nhân đồ họa tích hợp</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">Intel® UHD Graphics 730</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Phiên bản PCI Express</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">5.0 and 4.0</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Số lượng PCIe lanes</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">20</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Bảo Hành</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">36 Tháng</span></p></td></tr></tbody></table><p> </p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "Intel",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "Bộ vi xử lý - Intel Core i5 14400F / Turbo up to 4.7GHz / 10 Nhân 16 Luồng / 20MB / LGA 1700",
+    "code": "c193d46d-2707",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/1_948af8671a3a4881b05af9b7b6c2c58c_grande.png",
+        "public_id": "ec79bf89"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/2_8adc646bd8174978a8bd3b1cc8de4010_grande.png",
+        "public_id": "a1b837b0"
+      }
+    ],
+    "price": 3790000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<p><strong><span style=\"font-size:15px\">Bộ vi xử lý - Intel Core i5 14400F / Turbo up to 4.7GHz / 10 Nhân 16 Luồng / 20MB / LGA 1700<br/><br/>Thông Số Kỹ Thuật</span></strong></p><table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:680px\"><tbody><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Hãng sản xuất</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">Intel</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Socket</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">FCLGA1700</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Dòng CPU</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">Core i5</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">CPU</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">Intel® Core® i5-14400F (Raptor Lake)</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Số nhân</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">10 (6 Performance-cores/ 4 Efficient-cores)</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Số luồng</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">16</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Tốc độ Turbo tối đa của P-core</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">4.7 GHz</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Tốc độ Turbo tối đa của E-core </span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">3.5 GHz</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Tốc độ cơ bản của P-core</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">2.5 GHz</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Tốc độ cơ bản của E-core</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">1.8 GHz</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Điện năng tiêu thụ</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">65W - 148W</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Bộ nhớ đệm</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">20MB Intel® Smart Cache</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Bo mạch chủ tương thích</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">600 và 700 series</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Bộ nhớ hỗ trợ tối đa</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">192GB</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Loại bộ nhớ</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">DDR5, DDR4</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Nhân đồ họa tích hợp</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">Không</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Phiên bản PCI Express</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">5.0 and 4.0</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Số lượng PCIe lanes</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">20</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Bảo Hành</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">36 Tháng</span></p></td></tr></tbody></table><p> </p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "Intel",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "Bộ vi xử lý - Intel Core i5 14400F / Turbo up to 4.7GHz / 10 Nhân 16 Luồng / 20MB / LGA 1700 (Tray)",
+    "code": "01c86622-70da",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/14400f_500fe1667d7a4513a164a36a4b087fe3_grande.png",
+        "public_id": "f41d4e5f"
+      }
+    ],
+    "price": 3090000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<p><strong><span style=\"font-size:15px\">Bộ vi xử lý - Intel Core i5 14400F / Turbo up to 4.7GHz / 10 Nhân 16 Luồng / 20MB / LGA 1700 (Tray)<br/><br/>Thông Số Kỹ Thuật</span></strong></p><table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:680px\"><tbody><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Hãng sản xuất</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">Intel</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Socket</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">FCLGA1700</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Dòng CPU</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">Core i5</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">CPU</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">Intel® Core® i5-14400F (Raptor Lake)</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Số nhân</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">10 (6 Performance-cores/ 4 Efficient-cores)</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Số luồng</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">16</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Tốc độ Turbo tối đa của P-core</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">4.7 GHz</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Tốc độ Turbo tối đa của E-core </span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">3.5 GHz</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Tốc độ cơ bản của P-core</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">2.5 GHz</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Tốc độ cơ bản của E-core</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">1.8 GHz</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Điện năng tiêu thụ</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">65W - 148W</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Bộ nhớ đệm</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">20MB Intel® Smart Cache</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Bo mạch chủ tương thích</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">600 và 700 series</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Bộ nhớ hỗ trợ tối đa</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">192GB</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Loại bộ nhớ</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">DDR5, DDR4</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Nhân đồ họa tích hợp</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">Không</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Phiên bản PCI Express</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">5.0 and 4.0</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Số lượng PCIe lanes</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">20</span></p></td></tr><tr><td style=\"width:231px\"><p><strong><span style=\"font-size:15px\">Bảo Hành</span></strong></p></td><td style=\"width:436px\"><p><span style=\"font-size:15px\">36 Tháng</span></p></td></tr></tbody></table><p> </p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "Intel",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "Bộ vi xử lý - Intel Core i5 14500 / Turbo up to 5.0GHz / 14 Nhân 20 Luồng / 24MB / LGA 1700",
+    "code": "34772bf8-244f",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/1_f480fb464d3048cbafcdc79113570447_grande.png",
+        "public_id": "a5ade9c6"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/2_ea8d431081de49ad93010615afef8cc5_grande.png",
+        "public_id": "ff5a95bf"
+      }
+    ],
+    "price": 6490000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<p><strong><span style=\"font-size:15px\">Bộ vi xử lý - Intel Core i5 14500 / Turbo up to 5.0GHz / 14 Nhân 20 Luồng / 24MB / LGA 1700<br/><br/>Thông Số Kỹ Thuật</span></strong></p><table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:653px\"><tbody><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Hãng sản xuất</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">Intel</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Socket</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">FCLGA1700</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Dòng CPU</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">Core i5</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">CPU</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">Intel® Core® i5-14500 (Raptor Lake)</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Số nhân</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">14 (6 Performance-cores/ 8 Efficient-cores)</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Số luồng</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">20</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Tốc độ Turbo tối đa của P-core</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">5.0 GHz</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Tốc độ Turbo tối đa của E-core </span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">3.7 GHz</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Tốc độ cơ bản của P-core</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">2.6 GHz</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Tốc độ cơ bản của E-core</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">1.9 GHz</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Điện năng tiêu thụ</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">65W - 154W</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Bộ nhớ đệm</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">24MB Intel® Smart Cache</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Bo mạch chủ tương thích</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">600 và 700 series</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Bộ nhớ hỗ trợ tối đa</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">192GB</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Loại bộ nhớ</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">DDR5, DDR4</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Nhân đồ họa tích hợp</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">Intel® UHD Graphics 770</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Phiên bản PCI Express</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">5.0 and 4.0</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Số lượng PCIe lanes</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">20</span></p></td></tr><tr><td style=\"width:238px\"><p><strong><span style=\"font-size:15px\">Bảo hành</span></strong></p></td><td style=\"width:402px\"><p><span style=\"font-size:15px\">36 Tháng</span></p></td></tr></tbody></table><p> </p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "Intel",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "CPU AMD - Ryzen Threadripper Pro 5965WX / 3.8GHz Boost 4.5GHz / 24 nhân 48 luồng / 141.5MB / sWRX8",
+    "code": "dc04662a-8938",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_ryzen_threadripper_pro_1_a675ba637a0642898091427ef0495796_grande.jpg",
+        "public_id": "e417fcb4"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_ryzen_threadripper_pro_2_9d8579b5885c43209154164b54618b88_grande.jpg",
+        "public_id": "aab8e7ef"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_ryzen_threadripper_pro_3_95fc9fde5082414ea52de2e6ca2b79cc_grande.jpg",
+        "public_id": "607003f9"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_ryzen_threadripper_pro_4_30d8a70a340444449a0b5b67a30a255a_grande.jpg",
+        "public_id": "8df4beac"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_ryzen_threadripper_pro_5_25b9a2e876ed4d6b8f98eb77bab1c15c_grande.jpg",
+        "public_id": "bc69f603"
+      }
+    ],
+    "price": 64990000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<h1 style=\"text-align: center;\"><strong>CPU AMD - Ryzen Threadripper Pro 5965WX</strong></h1><p><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>THÔNG SỐ KĨ THUẬT : </strong></span></p><table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" id=\"tblGeneralAttribute\" style=\"width:862px\"><tbody><tr><td style=\"width:273px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Socket</strong></span></p></td><td style=\"width:571px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">sWRX8</span></p></td></tr><tr><td style=\"width:273px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Bộ nhớ đệm</strong></span></p></td><td style=\"width:571px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">141.5MB</span></p></td></tr><tr><td style=\"width:273px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Số nhân (Cores)</strong></span></p></td><td style=\"width:571px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">24</span></p></td></tr><tr><td style=\"width:273px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Số luồng (Threads)</strong></span></p></td><td style=\"width:571px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">48</span></p></td></tr><tr><td style=\"width:273px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Xung cơ bản </strong></span></p></td><td style=\"width:571px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">3.8GHz</span></p></td></tr><tr><td style=\"width:273px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Xung boost</strong></span></p></td><td style=\"width:571px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">4.5GHz</span></p></td></tr><tr><td style=\"width:273px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Phiên bản PCI Express</strong></span></p></td><td style=\"width:571px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">PCIe 4.0</span></p></td></tr><tr><td style=\"width:273px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Hỗ trợ RAM</strong></span></p></td><td style=\"width:571px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">3200MHz</span></p></td></tr><tr><td style=\"width:273px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Điện tiêu thụ</strong></span></p></td><td style=\"width:571px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">280W</span></p></td></tr></tbody></table></p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "CPU AMD - Ryzen Threadripper Pro 5975WX / 3.6GHz Boost 4.5GHz / 32 nhân 64 luồng / 146MB / sWRX8",
+    "code": "d45a0ec1-d2fd",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_ryzen_threadripper_pro_1_75bcd1ec8e8547dba7fd1b053a90c249_grande.jpg",
+        "public_id": "c7fc6cbe"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_ryzen_threadripper_pro_2_c3c3c093205e4b66adb0e286d0eabb71_grande.jpg",
+        "public_id": "72a19986"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_ryzen_threadripper_pro_3_275dcfc307304d30819c4cbc9dbe1fef_grande.jpg",
+        "public_id": "b54e3bf3"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_ryzen_threadripper_pro_4_ca00fb5a507446abb6ce1227ca2d1805_grande.jpg",
+        "public_id": "10ec9c7d"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_ryzen_threadripper_pro_5_b498bfa3861a4679bede5719519885dd_grande.jpg",
+        "public_id": "b39d6505"
+      }
+    ],
+    "price": 90990000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<h1 style=\"text-align: center;\"><strong>CPU AMD - Ryzen Threadripper Pro 5975WX</strong></h1><p><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>THÔNG SỐ KĨ THUẬT : </strong></span></p><table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" id=\"tblGeneralAttribute\" style=\"width:865px\"><tbody><tr><td style=\"width:210px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Socket</strong></span></p></td><td style=\"width:635px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">sWRX8</span></p></td></tr><tr><td style=\"width:210px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Bộ nhớ đệm</strong></span></p></td><td style=\"width:635px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">146MB</span></p></td></tr><tr><td style=\"width:210px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Số nhân (Cores)</strong></span></p></td><td style=\"width:635px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">32</span></p></td></tr><tr><td style=\"width:210px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Số luồng (Threads)</strong></span></p></td><td style=\"width:635px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">64</span></p></td></tr><tr><td style=\"width:210px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Xung cơ bản </strong></span></p></td><td style=\"width:635px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">3.6GHz</span></p></td></tr><tr><td style=\"width:210px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Xung boost</strong></span></p></td><td style=\"width:635px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">4.5GHz</span></p></td></tr><tr><td style=\"width:210px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Phiên bản PCI Express</strong></span></p></td><td style=\"width:635px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">PCIe 4.0</span></p></td></tr><tr><td style=\"width:210px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Hỗ trợ RAM</strong></span></p></td><td style=\"width:635px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">3200MHz</span></p></td></tr><tr><td style=\"width:210px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Điện tiêu thụ</strong></span></p></td><td style=\"width:635px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">280W</span></p></td></tr></tbody></table></p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "CPU AMD - Ryzen Threadripper Pro 5995WX / 2.7GHz Boost 4.5GHz / 64 nhân 128 luồng / 292MB / sWRX8",
+    "code": "85334817-4a6d",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_ryzen_threadripper_pro_1_e109de89566f4ac389a4b4bf4c97dcc5_grande.jpg",
+        "public_id": "6cca5077"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_ryzen_threadripper_pro_2_4092cbd6add64fa8a0b7aa8823a26656_grande.jpg",
+        "public_id": "afdca9b3"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_ryzen_threadripper_pro_3_ad0ea7a7ae2c474e8a9e06cf88da681f_grande.jpg",
+        "public_id": "ebaca0f3"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_ryzen_threadripper_pro_4_f9d9219c81184bf9bc3114832984c4ea_grande.jpg",
+        "public_id": "e583f39b"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_ryzen_threadripper_pro_5_b4f99e8fde2344c2936c310800303fa1_grande.jpg",
+        "public_id": "19953ecb"
+      }
+    ],
+    "price": 180990000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<h1 style=\"text-align: center;\"><strong>CPU AMD - Ryzen Threadripper Pro 5995WX</strong></h1><p><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>THÔNG SỐ KĨ THUẬT : </strong></span></p><table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" id=\"tblGeneralAttribute\" style=\"width:813px\"><tbody><tr><td style=\"width:260px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Socket</strong></span></p></td><td style=\"width:535px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">sWRX8</span></p></td></tr><tr><td style=\"width:260px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Bộ nhớ đệm</strong></span></p></td><td style=\"width:535px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">292MB</span></p></td></tr><tr><td style=\"width:260px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Số nhân (Cores)</strong></span></p></td><td style=\"width:535px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">64</span></p></td></tr><tr><td style=\"width:260px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Số luồng (Threads)</strong></span></p></td><td style=\"width:535px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">128</span></p></td></tr><tr><td style=\"width:260px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Xung cơ bản </strong></span></p></td><td style=\"width:535px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">2.7GHz</span></p></td></tr><tr><td style=\"width:260px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Xung boost</strong></span></p></td><td style=\"width:535px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">4.5GHz</span></p></td></tr><tr><td style=\"width:260px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Phiên bản PCI Express</strong></span></p></td><td style=\"width:535px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">PCIe 4.0</span></p></td></tr><tr><td style=\"width:260px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Hỗ trợ RAM</strong></span></p></td><td style=\"width:535px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">3200MHz</span></p></td></tr><tr><td style=\"width:260px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Điện tiêu thụ</strong></span></p></td><td style=\"width:535px\"><p style=\"text-align: center;\"><span style=\"font-size:15px\">280W</span></p></td></tr></tbody></table></p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "CPU AMD Athlon 3000G | 5MB | 3.5GHz | 2 nhân 4 luồng | AM4",
+    "code": "11fb4c3a-5ead",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/lon_3000g__3.5ghz__2_nhan_4_luong___5mb_cache__35w__-_socket_amd_am4_1_1f0ce4a3b3424a3a96858243a0c5a7d5_grande.jpg",
+        "public_id": "39891932"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/lon_3000g__3.5ghz__2_nhan_4_luong___5mb_cache__35w__-_socket_amd_am4_2_23d9b4963a7a4343b2e2beeb88565d5b_grande.jpg",
+        "public_id": "aedae234"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/lon_3000g__3.5ghz__2_nhan_4_luong___5mb_cache__35w__-_socket_amd_am4_3_f526b07d384b4b5d97b9ca612d72e216_grande.jpg",
+        "public_id": "ec496f70"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/lon_3000g__3.5ghz__2_nhan_4_luong___5mb_cache__35w__-_socket_amd_am4_4_a3aad300eed24a49af0b51f9fd62ffef_grande.jpg",
+        "public_id": "8ff5bec9"
+      }
+    ],
+    "price": 1390000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<h1 style=\"text-align: center;\"><strong>CPU AMD ATHLON 3000G | 5MB | 3.5GHZ | 2 NHÂN 4 LUỒNG | AM4</strong></h1><p><p><span style=\"font-size:15px\"><strong>Thông số kỹ thuật</strong></span></p><table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" id=\"tblGeneralAttribute\" style=\"width:827px\"><tbody><tr><td style=\"width:273px\"><p><span style=\"font-size:15px\"><strong>Socket</strong></span></p></td><td style=\"width:534px\"><p><span style=\"font-size:15px\">AM4</span></p></td></tr><tr><td style=\"width:273px\"><p><span style=\"font-size:15px\"><strong>Dòng CPU</strong></span></p></td><td style=\"width:534px\"><p><span style=\"font-size:15px\">Athlon</span></p></td></tr><tr><td style=\"width:273px\"><p><span style=\"font-size:15px\"><strong>CPU</strong></span></p></td><td style=\"width:534px\"><p><span style=\"font-size:15px\">AMD Athlon 3000G</span></p></td></tr><tr><td style=\"width:273px\"><p><span style=\"font-size:15px\"><strong>Số nhân</strong></span></p></td><td style=\"width:534px\"><p><span style=\"font-size:15px\">2</span></p></td></tr><tr><td style=\"width:273px\"><p><span style=\"font-size:15px\"><strong>Số luồng</strong></span></p></td><td style=\"width:534px\"><p><span style=\"font-size:15px\">4</span></p></td></tr><tr><td style=\"width:273px\"><p><span style=\"font-size:15px\"><strong>Tốc độ xử lý tối đa</strong></span></p></td><td style=\"width:534px\"><p><span style=\"font-size:15px\">3.5 Ghz</span></p></td></tr><tr><td style=\"width:273px\"><p><span style=\"font-size:15px\"><strong>Điện năng tiêu thụ</strong></span></p></td><td style=\"width:534px\"><p><span style=\"font-size:15px\">35W</span></p></td></tr><tr><td style=\"width:273px\"><p><span style=\"font-size:15px\"><strong>Công nghệ CPU</strong></span></p></td><td style=\"width:534px\"><p><span style=\"font-size:15px\">14 nm</span></p></td></tr><tr><td style=\"width:273px\"><p><span style=\"font-size:15px\"><strong>Bộ nhớ đệm</strong></span></p></td><td style=\"width:534px\"><p><span style=\"font-size:15px\">5Mb</span></p></td></tr><tr><td style=\"width:273px\"><p><span style=\"font-size:15px\"><strong>Loại bộ nhớ</strong></span></p></td><td style=\"width:534px\"><p><span style=\"font-size:15px\">DDR4-2667 </span></p></td></tr><tr><td style=\"width:273px\"><p><span style=\"font-size:15px\"><strong>Nhân đồ họa</strong></span></p></td><td style=\"width:534px\"><p><span style=\"font-size:15px\">Radeon™ Vega 3 Graphics</span></p></td></tr></tbody></table></p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "CPU AMD Ryzen 3 3200G /6MB /3.6GHz /4 nhân 4 luồng",
+    "code": "781fb5eb-fe1c",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear.ryzen3200g_a_2f904dcb94fc4353a2255511d58355bf_grande.jpg",
+        "public_id": "0364a654"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear.ryzen3200g_b_01e5a19b81ad4967b23c6e8019010856_grande.jpg",
+        "public_id": "86665328"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear.ryzen3200g_c_a5a741ab3c014d5c951d80616c46a458_grande.png",
+        "public_id": "38b4313f"
+      }
+    ],
+    "price": 2290000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<p><span style=\"font-size: 15pt;\"><strong>Tính năng nổi bật:</strong></span></p><p><span><strong></strong></span><br/></p><p><table border=\"4\" cellspacing=\"2\"><tbody><tr><td><strong><span> <span style=\"font-size: 15pt;\">Socket</span></span></strong></td><td><span style=\"font-size: 15pt;\"> <strong>AM4</strong></span></td></tr><tr><td><span style=\"font-size: 15pt;\"><strong> Bộ nhớ đệm</strong></span></td><td><span style=\"font-size: 15pt;\"><strong> 6MB</strong></span></td></tr><tr><td><span style=\"font-size: 15pt;\"><strong> Số nhân (Cores)</strong></span></td><td><span style=\"font-size: 15pt;\"> <b>4</b></span></td></tr><tr><td><span style=\"font-size: 15pt;\"><strong> Số luồng (Threads)</strong></span></td><td><span style=\"font-size: 15pt;\"><b> 4</b></span></td></tr><tr><td><span style=\"font-size: 15pt;\"><strong> Xung cơ bản</strong></span></td><td><span style=\"font-size: 15pt;\"> <strong>3.6GHz</strong></span></td></tr><tr><td><span style=\"font-size: 15pt;\"><strong> Xung tối đa</strong></span></td><td><span style=\"font-size: 15pt;\"> <strong>4.0GHz</strong></span></td></tr><tr><td><span style=\"font-size: 15pt;\"><strong>Tích hợp</strong></span></td><td><span style=\"font-size: 15pt;\"><strong> VGA Radeon™ RX Vega 8 Graphics</strong></span></td></tr><tr><td><span style=\"font-size: 15pt;\"><strong> Điện tiêu thụ</strong></span></td><td><span style=\"font-size: 15pt;\"> <strong>65W</strong></span></td></tr></tbody></table></p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "CPU AMD Ryzen 3 4100 MPK / 3.8GHz Boost 4.0GHz / 4 nhân 8 luồng / AM4",
+    "code": "608dd8f5-218a",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/211250452-a_ryzen3_4000series_row_right_cbcc6f114492441f9c71a36dd23c788c_grande.png",
+        "public_id": "fa3c2cee"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/211250452-a_ryzen3_4000series_row_left_8d46eb08e0414b9dae2a9c9af79b1bf1_grande.png",
+        "public_id": "e475cc65"
+      }
+    ],
+    "price": 1950000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<h1 style=\"text-align: center;\"><strong>CPU AMD RYZEN 3 4100 MPK</strong></h1><p><strong>CPU AMD Ryzen 3 </strong>là những con chip tốt nhất mà AMD từng tạo ra để cạnh tranh với Intel ở phân khúc tầm trung. Với Ryzen 3, AMD đang hướng tới đối tượng người dùng có khả năng kinh tế vừa phải nhưng lại muốn có hiệu suất cao hơn so với core I3 của Intel. </p><p><h2><strong>Thông số kỹ thuật</strong></h2><table style=\"width:402px\"><tbody><tr><td>Thương hiệu</td><td>AMD</td></tr><tr><td>Tên sản phẩm</td><td>RYZEN-3-4100</td></tr><tr><td>Tình trạng</td><td>Mới 100%</td></tr><tr><td>Số nhân</td><td>4</td></tr><tr><td>Số luồng</td><td>8</td></tr><tr><td>Xung nhịp cơ bản</td><td>3.8 GHz</td></tr><tr><td>Xung nhịp tối đa</td><td>4.0 GHz</td></tr><tr><td>Tổng cache L1</td><td>256KB</td></tr><tr><td>Tổng cache L2</td><td>2MB</td></tr><tr><td>Tổng cache L3</td><td>4MB</td></tr><tr><td>Package</td><td>AM4</td></tr><tr><td>TDP / TDP mặc định</td><td>65 W</td></tr><tr><td>Nhiệt độ tối đa</td><td>95°C</td></tr><tr><td>Mở khoá</td><td> Có</td></tr><tr><td>Phiên bản PCIe</td><td>PCIe® 3.0</td></tr><tr><td>CMOS</td><td>TSMC 7nm FinFET</td></tr><tr><td>Giải pháp tản nhiệt</td><td>Wraith Stealth</td></tr></tbody></table></p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "CPU AMD Ryzen 3 4300G / 3.8GHz Boost 4.0GHz / 4 nhân 8 luồng / 6MB / AM4",
+    "code": "18dd0ec8-5c34",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/amd_4000_series_0b9ce6cdc24947cb9a961c8f039b30ae_grande.jpg",
+        "public_id": "492544c0"
+      }
+    ],
+    "price": 2520000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<p><span style=\"font-size:15px\"><strong>Thông số kỹ thuật</strong></span></p><table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" id=\"tblGeneralAttribute\" style=\"width:817px\"><tbody><tr><td style=\"width:375px\"><span style=\"font-size:15px\"><strong>Socket</strong></span></td><td style=\"width:420px\"><span style=\"font-size:15px\">AM4</span></td></tr><tr><td style=\"width:375px\"><span style=\"font-size:15px\"><strong>Bộ nhớ đệm</strong></span></td><td style=\"width:420px\"><span style=\"font-size:15px\">4MB</span></td></tr><tr><td style=\"width:375px\"><span style=\"font-size:15px\"><strong>Số nhân</strong></span></td><td style=\"width:420px\"><span style=\"font-size:15px\">4</span></td></tr><tr><td style=\"width:375px\"><span style=\"font-size:15px\"><strong>Số luồng</strong></span></td><td style=\"width:420px\"><span style=\"font-size:15px\">8</span></td></tr><tr><td style=\"width:375px\"><span style=\"font-size:15px\"><strong>Xung cơ bản</strong></span></td><td style=\"width:420px\"><span style=\"font-size:15px\">3.8Ghz</span></td></tr><tr><td style=\"width:375px\"><span style=\"font-size:15px\"><strong>Xung tối đa</strong></span></td><td style=\"width:420px\"><span style=\"font-size:15px\">4.0Ghz</span></td></tr><tr><td style=\"width:375px\"><span style=\"font-size:15px\"><strong>Tiến trình CPU</strong></span></td><td style=\"width:420px\"><span style=\"font-size:15px\">7nm</span></td></tr><tr><td style=\"width:375px\"><span style=\"font-size:15px\"><strong>Mở khóa để ép xung</strong></span></td><td style=\"width:420px\"><span style=\"font-size:15px\">Có</span></td></tr><tr><td style=\"width:375px\"><br/><span style=\"font-size:15px\"><strong>Tích hợp card đồ họa</strong></span></td><td style=\"width:420px\"><p><span style=\"font-size:15px\">VGA Radeon RX Vega 8 Graphics</span></p></td></tr><tr><td style=\"width:375px\"><span style=\"font-size:15px\"><strong>Điện năng tiêu thụ (TDP)</strong></span></td><td style=\"width:420px\"><span style=\"font-size:15px\">45 - 65W</span></td></tr></tbody></table>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "Unknown",
+    "code": "c039153b-a64f",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/211250451-a_ryzen5_4000series_row_right_b61c810de281489792d82f95081a48e4_grande.png",
+        "public_id": "da83e99b"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/211250451-a_ryzen5_4000series_row_left_bee69139381647d8a07677dcea2f9491_grande.png",
+        "public_id": "8a4463f8"
+      }
+    ],
+    "price": 2290000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<h1 style=\"text-align: center;\"><strong>CPU AMD RYZEN 3 4500 MPK</strong></h1><p><strong>CPU AMD Ryzen 5 4500 MPK</strong> nâng cao hiệu suất xử lý với 6 nhân 12 luồng giúp tăng hiệu năng xử lý đa nguồn, giải phóng sức mạnh để tối đa hóa hiệu suất của máy tính.</p><h2 id=\"modalLabel\">Thông số kỹ thuật chi tiết</h2><table><tbody><tr><td colspan=\"2\">Thiết yếu</td></tr><tr><td>Bộ Sưu Tập Sản Phẩm</td><td>AMD Ryzen™ Processors</td></tr><tr><td>Tên mã</td><td>AMD Ryzen™ 5 Desktop Processors</td></tr><tr><td>Phân đoạn thẳng</td><td>Desktop</td></tr><tr><td>Số hiệu Bộ xử lý</td><td>Ryzen™ 5 4500 MPK</td></tr><tr><td>Tình trạng</td><td>Launched</td></tr><tr><td>Ngày phát hành</td><td>05/04/2022</td></tr><tr><td>Thuật in thạch bản</td><td>TSMC 7nm FinFET</td></tr><tr><td colspan=\"2\">Hiệu suất</td></tr><tr><td>Số nhân</td><td>6</td></tr><tr><td>Số luồng</td><td>12</td></tr><tr><td>Tần số cơ sở của bộ xử lý</td><td>3.6 GHz</td></tr><tr><td>Tần số turbo tối đa</td><td>4.1 GHz</td></tr><tr><td>Bộ nhớ đệm</td><td>8MB</td></tr><tr><td>Nguồn tiêu thụ ( TDP )</td><td>65W</td></tr><tr><td colspan=\"2\">Thông số bộ nhớ</td></tr><tr><td>Các loại bộ nhớ</td><td>DDR4 Up to 3200MHz</td></tr><tr><td colspan=\"2\">Các tùy chọn mở rộng</td></tr><tr><td>Phiên bản PCI Express</td><td>PCIe 4.0</td></tr><tr><td colspan=\"2\">Thông số gói</td></tr><tr><td>Hỗ trợ socket</td><td>AM4</td></tr><tr><td>Thông số giải pháp Nhiệt</td><td>Wraith Stealth</td></tr></tbody></table>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "CPU AMD Ryzen 5 4500 / 3.6GHz Boost 4.1GHz / 6 nhân 12 luồng / 11MB / AM4",
+    "code": "bf690d33-12fb",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/amd_4000_series_00ff4dcada3c44bb971f38c939307d3c_grande.jpg",
+        "public_id": "4c68b3d7"
+      }
+    ],
+    "price": 2150000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<p><span style=\"font-size:15px\"><strong>THÔNG SỐ KĨ THUẬT</strong></span></p><table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" id=\"tblGeneralAttribute\" style=\"width:818px\"><tbody><tr><td><p><span style=\"font-size:15px\"><strong>Số nhân xử lý</strong></span></p></td><td style=\"width:647px\"><p><span style=\"font-size:15px\">6</span></p></td></tr><tr><td><p><span style=\"font-size:15px\"><strong>Số luồng xử lý</strong></span></p></td><td style=\"width:647px\"><p><span style=\"font-size:15px\">12</span></p></td></tr><tr><td><p><span style=\"font-size:15px\"><strong>Tốc độ xử lý</strong></span></p></td><td style=\"width:647px\"><p><span style=\"font-size:15px\">Xung cơ bản 3.6GHz, xung tối đa 4.1GHz</span></p></td></tr><tr><td><p><span style=\"font-size:15px\"><strong>Total L2 Cache:</strong></span></p></td><td style=\"width:647px\"><p> </p><p><span style=\"font-size:15px\">3MB</span></p><p> </p></td></tr><tr><td><p><span style=\"font-size:15px\"><strong>Total L3 Cache:</strong></span></p></td><td style=\"width:647px\"><p> </p><p><span style=\"font-size:15px\">8MB</span></p><p> </p></td></tr><tr><td><p><span style=\"font-size:15px\"><strong>Unlocked:</strong></span></p></td><td style=\"width:647px\"><p><span style=\"font-size:15px\">Yes</span></p></td></tr><tr><td><p><span style=\"font-size:15px\"><strong>CMOS:</strong></span></p></td><td style=\"width:647px\"><p> </p><p><span style=\"font-size:15px\">TSMC 7nm FinFET</span></p><p> </p></td></tr><tr><td><p><span style=\"font-size:15px\"><strong>Kiến trúc</strong></span></p></td><td style=\"width:647px\"><p><span style=\"font-size:15px\">AM4</span></p></td></tr><tr><td><p><span style=\"font-size:15px\"><strong>PCI Express Version:</strong></span></p></td><td style=\"width:647px\"><p><span style=\"font-size:15px\">PCIe® 3.0</span></p></td></tr><tr><td><p><span style=\"font-size:15px\"><strong>Default TDP / TDP:</strong></span></p></td><td style=\"width:647px\"><p><span style=\"font-size:15px\">65W</span></p></td></tr><tr><td><p><span style=\"font-size:15px\"><strong>Bộ nhớ hỗ trợ</strong></span></p></td><td style=\"width:647px\"><p> </p><p> </p><p><span style=\"font-size:15px\">DDR4 Up to 3200MHz</span></p><p><span style=\"font-size:15px\">Memory Channels: 2</span></p><p> </p><p> </p></td></tr><tr><td><p> </p><p> </p><p><span style=\"font-size:15px\"><strong>Công nghệ</strong></span></p></td><td style=\"width:647px\"><ul><li><p><span style=\"font-size:15px\">AMD StoreMI Technology</span></p></li><li><p><span style=\"font-size:15px\">AMD Ryzen™ VR-Ready Premium</span></p></li><li><p><span style=\"font-size:15px\">Kiến trúc '' Zen 2 ''</span></p></li></ul></td></tr><tr><td><p><span style=\"font-size:15px\"><strong>Product Family:</strong></span></p></td><td style=\"width:647px\"><p> </p><p><span style=\"font-size:15px\">AMD Ryzen™ Processors</span></p><p> </p></td></tr><tr><td><p><span style=\"font-size:15px\"><strong>Product Line:</strong></span></p></td><td style=\"width:647px\"><p> </p><p> </p><p> </p><p><span style=\"font-size:15px\">AMD Ryzen™ 5 Desktop Processors</span></p></td></tr></tbody></table>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "CPU AMD Ryzen 5 4600G / 3.7GHz Boost 4.2GHz / 6 nhân 12 luồng / 11MB / AM4",
+    "code": "45e1a412-761a",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/untitleddesign_48_740a55a428f1491996fbd105cb6285f9_grande.jpg",
+        "public_id": "83b06621"
+      }
+    ],
+    "price": 2690000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<h1 style=\"text-align: center;\"><strong>CPU AMD RYZEN 5 4600</strong></h1><p><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>THÔNG SỐ KĨ THUẬT</strong></span></p><table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" id=\"tblGeneralAttribute\"><tbody><tr><td><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Số nhân xử lý</strong></span></p></td><td><p style=\"text-align: center;\"><span style=\"font-size:15px\">6</span></p></td></tr><tr><td><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Số luồng xử lý</strong></span></p></td><td><p style=\"text-align: center;\"><span style=\"font-size:15px\">12</span></p></td></tr><tr><td><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Tốc độ xử lý</strong></span></p></td><td><p style=\"text-align: center;\"><span style=\"font-size:15px\">Xung cơ bản 3.7GHz, xung tối đa 4.2GHz</span></p></td></tr><tr><td><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Total L2 Cache:</strong></span></p></td><td><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"><span style=\"font-size:15px\">3MB</span></p><p style=\"text-align: center;\"> </p></td></tr><tr><td><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Total L3 Cache:</strong></span></p></td><td><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"><span style=\"font-size:15px\">8MB</span></p><p style=\"text-align: center;\"> </p></td></tr><tr><td><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Unlocked:</strong></span></p></td><td><p style=\"text-align: center;\"><span style=\"font-size:15px\">Yes</span></p></td></tr><tr><td><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>CMOS:</strong></span></p></td><td><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"><span style=\"font-size:15px\">TSMC 7nm FinFET</span></p><p style=\"text-align: center;\"> </p></td></tr><tr><td><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Kiến trúc</strong></span></p></td><td><p style=\"text-align: center;\"><span style=\"font-size:15px\">AM4</span></p></td></tr><tr><td><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>PCI Express Version:</strong></span></p></td><td><p style=\"text-align: center;\"><span style=\"font-size:15px\">PCIe® 3.0</span></p></td></tr><tr><td><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Default TDP / TDP:</strong></span></p></td><td><p style=\"text-align: center;\"><span style=\"font-size:15px\">65W</span></p></td></tr><tr><td><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Nhân đồ hoạ tích hợp</strong></span></p></td><td><p style=\"text-align: center;\"><span style=\"font-size:15px\">Tần số đồ họa: 1900 MHz<br/>Mô hình đồ họa: Đồ họa Radeon™<br/>Số lượng lõi đồ họa: 7</span></p></td></tr><tr><td><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Bộ nhớ hỗ trợ</strong></span></p></td><td><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"><span style=\"font-size:15px\">DDR4 Up to 3200MHz</span></p><p style=\"text-align: center;\"><span style=\"font-size:15px\">Memory Channels: 2</span></p><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"> </p></td></tr><tr><td><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Công nghệ</strong></span></p></td><td><ul><li><p style=\"text-align: center;\"><span style=\"font-size:15px\">AMD StoreMI Technology</span></p></li><li><p style=\"text-align: center;\"><span style=\"font-size:15px\">AMD Ryzen™ Master Utility</span></p></li><li><p style=\"text-align: center;\"><span style=\"font-size:15px\">AMD Ryzen™ VR-Ready Premium</span></p></li><li><p style=\"text-align: center;\"><span style=\"font-size:15px\">Kiến trúc '' Zen 2 ''</span></p></li></ul></td></tr><tr><td><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Product Family:</strong></span></p></td><td><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"><span style=\"font-size:15px\">AMD Ryzen™ Processors</span></p><p style=\"text-align: center;\"> </p></td></tr><tr><td><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Product Line:</strong></span></p></td><td><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"><span style=\"font-size:15px\">AMD Ryzen™ 5 4000 G-Series Desktop Processors with Radeon™ Graphics</span></p><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"> </p></td></tr><tr><td><p style=\"text-align: center;\"><span style=\"font-size:15px\"><strong>Platform:</strong></span></p></td><td><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"> </p><p style=\"text-align: center;\"><span style=\"font-size:15px\">Boxed Processor</span></p></td></tr></tbody></table></p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "CPU AMD Ryzen 5 5500 / 3.6GHz Boost 4.2GHz / 6 nhân 12 luồng / 16MB / AM4",
+    "code": "20672098-d643",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_amd_ryzen_5_5500_1_23fcee3d880743e2820e6255152bdf58_grande.png",
+        "public_id": "59015531"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_amd_ryzen_5_5500_2_14ce50511af74e959a19c8a4631fd8d0_grande.png",
+        "public_id": "e4e56cf4"
+      }
+    ],
+    "price": 2590000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<h1 style=\"text-align: center;\"><strong>CPU AMD RYZEN 5500</strong></h1><p><p>Đối với các ứng dụng chuyên dụng trong công việc như render, biên tập video, hình ảnh thì CPU AMD Ryzen 5 5500 là một trong những dòng sản phẩm CPU - Bộ vi xử lý tốt nhất khi mang đến lại tốc độ xử lý rất đáng kinh ngạc, vượt mặt đối thủ trong tầm giá của mình là Core i5 dòng K ở các ứng dụng như Blender, V-Ray, Premiere.</p><p>Tuy nhiên, ở một vài ứng dụng như Photoshop thì việc sở hữu xung nhịp cao là một lợi thế của Intel tuy nhiên khác biệt là không thực sự đáng kể</p><h2><strong>THÔNG SỐ KĨ THUẬT</strong></h2><table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" id=\"tblGeneralAttribute\"><tbody><tr><td><strong>Số nhân xử lý</strong></td><td>6</td></tr><tr><td><strong>Số luồng xử lý</strong></td><td>12</td></tr><tr><td><p><strong>Tốc độ xử lý</strong></p></td><td>Xung cơ bản 3.6GHz, xung tối đa 4.2GHz</td></tr><tr><td><p><strong>Total L2 Cache:</strong></p></td><td><p> </p><p>3MB</p><p> </p></td></tr><tr><td><p><strong>Total L3 Cache:</strong></p></td><td><p> </p><p>16MB</p><p> </p></td></tr><tr><td><strong>Mở khóa để ép xung:</strong></td><td>Có</td></tr><tr><td><strong>CMOS:</strong></td><td><p> </p><p>TSMC 7nm FinFET</p><p> </p></td></tr><tr><td><strong>Kiến trúc</strong></td><td>AM4</td></tr><tr><td><p><strong>PCI Express Version:</strong></p></td><td>PCIe® 3.0</td></tr><tr><td><p><strong>Giải pháp tản nhiệt (PIB):</strong></p></td><td><p> </p><p>Wraith Stealth</p><p> </p></td></tr><tr><td><p><strong>TDP / TDP mặc định:</strong></p></td><td>65W</td></tr><tr><td><p><strong>Bộ nhớ hỗ trợ</strong></p></td><td><p> </p><p> </p><p>DDR4 Up to 3200MHz</p><p>Memory Channels: 2</p><p> </p><p> </p></td></tr><tr><td><p><strong>Product Family:</strong></p></td><td><p> </p><p>AMD Ryzen™ Processors</p><p> </p></td></tr><tr><td><p><strong>Product Line:</strong></p></td><td><p> </p><p> </p><p> </p><p>AMD Ryzen™ 5 Desktop Processors</p><p> </p><p> </p><p> </p></td></tr><tr><td><strong>Công nghệ được hỗ trợ:</strong></td><td>AMD StoreMI Technology<br/>AMD \"Zen 3\" Core Architecture<br/>AMD Ryzen™ VR-Ready Premium</td></tr></tbody></table></p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "CPU AMD Ryzen 5 5600 / 3.5GHz Boost 4.4GHz / 6 nhân 12 luồng / 32MB / AM4",
+    "code": "2c64c3c4-89f3",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_amd_ryzen_5_5600_1_79c8ac1226144c9891a80d393a1859eb_grande.png",
+        "public_id": "9ae5e62b"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_amd_ryzen_5_5600_2_c16c6695149c4ab19de8702090c492d1_grande.png",
+        "public_id": "694be127"
+      }
+    ],
+    "price": 3650000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<h1 style=\"text-align: center;\"><strong>CPU AMD RYZEN 5 5600</strong></h1><p>CPU AMD Ryzen 5 5600 được sản xuất với tiến trình TSMC 7nm FinFET mang lại số lượng vi xử lý nhiều hơn, chứng minh qua tốc độ đạt 3.5GHz và khi boost là 4.4GHz. Với 6 nhân 12 luồng, AMD Ryzen 5 5600 không chỉ đem đến khả năng xử lý với tốc độ cao giúp tối ưu thời gian làm việc mà còn giúp bạn tận hưởng những tựa game AAA trên những bộ PC Gaming.</p><p> </p><p><h3><strong>THÔNG SỐ KĨ THUẬT</strong></h3><table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" id=\"tblGeneralAttribute\"><tbody><tr><td><strong>Số nhân xử lý</strong></td><td>6</td></tr><tr><td><strong>Số luồng xử lý</strong></td><td>12</td></tr><tr><td><p><strong>Tốc độ xử lý</strong></p></td><td>Xung cơ bản 3.5GHz, xung tối đa 4.4GHz</td></tr><tr><td><p><strong>Total L2 Cache:</strong></p></td><td><p> </p><p>3MB</p><p> </p></td></tr><tr><td><p><strong>Total L3 Cache:</strong></p></td><td><p> </p><p>32MB</p><p> </p></td></tr><tr><td><strong>Mở khóa để ép xung:</strong></td><td>Có</td></tr><tr><td><strong>CMOS:</strong></td><td><p> </p><p>TSMC 7nm FinFET</p><p> </p></td></tr><tr><td><strong>Kiến trúc</strong></td><td>AM4</td></tr><tr><td><p><strong>PCI Express Version:</strong></p></td><td>PCIe® 4.0</td></tr><tr><td><p><strong>Giải pháp tản nhiệt (PIB):</strong></p></td><td><p> </p><p>Wraith Stealth</p><p> </p></td></tr><tr><td><p><strong>TDP / TDP mặc định:</strong></p></td><td>65W</td></tr><tr><td><p><strong>Bộ nhớ hỗ trợ</strong></p></td><td><p> </p><p> </p><p>DDR4 Up to 3200MHz</p><p>Memory Channels: 2</p><p> </p><p> </p></td></tr><tr><td><p><strong>Product Family:</strong></p></td><td><p> </p><p>AMD Ryzen™ Processors</p><p> </p></td></tr><tr><td><p><strong>Product Line:</strong></p></td><td><p> </p><p> </p><p> </p><p>AMD Ryzen™ 5 Desktop Processors</p><p> </p><p> </p><p> </p></td></tr><tr><td><strong>Công nghệ được hỗ trợ:</strong></td><td>AMD StoreMI Technology<br/>AMD \"Zen 3\" Core Architecture<br/>AMD Ryzen™ VR-Ready Premium</td></tr></tbody></table></p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "CPU AMD Ryzen 5 5600G / 19MB / 3.9GHz Boost 4.4GHz / 6 nhân 12 luồng / AM4",
+    "code": "9dfb15ce-4c00",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear-cpu-amd-ryzen-5-5600g-1_7488ea564c8943c7b82d42f3e3130275_grande.png",
+        "public_id": "6a390106"
+      },
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear-cpu-amd-ryzen-5-5600g-3_be4e01125cc643c6b5a7302c0d5efd21_grande.png",
+        "public_id": "9daee505"
+      }
+    ],
+    "price": 3750000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<h1 style=\"text-align: center;\"><span style=\"font-size:15pt\"><strong>CPU AMD Ryzen 5 5600G / 19MB / 3.9GHz Boost 4.4GHz / 6 nhân 12 luồng / AM4</strong></span></h1><p><p style=\"text-align: center\"><img data-src=\"//file.hstatic.net/1000037809/file/thegioigear-cpu-amd-ryzen-5-5600g-2_2493722d7fd34c1aa392a6f2664aa78c_master.png\"/></p><h2 style=\"text-align: center;\"><span style=\"font-size:10px\">thegioigear.vn - CPU AMD Ryzen 5 5600G / 19MB / 3.9GHz Boost 4.4GHz / 6 nhân 12 luồng / AM4</span></h2></p><p><span style=\"font-size:15pt\"><strong>Thông số kỹ thuật AMD Ryzen 5 5600G:</strong></span></p><p> </p><p><table border=\"4\" cellspacing=\"2\" style=\"height:257px; width:819px\"><tbody><tr><td>Số nhân</td><td>6</td></tr><tr><td>Số luồng</td><td>12</td></tr><tr><td>Tốc độ cơ bản</td><td>3.9GHz</td></tr><tr><td>Tốc độ tối đa (Max Boost)</td><td>4.4GHz</td></tr><tr><td>Bộ nhớ đệm</td><td>3MB (L2) + 16MB (L3)</td></tr><tr><td>Hỗ trợ mở khóa hệ số nhân</td><td>Có</td></tr><tr><td>Socket</td><td>AM4</td></tr><tr><td>Phiên bản PCI Express</td><td>4.0</td></tr><tr><td>TDP mặc định</td><td>65W</td></tr><tr><td>Loại RAM hỗ trợ</td><td>DDR4 3200MHz</td></tr><tr><td>Tiến trình sản xuất</td><td>TSMC 7nm</td></tr></tbody></table></p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "CPU AMD Ryzen 5 5600X / 32MB / 3.7GHz Boost 4.6GHz / 6 nhân 12 luồng",
+    "code": "87126790-560a",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/thegioigear_cpu_amd_ryzen_5_5600x_1_9af6d944595148b0b056943e3d1afaeb_grande.jpg",
+        "public_id": "0866036c"
+      }
+    ],
+    "price": 3990000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<h1 style=\"text-align: center;\">CPU AMD Ryzen 5 5600X / 32MB / 3.7GHz Boost 4.6GHz / 6 nhân 12 luồng</h1><p><span>Ryzen 5000 Series sở hữu kiến trúc Zen 3 với nhiều thay đổi mang lại hiệu năng rất cao so với thế hệ cũ</span></p><p>Mỗi nhân Zen 3 trên Ryzen 5000 sẽ có 512kB Cache L2. Từ đó có 4MB cache L2/CCD và nếu CPU có 2 CCD thì tổng lượng cache L2 sẽ là 8MB. Đi cùng với đó, mỗi CCD sẽ có thêm 32MB cache L3 và sẽ hợp nhất lại thành 1, thay vì chia làm đôi như thế hệ trước. </p><p>Tất cả những cải tiến đó cho phép: </p><ul><li>Xung boost cao hơn</li><li>IPC tăng lên tới 19%</li><li>Giảm thiểu đáng kể độ trễ bộ nhớ</li><li>Tăng tốc giao tiếp giữa nhân và cache<h2 class=\"tskt-title spct-title\" style=\"text-align: left;\">Thông số kỹ thuật</h2><p class=\"bang-tskt\"><table class=\"mce-item-table\" width=\"523\"><tbody><tr><td><p>Tên gọi</p></td><td><p>AMD Ryzen 5 5600X</p></td></tr><tr><td><p>Hãng sản xuất</p></td><td><p>AMD</p></td></tr><tr><td><p>Số nhân</p></td><td><p>6</p></td></tr><tr><td><p>Số luồng</p></td><td><p>12</p></td></tr><tr><td><p>Tốc độ cơ bản</p></td><td><p>3.7GHz</p></td></tr><tr><td><p>Tốc độ tối đa (Max Boost)</p></td><td><p>4.8GHz</p></td></tr><tr><td><p>Bộ nhớ đệm</p></td><td><p>3MB (L2) + 32MB (L3)</p></td></tr><tr><td><p>Hỗ trợ mở khóa hệ số nhân</p></td><td><p>Có</p></td></tr><tr><td><p>Socket</p></td><td><p>AM4</p></td></tr><tr><td><p>Phiên bản PCI Express</p></td><td><p>4.0</p></td></tr><tr><td><p>TDP mặc định</p></td><td><p>65W</p></td></tr><tr><td><p>Loại RAM hỗ trợ</p></td><td><p>DDR4 3200MHz</p></td></tr><tr><td><p>Tiến trình sản xuất</p></td><td><p>TSMC 7nm</p></td></tr></tbody></table></p></li></ul>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  },
+  {
+    "name": "CPU AMD Ryzen 5 7600 / 3.8GHz Boost 5.1GHz / 6 nhân 12 luồng / 38MB / AM5",
+    "code": "199233d7-bb2c",
+    "image": [
+      {
+        "url": "https://product.hstatic.net/1000037809/product/221764007-a_ryzen5_7000_65w_3dpib_front_pl_bca01c27315c4daa9d666abc70a7a953_grande.png",
+        "public_id": "9a4a0b72"
+      }
+    ],
+    "price": 5490000,
+    "description": "<div class=\"product-description-tab\">\n<div class=\"content-entry add-height-img max-height-ct lazyload-addclass\">\n<div class=\"more-description\">\n<h1 style=\"text-align: center;\"><strong>CPU AMD RYZEN 5 7600</strong></h1><p><h2><strong>Thông số kỹ thuật:</strong></h2><table border=\"1\" cellpadding=\"3\" cellspacing=\"0\" id=\"tblGeneralAttribute\" style=\"width:801px\"><tbody><tr><td style=\"width:394px\"><strong>Số nhân (Cores):</strong></td><td style=\"width:387px\">6</td></tr><tr><td style=\"width:394px\"><strong>Số luồng (Threads):</strong></td><td style=\"width:387px\">12</td></tr><tr><td style=\"width:394px\"><p><strong>Tốc độ xử lý:</strong></p></td><td style=\"width:387px\">Xung cơ bản 3.8GHz, xung tối đa 5.1GHz</td></tr><tr><td style=\"width:394px\"><p><strong>Bộ nhớ đệm L2:</strong></p></td><td style=\"width:387px\"><p> </p><p>6MB</p><p> </p></td></tr><tr><td style=\"width:394px\"><p><strong>Bộ nhớ đệm L3:</strong></p></td><td style=\"width:387px\"><p> </p><p>32MB</p><p> </p></td></tr><tr><td style=\"width:394px\"><strong>Mở khóa để ép xung:</strong></td><td style=\"width:387px\">Không</td></tr><tr><td style=\"width:394px\"><strong>CMOS:</strong></td><td style=\"width:387px\"><p> </p><p>--</p><p> </p></td></tr><tr><td style=\"width:394px\"><strong>Socket:</strong></td><td style=\"width:387px\">AM5</td></tr><tr><td style=\"width:394px\"><p><strong>Phiên bản PCI Express :</strong></p></td><td style=\"width:387px\">PCIe® 5.0</td></tr><tr><td style=\"width:394px\"><p><strong>Giải pháp tản nhiệt (PIB):</strong></p></td><td style=\"width:387px\">AMD Wraith Stealth</td></tr><tr><td style=\"width:394px\"><p><strong>TDP / TDP mặc định:</strong></p></td><td style=\"width:387px\">65 W</td></tr><tr><td style=\"width:394px\"><p><strong>Bộ nhớ hỗ trợ</strong></p></td><td style=\"width:387px\"><p> </p><p> </p><p>--</p><p> </p><p> </p></td></tr><tr><td style=\"width:394px\"><p><strong>Nhóm sản phẩm:</strong></p></td><td style=\"width:387px\"><p> </p><p>AMD Ryzen™ Processors</p><p> </p></td></tr><tr><td style=\"width:394px\"><p><strong>Dòng sản phẩm:</strong></p></td><td style=\"width:387px\"><p> </p><p> </p><p> </p><p>--</p><p> </p><p> </p><p> </p></td></tr><tr><td style=\"width:394px\"><strong>Công nghệ hỗ trợ:</strong></td><td style=\"width:387px\">AMD \"Zen 4\" Core Architecture</td></tr></tbody></table></p>\n</div>\n</div>\n<div class=\"view-all-btn\">\n<button>\n<i class=\"fa fa-plus-circle\"></i> Xem thêm\n\t\t\t</button>\n</div>\n</div>",
+    "available": 999,
+    "brand": "AMD",
+    "subcategory": "68397dc7f1382c4b0e7c562c"
+  }
+]
