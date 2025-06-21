@@ -1,0 +1,12 @@
+/* Custom slider dots styling */
+.custom-dots .slick-dots li button div {
+  @apply bg-gray-300;
+}
+
+.custom-dots .slick-dots li.slick-active button div {
+  @apply bg-primary;
+}
+
+.custom-dots .slick-dots li button div:hover {
+  @apply bg-primary;
+}

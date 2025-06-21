@@ -74,3 +74,13 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.slick-track
+{
+    display: flex !important;
+}
+
+.slick-slide
+{
+    height: inherit !important;
+}
