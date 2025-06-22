@@ -4,7 +4,7 @@ import SharedIcon from "@/components/shared/icons";
 import { IconName } from "@/constants/icons";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   FaChevronDown,
   FaChevronRight,
@@ -12,6 +12,7 @@ import {
   FaSearch,
   FaUser,
 } from "react-icons/fa";
+import LoginModal from "./LoginModal";
 import { headerData } from "./mockHeaderData";
 
 const MegaMenu = () => {
@@ -126,6 +127,8 @@ const MegaMenu = () => {
 
 const Header = () => {
   const [showMegaMenu, setShowMegaMenu] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const loginTriggerRef = useRef<HTMLDivElement>(null);
 
   return (
     <>
@@ -200,7 +203,11 @@ const Header = () => {
               </div>
 
               {/* Account */}
-              <div className="flex items-center gap-2">
+              <div
+                ref={loginTriggerRef}
+                className="flex items-center gap-2 cursor-pointer"
+                onClick={() => setShowLoginModal(!showLoginModal)}
+              >
                 <FaUser className="text-white w-6 h-6" />
                 <div>
                   <div className="text-green-500 text-xs font-medium">
@@ -316,6 +323,13 @@ const Header = () => {
           </div>
         </div>
       </header>
+
+      {/* Login Modal */}
+      <LoginModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+        triggerRef={loginTriggerRef}
+      />
     </>
   );
 };

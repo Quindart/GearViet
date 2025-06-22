@@ -1,8 +1,12 @@
 import BannerGroup from "@/components/Home/BannerGroup";
 import CategoryGroup from "@/components/Home/CategoryGroup";
+import CollectionGroup from "@/components/Home/CollectionGroup";
 import FlashSale from "@/components/Home/FlashSale";
 import FourBanners from "@/components/Home/FourBanners";
 import HomeSwiper from "@/components/Home/HomeSwiper";
+import KeyboardCollection from "@/components/Home/KeyboardCollection";
+import LatestNews from "@/components/Home/LatestNews";
+import MonitorCollection from "@/components/Home/MonitorCollection";
 import NewCollection from "@/components/Home/NewCollection";
 
 function HomePage() {
@@ -15,7 +19,10 @@ function HomePage() {
         <FlashSale />
         <NewCollection />
         <FourBanners />
-        <h1>test</h1>
+        <CollectionGroup />
+        <MonitorCollection />
+        <KeyboardCollection />
+        <LatestNews />
       </div>
     </div>
   );
