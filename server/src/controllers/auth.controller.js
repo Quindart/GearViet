@@ -1,30 +1,31 @@
+import CryptoJS from "crypto-js";
+import jsonwebtoken from "jsonwebtoken";
+import nodemailer from "nodemailer";
 import User from "../models/user.model.js";
 import {
   HTTP_STATUS,
   randomPassword,
   setResetPassEmailContent,
 } from "../utils/constant.js";
-import CryptoJS from "crypto-js";
-import jsonwebtoken from "jsonwebtoken";
-import { sendWarning, sendError } from "../utils/response.js";
-import nodemailer from "nodemailer";
+import { sendError, sendWarning } from "../utils/response.js";
 
 //[POST] login
 export const login = async (req, res) => {
-
-  const { username, password, remember } = req.body;
+  const { email, password, remember } = req.body;
   try {
+    // Find user by email only
     const user = await User.findOne({
-      username: username.toLowerCase(),
-    }).select("username password email role status");
+      email: email.toLowerCase()
+    }).select("username password email firstName lastName phone role status");
+    
     if (!user) {
-      return sendWarning(res, "Invalid username or password");
+      return sendWarning(res, "Invalid email or password");
     } else {
       const decryptedPassword = decryptPassword(user.password);
 
       //check password
       if (decryptedPassword !== password) {
-        return sendWarning(res, "Invalid username or password");
+        return sendWarning(res, "Invalid email or password");
       }
 
       //check user inactive
@@ -43,14 +44,20 @@ export const login = async (req, res) => {
       res.status(HTTP_STATUS.SUCCESS).json({
         success: true,
         status: 200,
-        user: {
-          id: user._id,
-          username: user.username,
-          role: user.role,
-          email: user.email,
-          status: user.status,
+        message: "Login successful",
+        data: {
+          user: {
+            id: user._id,
+            username: user.username,
+            firstName: user.firstName,
+            lastName: user.lastName,
+            email: user.email,
+            phone: user.phone,
+            role: user.role,
+            status: user.status,
+          },
+          token: token,
         },
-        token: token,
       });
     }
   } catch (error) {
@@ -60,16 +67,23 @@ export const login = async (req, res) => {
 
 //[POST] register
 export const register = async (req, res) => {
-  const { username, password, email } = req.body;
-  console.log("💲💲💲 ~ register ~ username, password, email:", username, password, email)
+  const { email, firstName, lastName, phone, password } = req.body;
+  console.log("💲💲💲 ~ register ~ registration data:", { email, firstName, lastName, phone, password });
 
   try {
     const encryptedPassword = encryptPassword(password);
+    
+    // Generate username from email (part before @)
+    const username = email.split('@')[0].toLowerCase();
 
     const newUser = await User.create({
-      username: username.toLowerCase(),
+      username,
       password: encryptedPassword.toString(),
       email,
+      firstName,
+      lastName,
+      phone,
+      name: `${firstName} ${lastName}`, // Keep the name field for backward compatibility
     });
 
     const token = jwtSign(newUser._id);
@@ -77,14 +91,20 @@ export const register = async (req, res) => {
     res.status(HTTP_STATUS.SUCCESS).json({
       success: true,
       status: 200,
-      user: {
-        id: newUser._id,
-        username: newUser.username,
-        role: newUser.role,
-        email: newUser.email,
-        status: newUser.status,
+      message: "Registration successful",
+      data: {
+        user: {
+          id: newUser._id,
+          username: newUser.username,
+          firstName: newUser.firstName,
+          lastName: newUser.lastName,
+          email: newUser.email,
+          phone: newUser.phone,
+          role: newUser.role,
+          status: newUser.status,
+        },
+        token,
       },
-      token,
     });
   } catch (error) {
     sendError(res, error);

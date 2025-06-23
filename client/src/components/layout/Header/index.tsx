@@ -2,14 +2,16 @@
 
 import SharedIcon from "@/components/shared/icons";
 import { IconName } from "@/constants/icons";
+import { useAuthStore } from "@/store/authStore";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   FaChevronDown,
   FaChevronRight,
   FaPhone,
   FaSearch,
+  FaSignOutAlt,
   FaUser,
 } from "react-icons/fa";
 import LoginModal from "./LoginModal";
@@ -128,7 +130,38 @@ const MegaMenu = () => {
 const Header = () => {
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showUserDropdown, setShowUserDropdown] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const loginTriggerRef = useRef<HTMLDivElement>(null);
+  const userDropdownRef = useRef<HTMLDivElement>(null);
+
+  // Get auth state from Zustand store
+  const { isAuthenticated, user, logout } = useAuthStore();
+
+  const handleLogout = () => {
+    logout();
+    setShowUserDropdown(false);
+  };
+
+  // Close user dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        userDropdownRef.current &&
+        !userDropdownRef.current.contains(event.target as Node)
+      ) {
+        setShowUserDropdown(false);
+      }
+    };
+
+    if (showUserDropdown) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showUserDropdown]);
 
   return (
     <>
@@ -161,6 +194,8 @@ const Header = () => {
                 <input
                   type="text"
                   placeholder="Bạn đang tìm gì..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full h-10 px-3 py-2 rounded-md bg-white text-gray-800 focus:outline-none placeholder:text-gray-500"
                 />
                 <button className="absolute right-1 top-1/2 -translate-y-1/2 bg-black h-[90%] w-[80px] flex items-center justify-center rounded-md">
@@ -203,22 +238,75 @@ const Header = () => {
               </div>
 
               {/* Account */}
-              <div
-                ref={loginTriggerRef}
-                className="flex items-center gap-2 cursor-pointer"
-                onClick={() => setShowLoginModal(!showLoginModal)}
-              >
-                <FaUser className="text-white w-6 h-6" />
-                <div>
-                  <div className="text-green-500 text-xs font-medium">
-                    Đăng nhập
+              {isAuthenticated && user ? (
+                <div
+                  ref={userDropdownRef}
+                  className="relative flex items-center gap-2 cursor-pointer"
+                  onClick={() => setShowUserDropdown(!showUserDropdown)}
+                >
+                  <FaUser className="text-white w-6 h-6" />
+                  <div>
+                    <div className="text-green-500 text-xs font-medium">
+                      Xin chào
+                    </div>
+                    <div className="text-green-500 text-sm font-medium">
+                      {user.firstName} {user.lastName}
+                    </div>
                   </div>
-                  <div className="text-green-500 text-sm font-medium">
-                    Đăng ký
-                  </div>
+                  <FaChevronDown className="text-white" />
+
+                  {/* User Dropdown */}
+                  {showUserDropdown && (
+                    <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                      <Link
+                        href="/profile"
+                        className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-50"
+                        onClick={() => setShowUserDropdown(false)}
+                      >
+                        <FaUser className="w-4 h-4" />
+                        Thông tin tài khoản
+                      </Link>
+                      <Link
+                        href="/orders"
+                        className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-50"
+                        onClick={() => setShowUserDropdown(false)}
+                      >
+                        <SharedIcon
+                          iconName="CART"
+                          type="ICON"
+                          className="w-4 h-4"
+                        />
+                        Đơn hàng của tôi
+                      </Link>
+                      <hr className="my-2" />
+                      <button
+                        onClick={handleLogout}
+                        className="flex items-center gap-2 px-4 py-2 text-red-600 hover:bg-red-50 w-full text-left"
+                      >
+                        <FaSignOutAlt className="w-4 h-4" />
+                        Đăng xuất
+                      </button>
+                    </div>
+                  )}
                 </div>
-                <FaChevronDown className="text-white" />
-              </div>
+              ) : (
+                <div
+                  ref={loginTriggerRef}
+                  className="flex items-center gap-2 cursor-pointer"
+                  onClick={() => setShowLoginModal(!showLoginModal)}
+                >
+                  <FaUser className="text-white w-6 h-6" />
+                  <div>
+                    <div className="text-green-500 text-xs font-medium">
+                      Đăng nhập
+                    </div>
+                    <div className="text-green-500 text-sm font-medium">
+                      Đăng ký
+                    </div>
+                  </div>
+                  <FaChevronDown className="text-white" />
+                </div>
+              )}
 
               {/* Cart */}
               <Link
