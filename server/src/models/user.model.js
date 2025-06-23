@@ -1,14 +1,14 @@
-import mongoose from 'mongoose'
-import validator from "validator"
+import mongoose from 'mongoose';
+import validator from "validator";
 
 const userSchema = new mongoose.Schema(
   {
     username: {
       type: String,
-      required: true,
       unique: true,
       trim: true,
       lowercase: true,
+      sparse: true, // Allow null/undefined values to be non-unique
     },
     password: {
       type: String,
@@ -18,6 +18,16 @@ const userSchema = new mongoose.Schema(
     },
     name: {
       type: String,
+    },
+    firstName: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    lastName: {
+      type: String,
+      required: true,
+      trim: true,
     },
     address: {
       province: {
@@ -35,8 +45,8 @@ const userSchema = new mongoose.Schema(
       detail: String,
     },
     phone: {
-      type: Number,
-      // required: true,
+      type: String,
+      required: true,
       unique: true,
       trim: true,
     },

@@ -1,22 +1,22 @@
 import express from "express";
 import {
+  changePassword,
   login,
   register,
   resetPassword,
-  changePassword,
 } from "../controllers/auth.controller.js";
-import { validate } from "../middlewares/validation.js";
-import { body } from "express-validator";
-import User from "../models/user.model.js";
 import {
-  isValidUsernameLength,
-  isValidPasswordLength,
-  isValidEmail,
-  isUsernameExist,
-  isMatchPasswordRegex,
   isConfirmPasswordMatch,
+  isMatchPasswordRegex,
+  isPhoneExist,
+  isValidEmail,
+  isValidFirstName,
+  isValidLastName,
+  isValidPasswordLength,
+  isValidPhone,
 } from "../middlewares/authValidation.js";
 import { verifyToken } from "../middlewares/tokenHandler.js";
+import { validate } from "../middlewares/validation.js";
 import { ROUTES } from "../utils/routes.js";
 
 const router = express.Router();
@@ -25,7 +25,7 @@ const router = express.Router();
 //login route
 router.post(
   ROUTES.LOGIN,
-  isValidUsernameLength,
+  isValidEmail,
   isValidPasswordLength,
   validate,
   login
@@ -34,12 +34,14 @@ router.post(
 //register route
 router.post(
   ROUTES.REGISTER,
-  isValidUsernameLength,
-  isUsernameExist,
+  isValidFirstName,
+  isValidLastName,
   isValidPasswordLength,
   isMatchPasswordRegex,
   isConfirmPasswordMatch,
   isValidEmail,
+  isValidPhone,
+  isPhoneExist,
   validate,
   register
 );

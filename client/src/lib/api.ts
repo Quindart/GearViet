@@ -1,4 +1,6 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+import { useAuthStore } from "@/store/authStore";
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
 
 interface ApiResponse<T = unknown> {
   success: boolean;
@@ -7,18 +9,22 @@ interface ApiResponse<T = unknown> {
 }
 
 interface FetchOptions extends RequestInit {
-  data?: Record<string, unknown>;
+  data?: Record<string, unknown> | FormData | string;
 }
 
-async function fetchWithAuth<T>(endpoint: string, options: FetchOptions = {}): Promise<ApiResponse<T>> {
+async function fetchWithAuth<T>(
+  endpoint: string,
+  options: FetchOptions = {}
+): Promise<ApiResponse<T>> {
   const headers: Record<string, string> = {
-    'Content-Type': 'application/json',
-    ...options.headers as Record<string, string>,
+    "Content-Type": "application/json",
+    ...(options.headers as Record<string, string>),
   };
 
-  const token = localStorage.getItem('token');
+  // Get token from Zustand store instead of localStorage
+  const token = useAuthStore.getState().token;
   if (token) {
-    headers['Authorization'] = `Bearer ${token}`;
+    headers["Authorization"] = `Bearer ${token}`;
   }
 
   const { data, ...restOptions } = options;
@@ -33,48 +39,64 @@ async function fetchWithAuth<T>(endpoint: string, options: FetchOptions = {}): P
   }
 
   const response = await fetch(`${API_URL}${endpoint}`, config);
-  const result = await response.json() as ApiResponse<T>;
+  const result = (await response.json()) as ApiResponse<T>;
 
   if (!response.ok) {
-    throw new Error(result.message || 'API request failed');
+    throw new Error(result.message || "API request failed");
   }
 
   return result;
 }
 
 export const api = {
-  get: <T>(endpoint: string, options?: FetchOptions): Promise<ApiResponse<T>> => 
-    fetchWithAuth<T>(endpoint, { ...options, method: 'GET' }),
+  get: <T>(endpoint: string, options?: FetchOptions): Promise<ApiResponse<T>> =>
+    fetchWithAuth<T>(endpoint, { ...options, method: "GET" }),
 
-  post: <T>(endpoint: string, data?: Record<string, unknown>, options?: FetchOptions): Promise<ApiResponse<T>> =>
-    fetchWithAuth<T>(endpoint, { ...options, method: 'POST', data }),
+  post: <T>(
+    endpoint: string,
+    data?: Record<string, unknown>,
+    options?: FetchOptions
+  ): Promise<ApiResponse<T>> =>
+    fetchWithAuth<T>(endpoint, { ...options, method: "POST", data }),
 
-  put: <T>(endpoint: string, data?: Record<string, unknown>, options?: FetchOptions): Promise<ApiResponse<T>> =>
-    fetchWithAuth<T>(endpoint, { ...options, method: 'PUT', data }),
+  put: <T>(
+    endpoint: string,
+    data?: Record<string, unknown>,
+    options?: FetchOptions
+  ): Promise<ApiResponse<T>> =>
+    fetchWithAuth<T>(endpoint, { ...options, method: "PUT", data }),
 
-  delete: <T>(endpoint: string, data?: Record<string, unknown>, options?: FetchOptions): Promise<ApiResponse<T>> =>
-    fetchWithAuth<T>(endpoint, { ...options, method: 'DELETE', data }),
+  delete: <T>(
+    endpoint: string,
+    data?: Record<string, unknown>,
+    options?: FetchOptions
+  ): Promise<ApiResponse<T>> =>
+    fetchWithAuth<T>(endpoint, { ...options, method: "DELETE", data }),
 
-  upload: async <T>(endpoint: string, formData: FormData): Promise<ApiResponse<T>> => {
+  upload: async <T>(
+    endpoint: string,
+    formData: FormData
+  ): Promise<ApiResponse<T>> => {
     const headers: Record<string, string> = {};
-    
-    const token = localStorage.getItem('token');
+
+    // Get token from Zustand store instead of localStorage
+    const token = useAuthStore.getState().token;
     if (token) {
-      headers['Authorization'] = `Bearer ${token}`;
+      headers["Authorization"] = `Bearer ${token}`;
     }
 
     const response = await fetch(`${API_URL}${endpoint}`, {
-      method: 'POST',
+      method: "POST",
       headers,
       body: formData,
     });
 
-    const result = await response.json() as ApiResponse<T>;
+    const result = (await response.json()) as ApiResponse<T>;
 
     if (!response.ok) {
-      throw new Error(result.message || 'Upload failed');
+      throw new Error(result.message || "Upload failed");
     }
 
     return result;
-  }
-}; 
+  },
+};
