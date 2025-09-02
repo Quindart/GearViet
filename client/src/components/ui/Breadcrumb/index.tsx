@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { FaChevronRight, FaHome } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 
 export interface BreadcrumbItem {
   label: string;

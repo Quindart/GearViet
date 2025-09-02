@@ -89,7 +89,7 @@ export const useReviewStore = create<ReviewState>((set, get) => ({
       );
       if (response.success && response.data?.review) {
         const reviews = get().reviews.map(review =>
-          review._id === reviewId ? response.data.review : review
+          review._id === reviewId ? response.data!.review : review
         );
         set({ reviews, error: null });
       }

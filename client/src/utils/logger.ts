@@ -43,7 +43,8 @@ class Logger {
     }
   }
 
-  private sendToLogService(entry: LogEntry) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  private sendToLogService(_entry: LogEntry) {
     // Implement log service integration here
     // e.g., send to Sentry, LogRocket, etc.
   }

@@ -9,6 +9,13 @@ export interface OrderItem {
   size?: string;
 }
 
+export interface OrderPagination {
+  currentPage: number;
+  totalPages: number;
+  totalItems: number;
+  limit: number;
+}
+
 export interface Order {
   id: number;
   userId: number;
@@ -64,25 +71,25 @@ export const getUserOrders = async (params?: {
   page?: number;
   limit?: number;
   status?: string;
-}): Promise<{ orders: Order[]; pagination: any }> => {
+}): Promise<{ orders: Order[]; pagination: OrderPagination }> => {
   try {
     const queryParams = new URLSearchParams();
     if (params?.page) queryParams.append('page', params.page.toString());
     if (params?.limit) queryParams.append('limit', params.limit.toString());
     if (params?.status) queryParams.append('status', params.status);
 
-    const result = await api.get<{ orders: Order[]; pagination: any }>(`/order?${queryParams.toString()}`);
-    return result.data || { orders: [], pagination: {} };
+    const result = await api.get<{ orders: Order[]; pagination: OrderPagination }>(`/order?${queryParams.toString()}`);
+    return result.data || { orders: [], pagination: { currentPage: 1, totalPages: 1, totalItems: 0, limit: 10 } };
   } catch (error) {
     console.error("Get user orders error:", error);
-    return { orders: [], pagination: {} };
+    return { orders: [], pagination: { currentPage: 1, totalPages: 1, totalItems: 0, limit: 10 } };
   }
 };
 
 /**
  * Get order by ID
  */
-export const getOrderById = async (orderId: string | number): Promise<Order | null> => {
+export const getOrderById = async (orderId: string): Promise<Order | null> => {
   try {
     const result = await api.get<Order>(`/order/${orderId}`);
     return result.data || null;

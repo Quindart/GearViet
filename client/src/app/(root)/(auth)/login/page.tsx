@@ -1,23 +1,24 @@
 "use client";
 
-import { authService } from "@/services/authService";
+import { loginUser } from "@/services/authService";
 import { LoginFormData } from "@/types/auth";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { FaArrowLeft, FaEye, FaEyeSlash } from "react-icons/fa";
 import * as Yup from "yup";
 
 // Validation schema with Vietnamese requirements
 const validationSchema = Yup.object({
-  username: Yup.string().required("Vui lòng nhập tên đăng nhập hoặc email"),
-
+  email: Yup.string()
+    .email("Email không hợp lệ")
+    .required("Vui lòng nhập email"),
   password: Yup.string().required("Vui lòng nhập mật khẩu"),
 });
 
 interface LoginFormValues {
-  username: string;
+  email: string;
   password: string;
   remember: boolean;
 }
@@ -42,7 +43,7 @@ const Login = () => {
   }, [searchParams]);
 
   const initialValues: LoginFormValues = {
-    username: "",
+    email: "",
     password: "",
     remember: false,
   };
@@ -53,12 +54,12 @@ const Login = () => {
 
     try {
       const loginData: LoginFormData = {
-        username: values.username,
+        email: values.email,
         password: values.password,
         remember: values.remember,
       };
 
-      const response = await authService.login(loginData);
+      const response = await loginUser(loginData);
 
       if (response.success) {
         // Redirect to dashboard or home page
@@ -168,23 +169,23 @@ const Login = () => {
                     </div>
                   )}
 
-                  {/* Username */}
+                  {/* Email */}
                   <div>
                     <Field
-                      name="username"
-                      type="text"
-                      placeholder="Tên đăng nhập hoặc Email"
-                      value={values.username || ""}
+                      name="email"
+                      type="email"
+                      placeholder="Email"
+                      value={values.email || ""}
                       onChange={handleChange}
                       onBlur={handleBlur}
                       className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent ${
-                        errors.username && touched.username
+                        errors.email && touched.email
                           ? "border-red-500"
                           : "border-gray-300"
                       }`}
                     />
                     <ErrorMessage
-                      name="username"
+                      name="email"
                       component="div"
                       className="mt-1 text-sm text-red-500"
                     />
@@ -292,4 +293,17 @@ const Login = () => {
   );
 };
 
-export default Login;
+// Create a wrapper with Suspense boundary
+function LoginPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-lg">Đang tải...</div>
+      </div>
+    }>
+      <Login />
+    </Suspense>
+  );
+}
+
+export default LoginPage;

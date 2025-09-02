@@ -1,25 +1,5 @@
 import { api } from "@/lib/api";
-import { ResponseType } from '@/types';
-
-export interface Province {
-  id: number;
-  name: string;
-  code: string;
-}
-
-export interface District {
-  id: number;
-  name: string;
-  code: string;
-  provinceId: number;
-}
-
-export interface Ward {
-  id: number;
-  name: string;
-  code: string;
-  districtId: number;
-}
+import { ResponseType, ProvinceType, DistrictType, WardType } from '@/types';
 
 export interface ShippingService {
   id: number;
@@ -45,7 +25,7 @@ export interface ShippingFeeParams {
  */
 export const fetchAllProvinces = async (): Promise<ResponseType> => {
   try {
-    const result = await api.get<Province[]>('/shipping/master-data/province');
+    const result = await api.get<ProvinceType[]>('/shipping/master-data/province');
     return { data: result.data || [] };
   } catch (error) {
     console.error("Fetch provinces error:", error);
@@ -58,7 +38,7 @@ export const fetchAllProvinces = async (): Promise<ResponseType> => {
  */
 export const fetchAllDistrictByProvince = async (provinceId: number): Promise<ResponseType> => {
   try {
-    const result = await api.get<District[]>(`/shipping/master-data/district?provinceId=${provinceId}`);
+    const result = await api.get<DistrictType[]>(`/shipping/master-data/district?provinceId=${provinceId}`);
     return { data: result.data || [] };
   } catch (error) {
     console.error("Fetch districts error:", error);
@@ -71,7 +51,7 @@ export const fetchAllDistrictByProvince = async (provinceId: number): Promise<Re
  */
 export const fetchAllWardByDistrict = async (districtId: number): Promise<ResponseType> => {
   try {
-    const result = await api.get<Ward[]>(`/shipping/master-data/ward?districtId=${districtId}`);
+    const result = await api.get<WardType[]>(`/shipping/master-data/ward?districtId=${districtId}`);
     return { data: result.data || [] };
   } catch (error) {
     console.error("Fetch wards error:", error);
@@ -149,12 +129,25 @@ export const createShippingOrder = async (orderData: {
   }
 };
 
+export interface ShippingOrderDetails {
+  trackingCode: string;
+  status: string;
+  estimatedDelivery?: string;
+  currentLocation?: string;
+  history?: Array<{
+    timestamp: string;
+    status: string;
+    location?: string;
+    description?: string;
+  }>;
+}
+
 /**
  * Get shipping order details
  */
-export const getShippingOrderDetails = async (trackingCode: string): Promise<any> => {
+export const getShippingOrderDetails = async (trackingCode: string): Promise<ShippingOrderDetails | null> => {
   try {
-    const result = await api.get(`/shipping/shipping-order/detail?trackingCode=${trackingCode}`);
+    const result = await api.get<ShippingOrderDetails>(`/shipping/shipping-order/detail?trackingCode=${trackingCode}`);
     return result.data || null;
   } catch (error) {
     console.error("Get shipping order details error:", error);

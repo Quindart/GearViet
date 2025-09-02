@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import "./styles.css";
 
-function SampleNextArrow(props) {
+function SampleNextArrow(props: { className?: string; style?: React.CSSProperties; onClick?: () => void; }) {
   const { className, style, onClick } = props;
   return (
     <div
@@ -16,7 +16,7 @@ function SampleNextArrow(props) {
   );
 }
 
-function SamplePrevArrow(props) {
+function SamplePrevArrow(props: { className?: string; style?: React.CSSProperties; onClick?: () => void; }) {
   const { className, style, onClick } = props;
   return (
     <div

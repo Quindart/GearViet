@@ -1,9 +1,8 @@
 import { ICoupon } from './coupon';
 import { IOrder } from './order';
 import { ProductDataType, CommentType, ReviewType, ReviewStatsType } from './product';
-import { ProvinceType, WardType } from './shipping';
+import { ProvinceType, WardType, DistrictType } from './shipping';
 import { IUser } from './user';
-import { DistrictType } from 'types/shipping';
 
 export interface ResponseType {
   success?: string;
@@ -55,3 +54,9 @@ export type DropDownType = {
   _id: number;
   name: string;
 };
+
+export type { ICoupon } from './coupon';
+export type { IOrder } from './order';
+export type { ProductDataType, CommentType, ReviewType, ReviewStatsType } from './product';
+export type { ProvinceType, WardType, DistrictType } from './shipping';
+export type { IUser } from './user';

@@ -4,17 +4,17 @@ import React, { useMemo, useCallback, useState, useEffect } from 'react';
  * Custom hook for memoizing expensive calculations
  */
 export function useMemoizedValue<T>(factory: () => T, deps: React.DependencyList): T {
-  return useMemo(factory, deps);
+  return useMemo(() => factory(), deps);
 }
 
 /**
  * Custom hook for memoizing callback functions
  */
-export function useMemoizedCallback<T extends (...args: any[]) => any>(
+export function useMemoizedCallback<T extends (...args: unknown[]) => unknown>(
   callback: T,
   deps: React.DependencyList
 ): T {
-  return useCallback(callback, deps);
+  return useCallback(callback, deps) as T;
 }
 
 /**

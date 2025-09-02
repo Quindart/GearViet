@@ -1,6 +1,6 @@
 import { api } from "@/lib/api";
 
-export interface Review {
+interface Review {
   id: number;
   productId: number;
   userId: number;
@@ -20,6 +20,26 @@ export interface CreateReviewData {
   images?: File[];
   videoLink?: string;
 }
+
+export interface UpdateReviewData {
+  rating?: number;
+  comment?: string;
+  images?: File[];
+  videoLink?: string;
+}
+
+/**
+ * Get reviews by product ID
+ */
+export const getReviewsByProduct = async (productId: string): Promise<Review[]> => {
+  try {
+    const result = await api.get<Review[]>(`/review/product/${productId}`);
+    return result.data || [];
+  } catch (error) {
+    console.error("Get reviews by product error:", error);
+    return [];
+  }
+};
 
 export interface UpdateReviewData {
   rating?: number;
@@ -71,7 +91,7 @@ export const createReview = async (reviewData: CreateReviewData): Promise<Review
       }
 
       // Add images to form data
-      reviewData.images.forEach((image, index) => {
+      reviewData.images.forEach((image) => {
         formData.append(`images`, image);
       });
 

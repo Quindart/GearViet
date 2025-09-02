@@ -167,7 +167,7 @@ export const useOrderStore = create<OrderState>((set, get) => ({
       );
       if (response.success && response.data?.order) {
         const orders = get().orders.map(order =>
-          order._id === orderId ? response.data.order : order
+          order._id === orderId ? response.data!.order : order
         );
         set({ orders, error: null });
       }

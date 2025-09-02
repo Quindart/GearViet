@@ -11,6 +11,6 @@ export { useCategoryStore } from './useCategoryStore';
 export type { Category, Brand } from './useAppStore';
 export type { User, LoginValues, RegisterValues } from './useUserStore';
 export type { Product, Review } from './useProductStore';
-export type { Order, OrderItem, ShippingAddress } from './useOrderStore';
+export type { Order, ShippingOrderData } from './useOrderStore';
 export type { CartItem } from './useCartStore';
 export type { Coupon } from './useCouponStore'; 

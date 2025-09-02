@@ -1,6 +1,6 @@
 "use client";
 
-import { authService } from "@/services/authService";
+import { registerUser } from "@/services/authService";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -75,7 +75,7 @@ const Register = () => {
     setSubmitSuccess(false);
 
     try {
-      const response = await authService.register(values);
+      const response = await registerUser(values);
 
       if (response.success) {
         setSubmitSuccess(true);
