@@ -1,9 +1,17 @@
 import Breadcrumb, { BreadcrumbItem } from "@/components/ui/Breadcrumb";
 import { notFound } from "next/navigation";
-import ProductClient from "./ProductClient";
+import { Product } from "@/types/product-page";
+import {
+  ProductHeader,
+  ProductImageGallery,
+  ProductOptions,
+  ProductPolicies,
+  ProductDescription,
+  ProductReview,
+} from "./components";
 
 // Mock product data - In real app, this would come from API/database
-const getProduct = async (slug: string) => {
+const getProduct = async (slug: string): Promise<Product | null> => {
   // Simulate API call
   const products = {
     "gia-treo-man-hinh-hyperwork-t9-pro-iii-24-57inch": {
@@ -55,9 +63,9 @@ export async function generateStaticParams() {
 }
 
 interface ProductPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
@@ -70,12 +78,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   const breadcrumbItems: BreadcrumbItem[] = [
     {
-      label: "Sản phẩm mới",
-      href: "/products",
+      label: "Trang chủ",
+      href: "/",
     },
     {
-      label: product.category,
-      href: `/category/${product.category.toLowerCase().replace(/\s+/g, "-")}`,
+      label: "SẢN PHẨM MỚI",
+      href: "/products",
     },
     {
       label: product.name,
@@ -83,15 +91,44 @@ export default async function ProductPage({ params }: ProductPageProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-6">
+    <div className="min-h-screen bg-gray-100">
+      <div className="container mx-auto px-4 py-2">
         {/* Breadcrumb */}
-        <div className="mb-6">
+        <div className="mb-2">
           <Breadcrumb items={breadcrumbItems} />
         </div>
 
         {/* Product Content */}
-        <ProductClient product={product} />
+        <div className="grid grid-cols-1 lg:grid-cols-12">
+          {/* Left Column - Product Images */}
+          <div className="lg:col-span-4 bg-white p-4 rounded-tl-lg rounded-bl-lg">
+            <ProductImageGallery product={product} />
+          </div>
+
+          {/* Center Column - Product Info */}
+          <div className="lg:col-span-5 bg-white p-4 rounded-tr-lg rounded-br-lg">
+            <div className="space-y-4">
+              <ProductHeader product={product} />
+              <ProductOptions product={product} />
+            </div>
+          </div>
+
+          {/* Right Sidebar */}
+          <div className="lg:col-span-3 bg-white ml-4 rounded-lg p-4">
+            <ProductPolicies />
+          </div>
+        </div>
+
+        {/* Product Description - Full Width */}
+        <div className="mt-8">
+          <ProductDescription product={product} />
+        </div>
+
+        {/* Product Review - Full Width */}
+        <div className="mt-8">
+          <ProductReview productId={product.id} />
+        </div>
+
       </div>
     </div>
   );

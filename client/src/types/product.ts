@@ -54,7 +54,7 @@ export interface ProductDataType {
 }
 
 export interface FormDataType {
-  [key: string]: any;
+  [key: string]: string | number | boolean | File | undefined;
 }
 
 export interface CommentType {

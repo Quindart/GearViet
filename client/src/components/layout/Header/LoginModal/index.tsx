@@ -1,4 +1,6 @@
-import { authService } from "@/services/authService";
+import {
+  loginUser
+} from "@/services";
 import { useAuthStore } from "@/store/authStore";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -33,7 +35,7 @@ const LoginModal: React.FC<LoginModalProps> = ({
     setError("");
 
     try {
-      const response = await authService.login({
+      const response = await loginUser({
         email,
         password,
         remember,

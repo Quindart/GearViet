@@ -37,7 +37,7 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
-    customPaging: (i: number) => (
+    customPaging: () => (
       <div className="w-2 h-2 bg-gray-300 rounded-full hover:bg-primary transition-colors duration-300" />
     ),
     dotsClass: "slick-dots !-bottom-3 custom-dots",

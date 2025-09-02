@@ -21,7 +21,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className = "" }) => {
         href="/"
         className="flex items-center text-gray-600 hover:text-green-600 transition-colors"
       >
-        <FaHome className="w-4 h-4" />
+        <span>Trang chủ</span>
       </Link>
 
       {items.map((item, index) => {
