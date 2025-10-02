@@ -1,6 +1,11 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { ShippingAddress } from './useOrderStore';
+
+interface ShippingAddress {
+  address: string;
+  phone: string;
+  note?: string;
+}
 
 interface ShippingState {
   shippingAddress: ShippingAddress | null;

@@ -60,7 +60,7 @@ export const useCategoryStore = create<CategoryState>((set, get) => ({
       set({ isLoading: true });
       const response = await api.post<{ category: Category }>('/categories', { name });
       if (response.success && response.data) {
-        const categories = [...get().categories, response.data.category];
+        const categories = [...get().categories, response.data!.category];
         set({ categories, error: null });
       }
     } catch (error) {
@@ -80,7 +80,7 @@ export const useCategoryStore = create<CategoryState>((set, get) => ({
       );
       if (response.success && response.data) {
         const categories = get().categories.map(category =>
-          category._id === categoryId ? response.data.category : category
+          category._id === categoryId ? response.data!.category : category
         );
         set({ categories, error: null });
       }
@@ -117,7 +117,7 @@ export const useCategoryStore = create<CategoryState>((set, get) => ({
       );
       if (response.success && response.data) {
         const categories = get().categories.map(category =>
-          category._id === categoryId ? response.data.category : category
+          category._id === categoryId ? response.data!.category : category
         );
         set({ categories, error: null });
       }

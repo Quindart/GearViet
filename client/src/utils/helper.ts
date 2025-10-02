@@ -1,9 +1,7 @@
-import { IOrder } from 'types/order';
+import { IOrder, OrderProductsType } from '../types/order';
 import { ProductDataType } from '../types/product';
-import { OrderProductsType } from '../types/order';
-import { IUser } from 'types/user';
-import { DistrictType, ProvinceType } from 'types/shipping';
-import { WardType } from '../types/shipping';
+import { IUser } from '../types/user';
+import { DistrictType, ProvinceType, WardType } from '../types/shipping';
 // formatDates has 3 options:  'datetime' to display date(String type) and time, 'date' to display only date(String type), default if option is not define, month will display as number
 export const formatDates = (date: string, option?: string) => {
   const data = new Date(date);

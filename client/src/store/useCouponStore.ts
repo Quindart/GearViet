@@ -85,7 +85,7 @@ export const useCouponStore = create<CouponState>((set, get) => ({
       );
       if (response.success && response.data?.coupon) {
         const coupons = get().coupons.map(coupon =>
-          coupon._id === couponId ? response.data.coupon : coupon
+          coupon._id === couponId ? response.data!.coupon : coupon
         );
         set({ coupons, error: null });
       }

@@ -1,6 +1,4 @@
 import { check } from "express-validator";
-import { UNCATEGORY_ID } from "../utils/constant.js";
-import { isValidId } from "./validation.js";
 import User from "../models/user.model.js";
 
 
@@ -98,6 +96,51 @@ export const isConfirmPasswordMatch = [
         );
       return true;
     }),
+  (req, res, next) => {
+    next();
+  },
+];
+
+export const isValidFirstName = [
+  check("firstName")
+    .notEmpty()
+    .withMessage("First name is required")
+    .isLength({ min: 2, max: 50 })
+    .withMessage("First name must be between 2 and 50 characters"),
+  (req, res, next) => {
+    next();
+  },
+];
+
+export const isValidLastName = [
+  check("lastName")
+    .notEmpty()
+    .withMessage("Last name is required")
+    .isLength({ min: 2, max: 50 })
+    .withMessage("Last name must be between 2 and 50 characters"),
+  (req, res, next) => {
+    next();
+  },
+];
+
+export const isValidPhone = [
+  check("phone")
+    .notEmpty()
+    .withMessage("Phone number is required")
+    .matches(/^(\+84|84|0)(3[2-9]|5[689]|7[06-9]|8[1-6889]|9[0-46-9])[0-9]{7}$/)
+    .withMessage("Invalid Vietnamese phone number format"),
+  (req, res, next) => {
+    next();
+  },
+];
+
+export const isPhoneExist = [
+  check("phone").custom((value) => {
+    return User.findOne({ phone: value }).then((user) => {
+      if (user) return Promise.reject("Phone number already exists");
+      return true;
+    });
+  }),
   (req, res, next) => {
     next();
   },

@@ -7,10 +7,15 @@ import { DistrictType, ProvinceType } from '@/types/shipping';
 import { fetchAllWardByDistrict } from '@/services/shippingApi';
 import { WardType } from '@/types/shipping';
 
+interface DropdownItem {
+  _id: number;
+  name: string;
+}
+
 const useShipping = () => {
-  const [provinceList, setProvinceList] = useState<any>([]);
-  const [districtList, setDistrictList] = useState<any>([]);
-  const [wardList, setWardList] = useState<any>([]);
+  const [provinceList, setProvinceList] = useState<DropdownItem[]>([]);
+  const [districtList, setDistrictList] = useState<DropdownItem[]>([]);
+  const [wardList, setWardList] = useState<DropdownItem[]>([]);
 
   const getAllProvince = async () => {
     const response: ResponseType = await fetchAllProvinces();
