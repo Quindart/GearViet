@@ -1,3 +1,5 @@
+"use client"
+
 import BannerGroup from "@/components/Home/BannerGroup";
 import CategoryGroup from "@/components/Home/CategoryGroup";
 import CollectionGroup from "@/components/Home/CollectionGroup";
@@ -8,6 +10,7 @@ import KeyboardCollection from "@/components/Home/KeyboardCollection";
 import LatestNews from "@/components/Home/LatestNews";
 import MonitorCollection from "@/components/Home/MonitorCollection";
 import NewCollection from "@/components/Home/NewCollection";
+import ChatBot from "react-chatbotify";
 
 function HomePage() {
   return (

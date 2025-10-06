@@ -11,13 +11,13 @@ import { sendError, sendWarning } from "../utils/response.js";
 
 //[POST] login
 export const login = async (req, res) => {
-  const { email, password, remember } = req.body;
+  const { username, password, remember } = req.body;
   try {
     // Find user by email only
     const user = await User.findOne({
-      email: email.toLowerCase()
+      username: username.toLowerCase(),
     }).select("username password email firstName lastName phone role status");
-    
+
     if (!user) {
       return sendWarning(res, "Invalid email or password");
     } else {
@@ -45,19 +45,17 @@ export const login = async (req, res) => {
         success: true,
         status: 200,
         message: "Login successful",
-        data: {
-          user: {
-            id: user._id,
-            username: user.username,
-            firstName: user.firstName,
-            lastName: user.lastName,
-            email: user.email,
-            phone: user.phone,
-            role: user.role,
-            status: user.status,
-          },
-          token: token,
+        user: {
+          id: user._id,
+          username: user.username,
+          firstName: user.firstName,
+          lastName: user.lastName,
+          email: user.email,
+          phone: user.phone,
+          role: user.role,
+          status: user.status,
         },
+        token: token,
       });
     }
   } catch (error) {
@@ -68,13 +66,19 @@ export const login = async (req, res) => {
 //[POST] register
 export const register = async (req, res) => {
   const { email, firstName, lastName, phone, password } = req.body;
-  console.log("💲💲💲 ~ register ~ registration data:", { email, firstName, lastName, phone, password });
+  console.log("💲💲💲 ~ register ~ registration data:", {
+    email,
+    firstName,
+    lastName,
+    phone,
+    password,
+  });
 
   try {
     const encryptedPassword = encryptPassword(password);
-    
+
     // Generate username from email (part before @)
-    const username = email.split('@')[0].toLowerCase();
+    const username = email.split("@")[0].toLowerCase();
 
     const newUser = await User.create({
       username,
@@ -239,4 +243,3 @@ const sendEmail = (email, subject, content) => {
     }
   });
 };
-

@@ -25,7 +25,6 @@ const router = express.Router();
 //login route
 router.post(
   ROUTES.LOGIN,
-  isValidEmail,
   isValidPasswordLength,
   validate,
   login
