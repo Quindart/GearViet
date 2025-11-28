@@ -2,10 +2,9 @@ import React from "react";
 import CollectionHeader from "./CollectionHeader";
 import ProductGrid from "./ProductGrid";
 import {
-  mockPCGamingProducts,
   pcGamingTags,
-  Product,
 } from "./mockCollectionData";
+import { Product } from "@/types/product";
 
 interface CollectionGroupProps {
   title?: string;
@@ -17,7 +16,7 @@ interface CollectionGroupProps {
 const CollectionGroup: React.FC<CollectionGroupProps> = ({
   title = "PC GAMING",
   tags = pcGamingTags,
-  products = mockPCGamingProducts,
+  products = [],
   viewAllHref = "/pc-gaming",
 }) => {
   return (

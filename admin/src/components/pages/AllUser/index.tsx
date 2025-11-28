@@ -6,6 +6,7 @@ import DropDown from 'components/ui/Dropdown';
 import SearchBox from 'components/ui/SearchBox';
 import useUser from 'hooks/useUser';
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { RootState } from 'store';
 import { KeywordSearchEnum, Role, UserStatus } from 'types/enum';
@@ -15,6 +16,7 @@ import TableUsers from './TableUser';
 import CustomUser from './style';
 
 const ListAllUserTemplate = () => {
+  const { t } = useTranslation();
   const {
     getAllUser,
     userList,
@@ -109,14 +111,14 @@ const ListAllUserTemplate = () => {
     <>
       <CustomUser>
         <Box className='title'>
-          <Typography>User Management</Typography>
+          <Typography>{t('pages/users:title', { defaultValue: 'User Management' })}</Typography>
         </Box>
 
         <Box className='flex flex-col gap-4 p-4 border-b border-dashed border-[#e9ebec] mb-4'>
           <Box className='w-full flex gap-4'>
             <SearchBox
               inputRef={searchTextRef}
-              placeholder='Search for order ID, customer, order status or something ...'
+              placeholder={t('pages/users:searchPlaceholder', { defaultValue: 'Search for username, name, email ...' })}
             />
             <DropDown
               className='grow'
@@ -129,7 +131,7 @@ const ListAllUserTemplate = () => {
               variant='contained'
               onClick={handleSearchUser}
             >
-              Search
+              {t('shared/common:search', { defaultValue: 'Search' })}
             </Button>
           </Box>
 
@@ -138,19 +140,17 @@ const ListAllUserTemplate = () => {
               className='grow'
               options={LIST_ROLE}
               value={filterRole}
-              // placeholder='Filter by role'
               onChange={handleChangeRole}
             />
             <DropDown
               className='grow'
               options={LIST_STATUS}
               value={filterStatus}
-              // placeholder='Filter by status'
               onChange={handleChangeStatus}
             />
             <Button className='grow w-[300px] m-0' variant='contained' onClick={handleFilter}>
               <Icon icon='mdi:abacus' />
-              Filters
+              {t('shared/common:filter', { defaultValue: 'Filters' })}
             </Button>
           </Box>
         </Box>

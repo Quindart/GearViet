@@ -72,19 +72,34 @@ export function formatOrderList(orderList: IOrder[]) {
       0,
     );
 
-    const { province, district, ward, detail } = item.shippingDetail.address;
-    const address = `${detail && detail} - ${ward?.wardName} - ${district?.districtName} - ${
-      province?.provinceName
-    }`;
+    let address = '';
+    let name = '';
+    let phone = '';
+    let email = '';
+
+    if (item.customerInfo) {
+      address = item.customerInfo.address || '';
+      name = item.customerInfo.fullname || '';
+      phone = item.customerInfo.phone || '';
+      email = item.customerInfo.email || '';
+    } else if (item.shippingDetail) {
+      const { province, district, ward, detail } = item.shippingDetail.address || {};
+      address = `${detail || ''} - ${ward?.wardName || ''} - ${district?.districtName || ''} - ${
+        province?.provinceName || ''
+      }`.replace(/^ - | - $/g, '').trim();
+      name = item.shippingDetail.fullname || '';
+      phone = item.shippingDetail.phone || '';
+      email = item.shippingDetail.email || '';
+    }
 
     return {
       ...item,
       id: item._id,
       code: item.code,
-      name: item.shippingDetail.fullname,
+      name: name,
       address: address,
-      phone: item.shippingDetail.phone,
-      email: item.shippingDetail.email,
+      phone: phone,
+      email: email,
       dateCreated: item.createdAt,
       quantities: quantities,
       paymentType: item.paymentType,

@@ -1,125 +1,69 @@
 import { api } from "@/lib/api";
-
-export interface ProductListResponse {
-  products: Array<{
-    id: number;
-    name: string;
-    price: number;
-    originalPrice?: number;
-    images: string[];
-    rating: number;
-    reviewCount: number;
-    brand: string;
-    slug: string;
-  }>;
-  pagination: {
-    currentPage: number;
-    totalPages: number;
-    totalItems: number;
-    limit: number;
-  };
-}
-
-export interface Product {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  originalPrice?: number;
-  discount?: number;
-  images: string[];
-  rating: number;
-  reviewCount: number;
-  brand: string;
-  category: string;
-  inStock: boolean;
-  warranty: string;
-  features: string[];
-  specifications: Record<string, string>;
-  tags: string[];
-}
+import { Product, Brand, FilterProductParams } from "@/types/product";
+import { ProductResponse, SingleProductResponse, BrandResponse } from "@/types/api-response";
 
 /**
- * Get all products with pagination
+ * Get all products
  */
-export const getAllProducts = async (params?: {
-  page?: number;
-  limit?: number;
-  category?: string;
-  search?: string;
-}): Promise<ProductListResponse> => {
+export const getAllProducts = async (
+  params?: { page?: number; limit?: number }
+): Promise<Product[]> => {
   try {
-    const queryParams = new URLSearchParams();
-    if (params?.page) queryParams.append('page', params.page.toString());
-    if (params?.limit) queryParams.append('limit', params.limit.toString());
-    if (params?.category) queryParams.append('category', params.category);
-    if (params?.search) queryParams.append('search', params.search);
+    const queryParams = params ? new URLSearchParams(
+      Object.entries(params)
+        .filter(([_, value]) => value !== undefined)
+        .map(([key, value]) => [key, String(value)])
+    ).toString() : "";
+    const url = queryParams ? `/product?${queryParams}` : "/product";
 
-    const result = await api.get<ProductListResponse>(`/product?${queryParams.toString()}`);
-    return result.data || { products: [], pagination: { currentPage: 1, totalPages: 1, totalItems: 0, limit: 10 } };
+    const result = await api.get<ProductResponse>(url);
+    return result.products || [];
   } catch (error) {
-    console.error("Get products error:", error);
-    return { products: [], pagination: { currentPage: 1, totalPages: 1, totalItems: 0, limit: 10 } };
-  }
-};
-
-/**
- * Get product by ID
- */
-export const getProductById = async (productId: string | number): Promise<Product | null> => {
-  try {
-    const result = await api.get<Product>(`/product/${productId}`);
-    return result.data || null;
-  } catch (error) {
-    console.error("Get product by ID error:", error);
-    return null;
+    console.error("Get all products error:", error);
+    return [];
   }
 };
 
 /**
  * Search products
  */
-export const searchProducts = async (params: {
-  name?: string;
-  code?: string;
-  page?: number;
-  limit?: number;
-}): Promise<ProductListResponse> => {
+export const searchProduct = async (query: string): Promise<Product[]> => {
   try {
-    const queryParams = new URLSearchParams();
-    if (params.name) queryParams.append('name', params.name);
-    if (params.code) queryParams.append('code', params.code);
-    if (params.page) queryParams.append('page', params.page.toString());
-    if (params.limit) queryParams.append('limit', params.limit.toString());
-
-    const result = await api.get<ProductListResponse>(`/product/search?${queryParams.toString()}`);
-    return result.data || { products: [], pagination: { currentPage: 1, totalPages: 1, totalItems: 0, limit: 10 } };
+    const result = await api.get<ProductResponse>(`/product/search?q=${encodeURIComponent(query)}`);
+    return result.products || [];
   } catch (error) {
-    console.error("Search products error:", error);
-    return { products: [], pagination: { currentPage: 1, totalPages: 1, totalItems: 0, limit: 10 } };
+    console.error("Search product error:", error);
+    return [];
   }
 };
 
 /**
  * Filter products
  */
-export const filterProducts = async (filterQuery: string): Promise<ProductListResponse> => {
+export const filterProduct = async (params: FilterProductParams): Promise<Product[]> => {
   try {
-    const result = await api.get<ProductListResponse>(`/product/filter?${filterQuery}`);
-    return result.data || { products: [], pagination: { currentPage: 1, totalPages: 1, totalItems: 0, limit: 10 } };
+    const queryParams = new URLSearchParams(
+      Object.entries(params)
+        .filter(([_, value]) => value !== undefined)
+        .map(([key, value]) => [key, Array.isArray(value) ? value.join(",") : String(value)])
+    ).toString();
+    const url = queryParams ? `/product/filter?${queryParams}` : "/product/filter";
+    const result = await api.get<ProductResponse>(url);
+    return result.products || [];
   } catch (error) {
-    console.error("Filter products error:", error);
-    return { products: [], pagination: { currentPage: 1, totalPages: 1, totalItems: 0, limit: 10 } };
+    console.error("Filter product error:", error);
+    return [];
   }
 };
 
 /**
  * Get newest products
  */
-export const getNewestProducts = async (limit: number = 10): Promise<Product[]> => {
+export const getNewestProducts = async (limit?: number): Promise<Product[]> => {
   try {
-    const result = await api.get<Product[]>(`/product/newest?limit=${limit}`);
-    return result.data || [];
+    const url = limit ? `/product/newest?limit=${limit}` : "/product/newest";
+    const result = await api.get<ProductResponse>(url);
+    return result.products || [];
   } catch (error) {
     console.error("Get newest products error:", error);
     return [];
@@ -129,10 +73,11 @@ export const getNewestProducts = async (limit: number = 10): Promise<Product[]> 
 /**
  * Get best selling products
  */
-export const getBestSellingProducts = async (limit: number = 10): Promise<Product[]> => {
+export const getBestSellingProducts = async (limit?: number): Promise<Product[]> => {
   try {
-    const result = await api.get<Product[]>(`/product/best-selling?limit=${limit}`);
-    return result.data || [];
+    const url = limit ? `/product/best-selling?limit=${limit}` : "/product/best-selling";
+    const result = await api.get<ProductResponse>(url);
+    return result.products || [];
   } catch (error) {
     console.error("Get best selling products error:", error);
     return [];
@@ -140,12 +85,48 @@ export const getBestSellingProducts = async (limit: number = 10): Promise<Produc
 };
 
 /**
+ * Get product by ID
+ */
+export const getProductById = async (productId: string): Promise<Product | null> => {
+  try {
+    console.log("getProductById - Fetching:", productId);
+    const result = await api.get<SingleProductResponse>(`/product/${productId}`);
+    console.log("getProductById - Full result:", JSON.stringify(result, null, 2));
+    
+    // Check if result has product field
+    if (result && 'product' in result) {
+      console.log("getProductById - result.product:", result.product);
+      const product = result.product || null;
+      console.log("getProductById - Returning:", product);
+      return product;
+    } else {
+      console.error("getProductById - Result does not have product field:", result);
+      return null;
+    }
+  } catch (error) {
+    console.error("Get product by ID error:", error);
+    return null;
+  }
+};
+
+/**
  * Get products by subcategory
  */
-export const getProductsBySubcategory = async (subcategoryId: string | number): Promise<Product[]> => {
+export const getProductsBySubcategory = async (
+  subcategoryId: string,
+  params?: { page?: number; limit?: number }
+): Promise<Product[]> => {
   try {
-    const result = await api.get<Product[]>(`/product/subcategory/${subcategoryId}`);
-    return result.data || [];
+    const queryParams = params ? new URLSearchParams(
+      Object.entries(params)
+        .filter(([_, value]) => value !== undefined)
+        .map(([key, value]) => [key, String(value)])
+    ).toString() : "";
+    const url = queryParams
+      ? `/product/subcategory/${subcategoryId}?${queryParams}`
+      : `/product/subcategory/${subcategoryId}`;
+    const result = await api.get<ProductResponse>(url);
+    return result.products || [];
   } catch (error) {
     console.error("Get products by subcategory error:", error);
     return [];
@@ -155,25 +136,13 @@ export const getProductsBySubcategory = async (subcategoryId: string | number): 
 /**
  * Get all brands
  */
-export const getAllBrands = async (): Promise<string[]> => {
+export const getAllBrands = async (): Promise<Brand[]> => {
   try {
-    const result = await api.get<string[]>('/product/brand');
-    return result.data || [];
+    const result = await api.get<BrandResponse>("/product/brand");
+    return result.brands || [];
   } catch (error) {
-    console.error("Get brands error:", error);
+    console.error("Get all brands error:", error);
     return [];
   }
 };
 
-/**
- * Check if brand exists
- */
-export const checkBrandExists = async (brandName: string): Promise<boolean> => {
-  try {
-    const result = await api.get<{ exists: boolean }>(`/product/brand/check?name=${brandName}`);
-    return result.data?.exists || false;
-  } catch (error) {
-    console.error("Check brand exists error:", error);
-    return false;
-  }
-};

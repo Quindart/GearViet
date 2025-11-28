@@ -5,27 +5,20 @@ export const fetchAllOrder = async (page?: number | string, limit?: number | str
   if (!page) page = '';
   if (!limit) limit = '';
 
-  return await axiosConfig.get(`/order?page=${page}&limit=${limit}`);
+  return await axiosConfig.get(`/api/order?page=${page}&limit=${limit}`);
 };
 
 export const fetchOrderById = async (orderId: string) => {
-  return await axiosConfig.get('/order/' + orderId);
+  return await axiosConfig.get('/api/order/' + orderId);
 };
 
 export const searchingOrder = async (key: string, value: string, page: number, limit: number) => {
-  return await axiosConfig.get(`/order/search?${key}=${value}&page=${page}&limit=${limit}`);
-};
-
-export const assignWarehouseUser = async (orderId: string, warehouseUserId: string) => {
-  return await axiosConfig.put('/order/assign', {
-    orderId,
-    warehouseUserId,
-  });
+  return await axiosConfig.get(`/api/order/search?${key}=${value}&page=${page}&limit=${limit}`);
 };
 
 // export const filterOrder = async (data: FilterOrderType, page?: number, limit?: number) => {
 //   const { status, paymentStatus, warehouseUser, code } = data;
-//   return await axiosConfig.get('/order/filter', {
+//   return await axiosConfig.get('/api/order/filter', {
 //     params: {
 //       page,
 //       limit,
@@ -38,7 +31,7 @@ export const assignWarehouseUser = async (orderId: string, warehouseUserId: stri
 // };
 
 export const fetchFilterOrder = async (query: string) => {
-  return await axiosConfig.get('/order/filter?' + query);
+  return await axiosConfig.get('/api/order/filter?' + query);
 };
 
 export const creatingShippingOrder = async (orderId: string, data: ShippingOrderType) => {
@@ -54,9 +47,9 @@ export const creatingShippingOrder = async (orderId: string, data: ShippingOrder
 };
 
 export const fetchTotalRevenueByTime = async (time: string) => {
-  return await axiosConfig.get(`/order/revenue?limit=${time}`);
+  return await axiosConfig.get(`/api/order/revenue?limit=${time}`);
 };
 
 export const fetchTotalOrderByTime = async (time: string) => {
-  return await axiosConfig.get(`/order/total?limit=${time}`);
+  return await axiosConfig.get(`/api/order/total?limit=${time}`);
 };

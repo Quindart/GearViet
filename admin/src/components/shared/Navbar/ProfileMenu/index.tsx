@@ -1,5 +1,6 @@
 import { Icon } from '@iconify/react';
 import { ListItemButton, ListItemIcon, ListItemText, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import { APP_PROFILE_MENU } from 'utils/app-config';
 import { ProfileBox } from '../style';
 import { useDispatch } from 'react-redux';
@@ -12,12 +13,13 @@ type ProfileMenuTypes = {
 
 const ProfileMenu = (props: ProfileMenuTypes) => {
   const { onItemClick } = props;
+  const { t } = useTranslation();
   const { adminDetail, handleLogout } = useUser();
   const dispatch = useDispatch();
   return (
     <ProfileBox>
       <Typography variant='h6' className='profile__title'>
-        Welcome {adminDetail?.name}
+        {t('shared/navbar:welcome', { name: adminDetail?.name, defaultValue: `Welcome ${adminDetail?.name}` })}
       </Typography>
       <ListItemButton
         component='a'
@@ -30,7 +32,7 @@ const ProfileMenu = (props: ProfileMenuTypes) => {
         <ListItemIcon>
           <Icon icon='mdi:account-circle' />
         </ListItemIcon>
-        <ListItemText primary='Profile' />
+        <ListItemText primary={t('shared/navbar:profile', { defaultValue: 'Profile' })} />
       </ListItemButton>
       {APP_PROFILE_MENU.map((item: any, index: number) => (
         <ListItemButton
@@ -45,7 +47,7 @@ const ProfileMenu = (props: ProfileMenuTypes) => {
           <ListItemIcon>
             <Icon icon={item.icon} />
           </ListItemIcon>
-          <ListItemText primary={item.text} />
+          <ListItemText primary={t(`shared/navbar:${item.text.toLowerCase()}`, { defaultValue: item.text })} />
         </ListItemButton>
       ))}
       <ListItemButton
@@ -57,7 +59,7 @@ const ProfileMenu = (props: ProfileMenuTypes) => {
         <ListItemIcon>
           <Icon icon='mdi:logout' />
         </ListItemIcon>
-        <ListItemText primary='Logout' />
+        <ListItemText primary={t('shared/navbar:logout', { defaultValue: 'Logout' })} />
       </ListItemButton>
     </ProfileBox>
   );

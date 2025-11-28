@@ -6,11 +6,13 @@ import Rating from './Rating';
 import CustomFilter from './style';
 // import useProduct from 'hooks/useProduct';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { RootState } from 'store';
 import { setFilterParams, setProductRenderType } from 'store/slices/productSlice';
 import { renderType } from 'utils/app-config';
 
 const Filter = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const filterParams = useSelector((state: RootState) => state.product.filterParams);
 
@@ -40,7 +42,7 @@ const Filter = () => {
     <CustomFilter>
       <Box className='header'>
         <Box className='flex items-center justify-between'>
-          <Typography>Filters</Typography>
+          <Typography>{t('shared/common:filter', { defaultValue: 'Filters' })}</Typography>
           <Link
             className='text-[13px] text-[#405189] decoration-[#405189] cursor-pointer'
             onClick={() => {
@@ -48,7 +50,7 @@ const Filter = () => {
               dispatch(setFilterParams({ subCategoryId: '', brand: [], discount: 0, rating: 0 }));
             }}
           >
-            Clear all
+            {t('pages/products:clearAll', { defaultValue: 'Clear all' })}
           </Link>
         </Box>
       </Box>

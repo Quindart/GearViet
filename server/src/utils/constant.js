@@ -16,7 +16,6 @@ export const ROLE = {
   OWNER: "owner",
   ADMIN: "admin",
   MOD: "mod",
-  WAREHOUSE: "warehouse",
   USER: "user",
 };
 
@@ -25,21 +24,19 @@ export const STATUS = {
   INACTIVE: "inactive",
 };
 
+export const ORDER_STATUS = {
+  PENDING: "pending",
+  CONFIRMED: "confirmed",
+  PROCESSING: "processing",
+  SHIPPING: "shipping",
+  COMPLETED: "completed",
+  CANCELED: "canceled",
+};
+
 export const DATE = {
   DAYS: "days",
   WEEKS: "weeks",
   MONTHS: "months",
-};
-
-export const ORDER_STATUS = {
-  PENDING: "pending",
-  ASSIGNED: "assigned",
-  PICKING: "picking",
-  SHIPPING: "shipping",
-  RETURNING: "returning",
-  RETURNED: "returned",
-  FINISHED: "finished",
-  CANCELED: "canceled",
 };
 
 export const REVIEW_SCORE = [1, 2, 3, 4, 5];

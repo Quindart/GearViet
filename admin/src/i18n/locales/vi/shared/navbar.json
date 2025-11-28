@@ -1,0 +1,10 @@
+{
+  "profile": "Hồ sơ",
+  "message": "Tin nhắn",
+  "help": "Trợ giúp",
+  "setting": "Cài đặt",
+  "language": "Ngôn ngữ",
+  "logout": "Đăng xuất",
+  "welcome": "Chào mừng {{name}}"
+}
+

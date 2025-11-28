@@ -31,8 +31,6 @@ export const APP_ROUTES = {
   SUCCESS_MESSAGE: '/auth/successmessage',
   NOT_FOUND: '/404',
 
-  //warehouse
-  WAREHOUSE: '/warehouse',
 };
 
 export const APP_SIDEBAR = [
@@ -41,7 +39,7 @@ export const APP_SIDEBAR = [
     section: 'home',
     icon: 'bx:home-alt',
     link: APP_ROUTES.INDEX,
-    roles: ['admin', 'owner', 'mod', 'warehouse'],
+    roles: ['admin', 'owner', 'mod'],
   },
 
   {
@@ -76,7 +74,7 @@ export const APP_SIDEBAR = [
     section: 'order_management',
     icon: 'icon-park-outline:transaction-order',
     text: 'Order management',
-    roles: ['admin', 'owner', 'mod', 'warehouse'],
+    roles: ['admin', 'owner', 'mod'],
     link: [APP_ROUTES.ALL_ORDER],
 
     children: [
@@ -105,9 +103,9 @@ export const APP_SIDEBAR = [
   },
   {
     section: 'Coupons',
-    icon: 'ri:account-circle-line',
+    icon: 'ri:coupon-3-line',
     text: 'Coupon management',
-    roles: ['owner'],
+    roles: ['owner', 'admin', 'mod'],
     link: [APP_ROUTES.ALL_COUPON],
 
     children: [
@@ -118,13 +116,6 @@ export const APP_SIDEBAR = [
         key: 'coupons/all',
       },
     ],
-  },
-  {
-    section: 'warehouses',
-    icon: 'ic:twotone-warehouse',
-    text: 'Warehouse management',
-    link: APP_ROUTES.WAREHOUSE,
-    roles: ['admin', 'owner', 'warehouse'],
   },
 ];
 

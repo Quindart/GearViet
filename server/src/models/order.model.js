@@ -1,8 +1,8 @@
 import mongoose from 'mongoose'
-import { nanoid } from "nanoid"
+import { customAlphabet } from "nanoid"
 
 const generateId = () => {
-  const id = nanoid.customAlphabet("1234567890abcdefghijklmnopqrstuvwxyz", 10);
+  const id = customAlphabet("1234567890abcdefghijklmnopqrstuvwxyz", 10);
   return id();
 };
 
@@ -11,13 +11,6 @@ const orderSchema = new mongoose.Schema(
     code: {
       type: String,
       default: generateId,
-    },
-    shippingOrderCode: {
-      type: String,
-    },
-    warehouseUser: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
     },
     products: [
       {
@@ -34,38 +27,19 @@ const orderSchema = new mongoose.Schema(
         },
       },
     ],
-    coupon: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Coupon",
-    },
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
     },
     status: {
       type: String,
-      default: "pending", //pending, assigned, picking, shipping, returning, returned, finished, canceled
+      default: "pending", //pending, confirmed, processing, shipping, completed, canceled
       lowercase: true,
     },
-    shippingDetail: {
+    customerInfo: {
       fullname: {
         type: String,
         required: true,
-      },
-      address: {
-        province: {
-          provinceId: Number,
-          provinceName: String,
-        },
-        district: {
-          districtId: Number,
-          districtName: String,
-        },
-        ward: {
-          wardId: String,
-          wardName: String,
-        },
-        detail: String,
       },
       phone: {
         type: String,
@@ -73,6 +47,10 @@ const orderSchema = new mongoose.Schema(
       },
       email: {
         type: String,
+      },
+      address: {
+        type: String,
+        required: true,
       },
     },
     paymentType: {
@@ -87,9 +65,6 @@ const orderSchema = new mongoose.Schema(
     },
     payDate: {
       type: Date,
-    },
-    serviceTypeId: {
-      type: Number,
     },
   },
   {

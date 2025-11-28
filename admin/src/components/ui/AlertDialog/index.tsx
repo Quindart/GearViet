@@ -16,16 +16,20 @@ const AlertDialog = (props: AlertDialogProps) => {
   const { open, onClose, onChange, message, icon, ...restProps } = props;
 
   return (
-    <Modal open={open} onClose={onClose} {...restProps}>
+    <Modal open={open} onClose={onClose} {...restProps} aria-labelledby='alert-dialog-title' aria-describedby='alert-dialog-description'>
       <CustomAlertDialog>
-        {icon && <img src={trash_icon} />}
-        <Typography className='title'>Are you sure ?</Typography>
-        <Typography className='message'>{message}</Typography>
+        {icon && <img src={trash_icon} alt='Delete icon' />}
+        <Typography className='title' id='alert-dialog-title' component='h2'>
+          Are you sure ?
+        </Typography>
+        <Typography className='message' id='alert-dialog-description'>
+          {message}
+        </Typography>
         <Box className='btn__bx'>
-          <Button onClick={onClose} variant='contained' className='btn__close'>
+          <Button onClick={onClose} variant='contained' className='btn__close' aria-label='Cancel action'>
             Cancel
           </Button>
-          <Button onClick={onChange} variant='contained' className='btn--danger btn__'>
+          <Button onClick={onChange} variant='contained' className='btn--danger btn__' aria-label='Confirm action'>
             OK
           </Button>
         </Box>

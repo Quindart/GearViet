@@ -11,16 +11,16 @@ export default function MainContent(props: MainContentPropType) {
 
   return (
     <CustomContent>
-      <Typography className='content__title'>Description:</Typography>
+      <Typography className='content__title'>Nội dung:</Typography>
       <p
         className='text-[13px] text-[#878A99] mb-12'
         // hien thi content tu HTML string
         dangerouslySetInnerHTML={{ __html: description }}
       />
-      <Typography className='content__title'>Product Description:</Typography>
+      <Typography className='content__title'>Chi tiết sản phẩm:</Typography>
       <Box className='content__bx'>
         <Box className='content__item'>
-          <Typography>Product Code</Typography>
+          <Typography>Mã Code</Typography>
           <Typography>{code?.toUpperCase()}</Typography>
         </Box>
         <Box className='content__item'>
@@ -32,20 +32,20 @@ export default function MainContent(props: MainContentPropType) {
           <Typography>{brand}</Typography>
         </Box>
         <Box className='content__item'>
-          <Typography>Available</Typography>
+          <Typography>Có sẵn</Typography>
           <Typography>{available}</Typography>
         </Box>
         <Box className='content__item'>
-          <Typography>DateCreated</Typography>
+          <Typography>Ngày tạo</Typography>
           <Typography>{dayjs(createdAt).format('DD , MMM YYYY')}</Typography>
         </Box>
         <Box className='content__item'>
-          <Typography>Rating</Typography>
+          <Typography>Đánh giá</Typography>
           <Typography>{rating}</Typography>
         </Box>
 
         <Box className='content__item'>
-          <Typography>Status</Typography>
+          <Typography>Trạng thái</Typography>
           <Box
             className={`px-[8px] py-[1px] rounded-xl ${
               status === 'active' ? 'bg-[#0ab39c]' : 'bg-[#f06548]'

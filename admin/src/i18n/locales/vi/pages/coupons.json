@@ -1,0 +1,24 @@
+{
+  "title": "Quản lý mã giảm giá",
+  "allCoupons": "Tất cả mã giảm giá",
+  "addCoupon": "Thêm mã giảm giá",
+  "editCoupon": "Chỉnh sửa mã giảm giá",
+  "couponDetail": "Chi tiết mã giảm giá",
+  "couponCode": "Mã",
+  "discount": "Giảm giá",
+  "startDate": "Ngày bắt đầu",
+  "endDate": "Ngày kết thúc",
+  "available": "Có sẵn",
+  "status": "Trạng thái",
+  "searchPlaceholder": "Tìm kiếm theo mã giảm giá",
+  "noCoupon": "Không có mã giảm giá",
+  "deleteCoupon": "Bạn có chắc muốn xóa mã giảm giá này?",
+  "activateCoupon": "Bạn có chắc muốn kích hoạt mã giảm giá này?",
+  "deactivateCoupon": "Bạn có chắc muốn vô hiệu hóa mã giảm giá này?",
+  "createCouponSuccess": "Thêm mã giảm giá mới thành công",
+  "enterCouponCode": "Nhập mã giảm giá",
+  "enterDiscountPercentage": "Nhập phần trăm giảm giá",
+  "enterAvailableQuantity": "Nhập số lượng có sẵn",
+  "changeCouponStatus": "Thay đổi trạng thái mã giảm giá"
+}
+

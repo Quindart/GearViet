@@ -33,11 +33,11 @@ export const changeProductStatus = async (productId: string) => {
 };
 
 export const fetchReviewByProductId = async (productId: string) => {
-  return await axiosConfig.get('/review/product/' + productId);
+  return await axiosConfig.get('/api/review/product/' + productId);
 };
 
 export const fetchTotalProductRevenue = async (productId: string) => {
-  return await axiosConfig.get('/order/revenue-product/' + productId);
+  return await axiosConfig.get('/api/order/revenue/' + productId);
 };
 
 export const fetchBestSellingProduct = async (limit: number) => {

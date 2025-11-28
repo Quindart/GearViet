@@ -4,6 +4,7 @@ import Button from 'components/ui/Button';
 import DropDown from 'components/ui/Dropdown';
 import SearchBox from 'components/ui/SearchBox';
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { LIST_PAYMENT_TYPE, ORDER_SEARCH_OPTIONS } from 'utils/constants';
 import OrderTable from './OrderTable';
 import CustomOrder from './style';
@@ -16,6 +17,7 @@ import { renderType } from 'utils/app-config';
 import { LIST_ORDER_STATUS, LIST_PAYMENT_STATUS } from '../../../utils/constants';
 
 const AllOrderTemplate = () => {
+  const { t } = useTranslation();
   const {
     getAllOrder,
     filterOrder,
@@ -101,14 +103,14 @@ const AllOrderTemplate = () => {
   return (
     <CustomOrder>
       <Box className='title'>
-        <Typography>Order Management</Typography>
+        <Typography>{t('pages/orders:title', { defaultValue: 'Order Management' })}</Typography>
       </Box>
       <Box className='searchBx flex_col w-full '>
         <Box className='w-full'>
           <Box className='w-full flex gap-4'>
             <SearchBox
               inputRef={searchTextRef}
-              placeholder='Search for order ID, customer, order status or something ...'
+              placeholder={t('pages/orders:searchPlaceholder', { defaultValue: 'Search for order ID, customer, order status or something ...' })}
             />
             <DropDown
               value={keyword}
@@ -122,7 +124,7 @@ const AllOrderTemplate = () => {
               className='grow btn--success px-10'
               onClick={handleSearchOrder}
             >
-              Search
+              {t('shared/common:search', { defaultValue: 'Search' })}
             </Button>
           </Box>
         </Box>
@@ -154,7 +156,7 @@ const AllOrderTemplate = () => {
             onClick={handleFilterOrder}
           >
             <Icon icon='system-uicons:filtering' className='mr-2 text-white text-md' />
-            <Typography className='text-[13px]'>Filters</Typography>
+            <Typography className='text-[13px]'>{t('shared/common:filter', { defaultValue: 'Filters' })}</Typography>
           </Button>
         </Box>
       </Box>

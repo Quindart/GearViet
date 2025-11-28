@@ -1,14 +1,11 @@
 import { Icon } from '@iconify/react';
 import { Box, Typography } from '@mui/material';
 import { GridColDef, GridRenderCellParams } from '@mui/x-data-grid';
-import Modal from 'components/ui/Modal';
 import Table from 'components/ui/Table';
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import theme from 'theme';
 import { IOrder } from 'types/order';
-import { formatOrderList } from 'utils/helper';
-import AssignModal from './AssignModal';
 
 type OrderTablePropsType = {
   orderList: IOrder[];
@@ -19,69 +16,56 @@ type OrderTablePropsType = {
   handleChangePage: (currentLimit: number) => void;
 };
 
-type IsShowAssignModalType = {
-  status: boolean;
-  orderId: string;
-};
-
 const OrderTable = (props: OrderTablePropsType) => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { page, limit, handleChangeLimitPerPage, handleChangePage, totalRows, orderList } = props;
 
-  const [isShowAssignModal, setIsShowAssignModal] = useState<IsShowAssignModalType>({
-    status: false,
-    orderId: '',
-  });
-
-  const handleCloseModal = () => {
-    setIsShowAssignModal({ status: false, orderId: '' });
-  };
-
-  const rows = formatOrderList(orderList);
+  const rows = orderList;
 
   const columns: GridColDef[] = [
     {
       field: 'code',
       sortable: false,
       minWidth: 100,
-      headerName: 'Code',
+      headerName: t('pages/orders:orderCode', { defaultValue: 'Code' }),
     },
     {
       field: 'name',
       sortable: false,
       minWidth: 200,
-      headerName: 'name',
+      headerName: t('pages/orders:name', { defaultValue: 'Name' }),
     },
     {
       field: 'address',
       sortable: false,
       flex: 1,
       minWidth: 350,
-      headerName: 'Address',
+      headerName: t('pages/users:address', { defaultValue: 'Address' }),
     },
     {
       field: 'phone',
       sortable: false,
       minWidth: 100,
-      headerName: 'Phone',
+      headerName: t('pages/users:phone', { defaultValue: 'Phone' }),
     },
     {
       field: 'email',
       sortable: false,
       minWidth: 150,
-      headerName: 'Email',
+      headerName: t('pages/users:email', { defaultValue: 'Email' }),
     },
     {
       field: 'dateCreated',
       sortable: false,
       minWidth: 150,
-      headerName: 'Date created',
+      headerName: t('pages/orders:dateCreated', { defaultValue: 'Date created' }),
     },
     {
       field: 'quantities',
       sortable: false,
       minWidth: 60,
-      headerName: 'Quantities',
+      headerName: t('pages/orders:quantities', { defaultValue: 'Quantities' }),
       renderCell: (_: GridRenderCellParams) => (
         <Typography className='text-[13px] cursor-pointer hover:text-[#405189] transition-all'>
           {_.value}
@@ -92,23 +76,23 @@ const OrderTable = (props: OrderTablePropsType) => {
       field: 'paymentType',
       sortable: false,
       minWidth: 100,
-      headerName: 'Payment Type',
+      headerName: t('pages/orders:paymentType', { defaultValue: 'Payment Type' }),
     },
     {
       field: 'paymentStatus',
       sortable: false,
       minWidth: 100,
-      headerName: 'Payment status',
+      headerName: t('pages/orders:paymentStatus', { defaultValue: 'Payment status' }),
     },
     {
       field: 'status',
       sortable: false,
       minWidth: 100,
-      headerName: 'Status',
+      headerName: t('pages/orders:status', { defaultValue: 'Status' }),
     },
     {
       field: 'action',
-      headerName: 'Actions',
+      headerName: t('shared/common:actions', { defaultValue: 'Actions' }),
       align: 'center',
       minWidth: 60,
       renderCell: (params: GridRenderCellParams) => (
@@ -119,19 +103,16 @@ const OrderTable = (props: OrderTablePropsType) => {
             onClick={() => {
               navigate(`/order/detail/${params.id}`);
             }}
-          />
-          {params.row.status === 'pending' && (
-            <Icon
-              icon='fluent:clipboard-task-list-ltr-24-filled'
-              className={`text-[${theme.primary}] cursor-pointer text-lg`}
-              onClick={() =>
-                setIsShowAssignModal({
-                  status: true,
-                  orderId: params.row._id,
-                })
+            role='button'
+            aria-label='View order details'
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navigate(`/order/detail/${params.id}`);
               }
-            />
-          )}
+            }}
+          />
         </Box>
       ),
       sortable: false,
@@ -158,12 +139,8 @@ const OrderTable = (props: OrderTablePropsType) => {
           getRowId={(row: IOrder) => row._id}
         />
       ) : (
-        <Typography className='text-center py-4'>No order here</Typography>
+        <Typography className='text-center py-4'>Không có đơn hàng nào</Typography>
       )}
-
-      <Modal open={isShowAssignModal.status} onClose={handleCloseModal}>
-        <AssignModal onClose={handleCloseModal} orderId={isShowAssignModal.orderId} />
-      </Modal>
     </>
   );
 };

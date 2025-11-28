@@ -1,8 +1,7 @@
 export enum NavbarDropDownType {
   NOTHING = '',
   PROFILE = 'profile',
-  NOTIFICATION = 'notification',
-  MESSAGE = 'message',
+  LANGUAGE = 'language',
 }
 
 export enum Role {
@@ -10,7 +9,6 @@ export enum Role {
   ADMIN = 'admin',
   MOD = 'mod',
   USER = 'user',
-  WAREHOUSE = 'warehouse',
   ALL = 'all',
 }
 
@@ -32,12 +30,10 @@ export enum KeywordSearchEnum {
 export enum OrderStatusEnum {
   ALL = 'all',
   PENDING = 'pending',
-  ASSIGNED = 'assigned',
-  PICKING = 'picking',
+  CONFIRMED = 'confirmed',
+  PROCESSING = 'processing',
   SHIPPING = 'shipping',
-  RETURNING = 'returing',
-  RETURNED = 'returned',
-  FINISHED = 'finished',
+  COMPLETED = 'completed',
   CANCELED = 'canceled',
 }
 

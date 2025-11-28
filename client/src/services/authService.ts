@@ -6,13 +6,13 @@ import { AuthResponse, LoginFormData, RegisterFormData } from "@/types/auth";
  */
 export const registerUser = async (data: RegisterFormData): Promise<AuthResponse> => {
   try {
-    const result = await api.post<AuthResponse["data"]>(
+    const result = await api.post<{ success: boolean; status: number; message: string; data: { user: any; token: string } }>(
       "/auth/register",
       data as unknown as Record<string, unknown>
     );
 
     return {
-      success: result.success,
+      success: result.success || false,
       message: result.message || "",
       data: result.data,
     };
@@ -30,15 +30,18 @@ export const registerUser = async (data: RegisterFormData): Promise<AuthResponse
  */
 export const loginUser = async (data: LoginFormData): Promise<AuthResponse> => {
   try {
-    const result = await api.post<AuthResponse["data"]>(
+    const result = await api.post<{ success: boolean; status: number; message: string; user: any; token: string }>(
       "/auth/login",
       data as unknown as Record<string, unknown>
     );
 
     return {
-      success: result.success,
+      success: result.success || false,
       message: result.message || "",
-      data: result.data,
+      data: {
+        user: result.user,
+        token: result.token,
+      },
     };
   } catch (error: unknown) {
     console.error("Login error:", error);
@@ -75,15 +78,15 @@ export const changePassword = async (data: {
   confirmPassword: string;
 }): Promise<AuthResponse> => {
   try {
-    const result = await api.put<AuthResponse["data"]>(
+    const result = await api.put<{ success: boolean; status: number; message: string }>(
       "/auth/password/change",
       data as unknown as Record<string, unknown>
     );
 
     return {
-      success: result.success,
+      success: result.success || false,
       message: result.message || "",
-      data: result.data,
+      data: undefined,
     };
   } catch (error: unknown) {
     console.error("Change password error:", error);
@@ -99,15 +102,15 @@ export const changePassword = async (data: {
  */
 export const resetPassword = async (email: string): Promise<AuthResponse> => {
   try {
-    const result = await api.post<AuthResponse["data"]>(
+    const result = await api.post<{ success: boolean; status: number; message: string }>(
       "/auth/forgot",
       { email } as unknown as Record<string, unknown>
     );
 
     return {
-      success: result.success,
+      success: result.success || false,
       message: result.message || "",
-      data: result.data,
+      data: undefined,
     };
   } catch (error: unknown) {
     console.error("Reset password error:", error);

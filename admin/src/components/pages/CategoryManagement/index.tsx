@@ -2,6 +2,7 @@ import { Icon } from '@iconify/react';
 import { Box, Typography } from '@mui/material';
 import Button from 'components/ui/Button';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Categories, Subcategory } from 'types';
 import useCategory from '../../../hooks/useCategory';
 import AddOrEditModal from './AddOrEditModal';
@@ -34,6 +35,7 @@ type ModalStateType = {
   item: Categories | Subcategory | undefined;
 };
 const AllCategoryTemplate = () => {
+  const { t } = useTranslation();
   const [modal, setModal] = useState<ModalStateType>({
     open: false,
     level: ModalCategoryLevelEnum.CATEGORY,
@@ -87,21 +89,41 @@ const AllCategoryTemplate = () => {
           }}
         >
           <Icon icon='material-symbols:add' className='text-[20px] mr-1' />
-          Add category
+          {t('pages/categories:addCategory', { defaultValue: 'Add category' })}
         </Button>
       </Box>
       {categories.map((category: Categories) => (
         <Accordion name={category.name} key={category._id}>
           <Box className='w-[120px] flex absolute  py-0 top-2 right-20 items-center '>
             <span
-              title='Thêm subcategory'
+              title={t('pages/categories:addSubcategory', { defaultValue: 'Add subcategory' })}
               onClick={() =>
                 handleOpenModal(ModalCategoryLevelEnum.SUB_CATEGORY, ModalMethodsEnum.ADD, category)
               }
+              role='button'
+              aria-label={t('pages/categories:addSubcategory', { defaultValue: 'Add subcategory' })}
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  handleOpenModal(ModalCategoryLevelEnum.SUB_CATEGORY, ModalMethodsEnum.ADD, category);
+                }
+              }}
             >
               <Icon icon='material-symbols:add' className='icon text-[#0AB39C] text-[28px]' />
             </span>
-            <span title='Sửa category'>
+            <span
+              title={t('pages/categories:editCategory', { defaultValue: 'Edit category' })}
+              role='button'
+              aria-label={t('pages/categories:editCategory', { defaultValue: 'Edit category' })}
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  handleOpenModal(ModalCategoryLevelEnum.CATEGORY, ModalMethodsEnum.EDIT, category);
+                }
+              }}
+            >
               <Icon
                 icon='material-symbols:edit'
                 className='icon text-[#405189]'
@@ -110,7 +132,22 @@ const AllCategoryTemplate = () => {
                 }
               />
             </span>
-            <span title='Xóa category'>
+            <span
+              title={t('pages/categories:deleteCategory', { defaultValue: 'Delete category' })}
+              role='button'
+              aria-label={t('pages/categories:deleteCategory', { defaultValue: 'Delete category' })}
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  handleOpenModal(
+                    ModalCategoryLevelEnum.CATEGORY,
+                    ModalMethodsEnum.DELETE,
+                    category,
+                  );
+                }
+              }}
+            >
               <Icon
                 icon='ph:trash-fill'
                 className='icon text-red-500'
@@ -130,7 +167,7 @@ const AllCategoryTemplate = () => {
               <Box className='w-full flex justify-between'>
                 <Typography className='text-[13px]'>{subcategory.name}</Typography>
                 <Box className='flex my-2'>
-                  <span title='Sửa subcategory'>
+                  <span title={t('pages/categories:editSubcategory', { defaultValue: 'Edit subcategory' })}>
                     <Icon
                       icon='material-symbols:edit'
                       className='icon text-[#405189]'
@@ -143,7 +180,7 @@ const AllCategoryTemplate = () => {
                       }
                     />
                   </span>
-                  <span title='Xóa subcategory'>
+                  <span title={t('pages/categories:deleteSubcategory', { defaultValue: 'Delete subcategory' })}>
                     <Icon
                       icon='ph:trash-fill'
                       className='icon text-red-500'
@@ -181,9 +218,9 @@ const AllCategoryTemplate = () => {
           open={modal.open}
           onClose={handleCloseModal}
           onChange={handleClickToDeleteItem}
-          message={`Bạn có chắc muốn xóa ${
-            modal.level === ModalCategoryLevelEnum.CATEGORY ? ' category ' : 'sub category'
-          }  này không?`}
+          message={modal.level === ModalCategoryLevelEnum.CATEGORY
+            ? t('pages/categories:areYouSureDeleteCategory', { categoryName: modal.item?.name || '', defaultValue: 'Are you sure you want to delete this category?' })
+            : t('pages/categories:areYouSureDeleteSubcategory', { subcategoryName: modal.item?.name || '', defaultValue: 'Are you sure you want to delete this subcategory?' })}
         />
       )}
     </CategoryBox>

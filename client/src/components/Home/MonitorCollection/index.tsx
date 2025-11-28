@@ -1,16 +1,20 @@
 import React from "react";
 import CollectionGroup from "../CollectionGroup";
 import {
-  mockMonitorProducts,
   monitorTags,
 } from "../CollectionGroup/mockCollectionData";
+import { Product } from "@/types/product";
 
-const MonitorCollection: React.FC = () => {
+interface MonitorCollectionProps {
+  products: Product[];
+}
+
+const MonitorCollection: React.FC<MonitorCollectionProps> = ({ products }) => {
   return (
     <CollectionGroup
       title="MÀN HÌNH"
       tags={monitorTags}
-      products={mockMonitorProducts}
+      products={products}
       viewAllHref="/monitors"
     />
   );

@@ -17,7 +17,6 @@ import { IOrder, ShippingOrderType } from 'types/order';
 import { renderType } from 'utils/app-config';
 import { formatOrderList } from 'utils/helper';
 import { fetchFilterOrder } from './../services/orderApi';
-import { IUser } from './../types/user';
 import { FilterOrderType } from '../types/order';
 
 const useOrder = () => {
@@ -59,71 +58,6 @@ const useOrder = () => {
         dispatch(setTotalRows(res.totalRows));
       } else {
         dispatch(setOrderRenderType(renderType.SEARCH));
-        dispatch(setOrderList([]));
-      }
-    } catch (error) {
-      if (isAxiosError(error)) {
-        console.log(error.message);
-      }
-    }
-  };
-
-  const getAllAssignedOrder = async (currentUser: IUser) => {
-    try {
-      if (
-        currentUser.role === 'owner' ||
-        currentUser.role === 'warehouse' ||
-        currentUser.role === 'admin'
-      ) {
-        const res: ResponseType =
-          currentUser.role === 'owner' || currentUser.role === 'admin'
-            ? await fetchFilterOrder(`page=${page}&limit=${limit}&status=assigned`)
-            : await fetchFilterOrder(
-                `page=${page}&limit=${limit}&status=assigned&warehouseUser=${currentUser._id}`,
-              );
-        if (res.success && res.orders && res.totalRows) {
-          const orderList = formatOrderList(res.orders);
-          dispatch(setOrderRenderType(renderType.ALL));
-          dispatch(setOrderList(orderList));
-          dispatch(setTotalRows(res.totalRows));
-        }
-      } else {
-        dispatch(setOrderList([]));
-      }
-    } catch (error) {
-      if (isAxiosError(error)) {
-        console.log(error.message);
-      }
-    }
-  };
-
-  const searchAssignedOrder = async (
-    currentUser: IUser,
-    code: string,
-    page: number,
-    limit: number,
-  ) => {
-    try {
-      if (
-        currentUser.role === 'owner' ||
-        currentUser.role === 'warehouse' ||
-        currentUser.role === 'admin'
-      ) {
-        const res: ResponseType =
-          currentUser.role === 'owner' || currentUser.role === 'admin'
-            ? await fetchFilterOrder(`page=${page}&limit=${limit}&status=assigned&code=${code}`)
-            : await fetchFilterOrder(
-                `page=${page}&limit=${limit}&status=assigned&warehouseUser=${currentUser._id}&code=${code}`,
-              );
-        if (res.success && res.orders && res.totalRows) {
-          const orderList = formatOrderList(res.orders);
-          dispatch(setOrderRenderType(renderType.SEARCH));
-          dispatch(setOrderList(orderList));
-          dispatch(setTotalRows(res.totalRows));
-        } else {
-          dispatch(setOrderList([]));
-        }
-      } else {
         dispatch(setOrderList([]));
       }
     } catch (error) {
@@ -208,13 +142,11 @@ const useOrder = () => {
     getAllOrder,
     searchOrder,
     totalRows,
-    getAllAssignedOrder,
     createShippingOrder,
     page,
     setPage,
     limit,
     setLimit,
-    searchAssignedOrder,
     getRecentOrder,
     recentOrder,
     totalOrderByTime,

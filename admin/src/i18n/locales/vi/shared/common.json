@@ -1,0 +1,27 @@
+{
+  "save": "Lưu",
+  "cancel": "Hủy",
+  "close": "Đóng",
+  "delete": "Xóa",
+  "edit": "Chỉnh sửa",
+  "add": "Thêm",
+  "update": "Cập nhật",
+  "search": "Tìm kiếm",
+  "filter": "Lọc",
+  "reset": "Đặt lại",
+  "submit": "Gửi",
+  "back": "Quay lại",
+  "next": "Tiếp theo",
+  "previous": "Trước",
+  "confirm": "Xác nhận",
+  "yes": "Có",
+  "no": "Không",
+  "loading": "Đang tải...",
+  "noData": "Không có dữ liệu",
+  "actions": "Hành động",
+  "status": "Trạng thái",
+  "active": "Hoạt động",
+  "inactive": "Không hoạt động",
+  "all": "Tất cả"
+}
+

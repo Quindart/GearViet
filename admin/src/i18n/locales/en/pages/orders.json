@@ -1,0 +1,28 @@
+{
+  "title": "Order Management",
+  "allOrders": "All Orders",
+  "orderCode": "Code",
+  "name": "Name",
+  "products": "Products",
+  "status": "Status",
+  "dateCreated": "Date created",
+  "quantities": "Quantities",
+  "paymentType": "Payment Type",
+  "paymentStatus": "Payment status",
+  "paymentStatusPaid": "Paid",
+  "paymentStatusUnpaid": "Unpaid",
+  "searchPlaceholder": "Search for order ID, customer, order status or something ...",
+  "pending": "Pending",
+  "confirmed": "Confirmed",
+  "processing": "Processing",
+  "shipping": "Shipping",
+  "completed": "Completed",
+  "canceled": "Canceled",
+  "orderStatus": "Order Status",
+  "orderStatusLabel": "Order status",
+  "transactionNo": "Transaction number",
+  "payDate": "Payment date",
+  "customerDetails": "Customer Details",
+  "customer": "Customer"
+}
+

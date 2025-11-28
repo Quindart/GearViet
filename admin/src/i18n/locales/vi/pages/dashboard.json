@@ -1,0 +1,19 @@
+{
+  "title": "Bảng điều khiển",
+  "goodMorning": "Chào buổi sáng, Giang!",
+  "subtitle": "Đây là những gì đang diễn ra với cửa hàng của bạn hôm nay.",
+  "totalEarnings": "TỔNG THU NHẬP",
+  "orders": "ĐƠN HÀNG",
+  "users": "NGƯỜI DÙNG",
+  "newProduct": "SẢN PHẨM MỚI",
+  "seeDetails": "Xem chi tiết",
+  "bestSelling": "Sản phẩm bán chạy nhất",
+  "newProductTitle": "Sản phẩm mới nhất",
+  "recentOrders": "Đơn hàng gần đây",
+  "timeOptions": {
+    "day": "1 Ngày",
+    "week": "1 Tuần",
+    "month": "1 Tháng"
+  }
+}
+

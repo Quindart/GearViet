@@ -1,0 +1,16 @@
+{
+  "title": "Danh mục",
+  "categoryManagement": "Quản lý danh mục",
+  "addCategory": "Thêm danh mục",
+  "addSubcategory": "Thêm danh mục con",
+  "editCategory": "Sửa danh mục",
+  "editSubcategory": "Sửa danh mục con",
+  "deleteCategory": "Xóa danh mục",
+  "deleteSubcategory": "Xóa danh mục con",
+  "categoryName": "Tên danh mục",
+  "subcategoryName": "Tên danh mục con",
+  "addNew": "Thêm mới",
+  "areYouSureDeleteCategory": "Bạn có chắc muốn xóa danh mục {{categoryName}}?",
+  "areYouSureDeleteSubcategory": "Bạn có chắc muốn xóa danh mục con {{subcategoryName}}?"
+}
+

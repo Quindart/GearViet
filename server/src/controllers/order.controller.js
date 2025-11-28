@@ -2,12 +2,8 @@ import mongoose from 'mongoose';
 import moment from 'moment';
 
 import Order from '../models/order.model.js';
-import Coupon from '../models/coupon.model.js';
 import User from '../models/user.model.js';
 import Product from '../models/product.model.js';
-
-const PORT = process.env.PORT || 3001;
-const BASE_URL = process.env.BASE_URL;
 
 import { tokenDecode } from '../middlewares/tokenHandler.js';
 import {
@@ -16,16 +12,9 @@ import {
   sendConflict,
   sendNotFound,
 } from '../utils/response.js';
-import { HTTP_STATUS, ROLE, ORDER_STATUS } from '../utils/constant.js';
-
-import { checkCode } from './coupon.controller.js';
-
-import {
-  cacheData,
-} from '../utils/cache.js';
+import { HTTP_STATUS, ROLE } from '../utils/constant.js';
 
 
-import axios from 'axios';
 
 //[GET] /getAllOrder
 export const getAllOrder = async (req, res) => {
@@ -59,13 +48,11 @@ export const getAllOrder = async (req, res) => {
 export const getOrderById = async (req, res) => {
   try {
     const order = await Order.findById(req.params.orderId)
-      .populate("products.product")
-      .populate("coupon", "discount");
+      .populate("products.product");
     if (
       req.user.role === ROLE.OWNER ||
       req.user.role === ROLE.ADMIN ||
       req.user.role === ROLE.MOD ||
-      req.user.role === ROLE.WAREHOUSE ||
       req.user._id.toString() === order.user.toString()
     ) {
       if (order) {
@@ -147,7 +134,7 @@ export const getTotalRevenue = async (req, res) => {
     res.status(HTTP_STATUS.SUCCESS).json({
       success: true,
       status: 200,
-      totalRevenue: result[0].totalRevenue,
+      totalRevenue: result.length > 0 ? result[0].totalRevenue : 0,
     });
   } catch (error) {
     sendError(res, error);
@@ -158,7 +145,7 @@ export const getTotalRevenue = async (req, res) => {
 export const getTotalRevenueId = async (req, res) => {
   const { productId } = Object.assign({}, req.params);
   try {
-    const check = Product.findById(productId);
+    const check = await Product.findById(productId);
 
     if (!check) return sendNotFound(res, "productId not found!");
 
@@ -168,7 +155,7 @@ export const getTotalRevenueId = async (req, res) => {
       },
       {
         $match: {
-          "products.product": mongoose.Types.ObjectId(productId),
+          "products.product": new mongoose.Types.ObjectId(productId),
         },
       },
       {
@@ -226,7 +213,7 @@ export const getOrderByUserId = async (req, res) => {
 //[POST] /createOrder
 export const createOrder = async (req, res) => {
   let userId;
-  const { products, coupon, shippingDetail, paymentType, serviceTypeId } =
+  const { products, customerInfo, paymentType } =
     req.body;
 
   //Nếu người dùng đăng nhập thì lấy userId
@@ -239,9 +226,7 @@ export const createOrder = async (req, res) => {
     if (paymentType === "offline") {
       const newOrder = await createOrderController(
         products,
-        coupon,
-        shippingDetail,
-        serviceTypeId,
+        customerInfo,
         "offline",
         "unpaid",
         userId
@@ -255,50 +240,22 @@ export const createOrder = async (req, res) => {
         newOrder,
       });
     } else {
-      const key = Date.now();
-
-      //Luu du lieu vao cache vs time out la 5p
-      cacheData(
-        key.toString(),
-        JSON.stringify({
-          products,
-          coupon,
-          shippingDetail,
-          serviceTypeId,
-          userId,
-        })
+      // Online payment
+      const newOrder = await createOrderController(
+        products,
+        customerInfo,
+        "online",
+        "unpaid",
+        userId
       );
 
-      //Tinh tong tien hang
-      let subTotal = 0;
-      let total;
-      for (const item of products) {
-        const product = await Product.findOne({ _id: item.product }).exec();
+      increaseProductSold(products);
 
-        if (!product) {
-          console.log(`Không tìm thấy sản phẩm với id: ${item.productId}`);
-          continue;
-        }
-
-        subTotal += product.price * item.quantity;
-      }
-
-      if (coupon) {
-        const currentCoupon = await Coupon.findOne({ code: coupon });
-        total = subTotal - (subTotal * parseInt(currentCoupon.discount)) / 100;
-      } else {
-        total = subTotal;
-      }
-
-      const response = await axios.post(
-        `${BASE_URL}:${PORT}/payment/create_payment_url`,
-        {
-          amount: total,
-          orderDescription: `ecomx_${key}`,
-        }
-      );
-
-      res.status(HTTP_STATUS.SUCCESS).json(response.data);
+      res.status(HTTP_STATUS.SUCCESS).json({
+        success: true,
+        status: 200,
+        newOrder,
+      });
     }
   } catch (error) {
     sendError(res, error);
@@ -311,7 +268,7 @@ export const searchOrder = async (req, res) => {
   const { user } = req;
 
   var regex = {
-    "shippingDetail.fullname": {
+    "customerInfo.fullname": {
       $regex: name ? name : "",
       $options: "i",
     },
@@ -319,7 +276,7 @@ export const searchOrder = async (req, res) => {
       $regex: code ? code : "",
       $options: "i",
     },
-    "shippingDetail.phone": {
+    "customerInfo.phone": {
       $regex: phone ? phone : "",
       $options: "i",
     },
@@ -393,41 +350,6 @@ export const changeOrderStatus = async (req, res) => {
   }
 };
 
-//Asign order to warehouse user
-export const assignOrderToWarehouse = async (req, res) => {
-  const { warehouseUserId, orderId } = req.body;
-
-  try {
-    const currentOrder = await Order.findById(orderId);
-    if (!currentOrder) return sendWarning(res, "Order not found");
-
-    //khi status cua order la shipping, returning ....thi khong cho assign
-    if (currentOrder.status !== ORDER_STATUS.PENDING)
-      return sendWarning(res, "You cant assign order to warehouse right now");
-
-    const updatedOrder = await Order.findByIdAndUpdate(
-      orderId,
-      {
-        $set: {
-          warehouseUser: warehouseUserId,
-          status: ORDER_STATUS.ASSIGNED,
-        },
-      },
-      { new: true }
-    );
-
-    if (!updatedOrder) return sendWarning(res, "Assign warehouse user failed");
-
-    //tăng selling của product khi status -> completed
-    res.status(HTTP_STATUS.SUCCESS).json({
-      success: true,
-      status: 200,
-      order: updatedOrder,
-    });
-  } catch (error) {
-    sendError(res, error);
-  }
-};
 
 export const filterOrder = async (req, res) => {
   const {
@@ -436,7 +358,6 @@ export const filterOrder = async (req, res) => {
     status,
     paymentStatus,
     paymentType,
-    warehouseUser,
     code,
   } = Object.assign({}, req.query);
 
@@ -444,7 +365,6 @@ export const filterOrder = async (req, res) => {
   if (status !== undefined) query["status"] = status;
   if (paymentStatus !== undefined) query["paymentStatus"] = paymentStatus;
   if (paymentType !== undefined) query["paymentType"] = paymentType;
-  if (warehouseUser !== undefined) query["warehouseUser"] = warehouseUser;
   if (code !== undefined && code !== "")
     query["code"] = {
       $regex: code ? code : "",
@@ -453,7 +373,6 @@ export const filterOrder = async (req, res) => {
 
   try {
     const orders = await Order.find(query)
-      .populate("warehouseUser", "_id username")
       .limit(limit)
       .skip((page - 1) * limit)
       .sort({ createdAt: -1 })
@@ -471,17 +390,6 @@ export const filterOrder = async (req, res) => {
   }
 };
 
-export const toggleCouponQuantity = async (code, quantity) => {
-  const coupon = await Coupon.findOneAndUpdate(
-    { code: code },
-    {
-      $inc: {
-        available: quantity,
-      },
-    }
-  );
-  return coupon;
-};
 
 export const toggleProductQuantity = async (products, type) => {
   products.forEach(async (element) => {
@@ -506,16 +414,14 @@ export const increaseProductSold = async (products) => {
 
 export const createOrderController = async (
   products,
-  coupon,
-  shippingDetail,
-  serviceTypeId,
+  customerInfo,
   paymentType,
   paymentStatus,
   userId,
   transactionNo,
   payDate
 ) => {
-  let { fullname, address, phone, email } = shippingDetail;
+  let { fullname, address, phone, email } = customerInfo;
 
   for (let i = 0; i < products.length; i++) {
     const { product, quantity } = products[i];
@@ -536,31 +442,18 @@ export const createOrderController = async (
 
   const data = {};
   data["products"] = products;
-  data["shippingDetail"] = {
+  data["customerInfo"] = {
     fullname,
     address,
     phone,
     email,
   };
-  data["serviceTypeId"] = serviceTypeId;
   data["paymentType"] = paymentType;
   data["paymentStatus"] = paymentStatus;
 
   if (userId) data["user"] = userId;
   if (transactionNo) data["transactionNo"] = transactionNo;
   if (payDate) data["payDate"] = payDate;
-
-  // nếu có coupon thì check có hợp lệ k
-  if (coupon) {
-    const result = await checkCode(coupon);
-    //Neu hop le thi tru so luong
-    if (typeof result !== "string") {
-      const currentCoupon = await toggleCouponQuantity(coupon, -1);
-
-      //Them coupon vao data
-      data["coupon"] = currentCoupon._id;
-    } else return sendWarning(res, "coupon k hop le");
-  }
 
   // trừ số lượng sản phẩm từ Product
   toggleProductQuantity(products, "decrease");
@@ -570,10 +463,6 @@ export const createOrderController = async (
   if (!newOrder) {
     //nếu tạo mới k thành công thì trả lại số lượng về sp
     toggleProductQuantity(products, "increase");
-
-    //nếu tạo mới k thành công va co coupon thì trả lại số lượng coupon
-    //Da check tinh hop le cua coupon o tren nen k check nua
-    toggleCouponQuantity(coupon, 1);
   }
 
   return newOrder;

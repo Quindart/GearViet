@@ -16,24 +16,7 @@ export const ROUTES = {
   SUBCATEGORY: "/subcategory",
   SUBCATEGORY_BY_ID: "/subcategory/:subcategoryId",
 
-  //Comment
-  COMMENT: "/comment",
-  COMMENT_BY_ID: "/:commentId",
-  COMMENT_BY_PRODUCT: "/product/:productId",
-  REPLY: "/reply/:commentId",
 
-  //Coupon
-  COUPON: "/coupon",
-  COUPON_BY_ID: "/:couponId",
-
-  //Order
-  ORDER: "/order",
-  ORDER_BY_ID: "/:orderId",
-  TOTAL_REVENUE: "/revenue",
-  TOTAL_REVENUE_BY_PRODUCT_ID: "/revenue-product/:productId",
-  TOTAL_ORDER_BY_TIME: "/total",
-  ORDER_BY_USER_ID: "/user/:userId",
-  ASSIGN_ORDER: "/assign",
 
   //Product
   PRODUCT: "/product",
@@ -48,10 +31,6 @@ export const ROUTES = {
   CHANGE_PRODUCT_STATUS: "/status/:productId",
   CHECK_PRODUCT_CODE: "/check-upc",
 
-  //Review
-  REVIEW: "/review",
-  REVIEW_BY_ID: "/:reviewId",
-  REVIEW_BY_PRODUCT_ID: "/product/:productId",
 
   //Upload
   UPLOAD: "/upload",
@@ -63,19 +42,24 @@ export const ROUTES = {
   USER_DETAIL: "/detail",
   CHANGE_USER_ROLE_AND_STATUS: "/change/:userId",
 
-  //Shipping
-  SHIPPING: "/shipping",
-  CREATE: "/shipping-order/create",
-  DETAIL: "/shipping-order/detail",
-  CANCEL: "/switch-status/cancel",
-  AVAILABLE_SERVICES: "/shipping-order/available-services",
-  FEE: "/shipping-order/fee",
-  PROVINCE: "/master-data/province",
-  DISTRICT: "/master-data/district",
-  WARD: "/master-data/ward",
+  //Order
+  ORDER: "/order",
+  ORDER_BY_ID: "/:orderId",
+  ORDER_BY_USER_ID: "/user/:userId",
+  TOTAL_ORDER_BY_TIME: "/total",
+  TOTAL_REVENUE: "/revenue",
+  TOTAL_REVENUE_BY_PRODUCT_ID: "/revenue/:productId",
+
+  //Coupon
+  COUPON: "/coupon",
+  COUPON_BY_ID: "/:couponId",
+
+  //Review
+  REVIEW: "/review",
+  REVIEW_BY_ID: "/:reviewId",
+  REVIEW_BY_PRODUCT_ID: "/product/:productId",
 
   //Payment
-  PAYMENT: "/payment",
-  CREATE_PAYMENT_URL: "/create_payment_url",
+  CREATE_PAYMENT_URL: "/create",
   PAYMENT_SUCCESS: "/success",
 };

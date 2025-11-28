@@ -1,34 +1,16 @@
 import { api } from "@/lib/api";
-
-export interface Category {
-  id: number;
-  name: string;
-  description?: string;
-  image?: string;
-  slug: string;
-  createdAt: string;
-  updatedAt: string;
-}
-
-export interface Subcategory {
-  id: number;
-  name: string;
-  description?: string;
-  categoryId: number;
-  slug: string;
-  createdAt: string;
-  updatedAt: string;
-}
+import { Category } from "@/types/category";
+import { CategoryResponse, SingleCategoryResponse } from "@/types/api-response";
 
 /**
  * Get all categories
  */
 export const getAllCategories = async (): Promise<Category[]> => {
   try {
-    const result = await api.get<Category[]>('/category');
-    return result.data || [];
+    const result = await api.get<CategoryResponse>("/category");
+    return result.categories || [];
   } catch (error) {
-    console.error("Get categories error:", error);
+    console.error("Get all categories error:", error);
     return [];
   }
 };
@@ -36,51 +18,13 @@ export const getAllCategories = async (): Promise<Category[]> => {
 /**
  * Get category by ID
  */
-export const getCategoryById = async (categoryId: string | number): Promise<Category | null> => {
+export const getCategoryById = async (categoryId: string): Promise<Category | null> => {
   try {
-    const result = await api.get<Category>(`/category/${categoryId}`);
-    return result.data || null;
+    const result = await api.get<SingleCategoryResponse>(`/category/${categoryId}`);
+    return result.category || null;
   } catch (error) {
     console.error("Get category by ID error:", error);
     return null;
   }
 };
 
-/**
- * Get all subcategories
- */
-export const getAllSubcategories = async (): Promise<Subcategory[]> => {
-  try {
-    const result = await api.get<Subcategory[]>('/category/subcategory');
-    return result.data || [];
-  } catch (error) {
-    console.error("Get subcategories error:", error);
-    return [];
-  }
-};
-
-/**
- * Get subcategory by ID
- */
-export const getSubcategoryById = async (subcategoryId: string | number): Promise<Subcategory | null> => {
-  try {
-    const result = await api.get<Subcategory>(`/category/subcategory/${subcategoryId}`);
-    return result.data || null;
-  } catch (error) {
-    console.error("Get subcategory by ID error:", error);
-    return null;
-  }
-};
-
-/**
- * Get subcategories by category ID
- */
-export const getSubcategoriesByCategoryId = async (categoryId: string | number): Promise<Subcategory[]> => {
-  try {
-    const result = await api.get<Subcategory[]>(`/category/${categoryId}/subcategories`);
-    return result.data || [];
-  } catch (error) {
-    console.error("Get subcategories by category ID error:", error);
-    return [];
-  }
-};

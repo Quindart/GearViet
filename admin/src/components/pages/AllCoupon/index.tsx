@@ -4,6 +4,7 @@ import Button from 'components/ui/Button';
 import Modal from 'components/ui/Modal';
 import useCoupon from 'hooks/useCoupon';
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import SearchBox from '../../ui/SearchBox/index';
 import AddModal from './AddModal/AddModal';
 import TableCoupon from './TableCoupon';
@@ -13,6 +14,7 @@ import { RootState } from 'store';
 import { renderType } from 'utils/app-config';
 // import Calendar from 'components/ui/Calendar';
 const ListALLCouponTemplate = () => {
+  const { t } = useTranslation();
   const [isShowAddCoupon, setIsShowAddCoupon] = useState<boolean>(false);
   const searchTextRef = useRef<HTMLInputElement | null>(null);
   const { getAllCoupon, searchCoupon, couponList, totalRows, page, setPage, limit, setLimit } =
@@ -56,20 +58,20 @@ const ListALLCouponTemplate = () => {
     <>
       <CustomCoupon>
         <Box className='title xl:flex-row sm:justify-between'>
-          <Typography>Coupon management</Typography>
+          <Typography>{t('pages/coupons:title', { defaultValue: 'Coupon management' })}</Typography>
           <Button
             onClick={() => setIsShowAddCoupon(true)}
             className='btn--success'
             variant='contained'
           >
-            Add Coupon
+            {t('pages/coupons:addCoupon', { defaultValue: 'Add Coupon' })}
           </Button>
         </Box>
 
         <Box className='flex flex-col gap-4 p-4 border-b border-dashed border-[#e9ebec] mb-4'>
           <Box className='w-full flex gap-4'>
             <SearchBox
-              placeholder='Search by coupon code'
+              placeholder={t('pages/coupons:searchPlaceholder', { defaultValue: 'Search by coupon code' })}
               inputRef={searchTextRef}
               onChange={handleInputChange}
             />
@@ -79,7 +81,7 @@ const ListALLCouponTemplate = () => {
               variant='contained'
               onClick={handleSearch}
             >
-              Search
+              {t('shared/common:search', { defaultValue: 'Search' })}
             </Button>
           </Box>
 

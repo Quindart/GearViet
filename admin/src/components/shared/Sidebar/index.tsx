@@ -10,6 +10,7 @@ import {
 import useApp from 'hooks/useApp';
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { APP_SIDEBAR } from 'utils/app-config';
 import { drawerStyle } from './style';
 import useUser from 'hooks/useUser';
@@ -19,12 +20,31 @@ const componentPageIndex = 1;
 
 export default function AdminSidebar() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [activeItemIndexes, setActiveItemIndexes] = React.useState<number[]>([]);
   const location = useLocation();
   const { adminDetail } = useUser();
   const [currentSidebarItemIndex, setCurrentSidebarItemIndex] = React.useState<number>(0);
   const { hideSideBar, setShowSideBar } = useApp();
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+
+  const getSidebarText = (section: string, defaultText: string) => {
+    const translationMap: { [key: string]: string } = {
+      home: 'home',
+      categories: 'categoryManagement',
+      Products: 'productManagement',
+      all_products: 'allProduct',
+      add_new: 'addProduct',
+      order_management: 'orderManagement',
+      all_order: 'allOrder',
+      Users: 'userManagement',
+      all_user: 'allUser',
+      Coupons: 'couponManagement',
+      all_coupons: 'allCoupon',
+    };
+    const key = translationMap[section] || defaultText.toLowerCase().replace(/\s+/g, '');
+    return t(`shared/sidebar:${key}`, { defaultValue: defaultText });
+  };
 
   React.useEffect(() => {
     if (location.pathname === '/') {
@@ -79,8 +99,8 @@ export default function AdminSidebar() {
       {hideSideBar ? (
         <Box component='section' className='w-full flex justify-center py-[26px] cursor-pointer'>
           <img
-            src='https://themesbrand.com/velzon/html/default/assets/images/logo-light.png'
-            className='w-[100px]'
+            src='https://res.cloudinary.com/dcgxrnv0k/image/upload/v1763391072/logo_yaaonz.webp'
+            className='w-[200px]'
             onClick={() => {
               windowWidth <= 1024 && setShowSideBar(false);
               navigate('/');
@@ -90,7 +110,7 @@ export default function AdminSidebar() {
       ) : (
         <Box component='section' className='flex justify-center py-7 cursor-pointer'>
           <img
-            src='https://themesbrand.com/velzon/html/default/assets/images/logo-sm.png'
+            src='https://res.cloudinary.com/dcgxrnv0k/image/upload/v1763391072/logo_yaaonz.webp'
             className='w-[22px] h-[22px]'
             onClick={() => {
               windowWidth <= 1024 && setShowSideBar(false);
@@ -130,7 +150,9 @@ export default function AdminSidebar() {
                   }}
                 >
                   <Icon icon={item.icon} className='mr-2 h-[18px] w-[18px] ' />
-                  <Typography className='flex-1 text-sm '>{item.text}</Typography>
+                  <Typography className='flex-1 text-sm '>
+                    {getSidebarText(item.section, item.text)}
+                  </Typography>
                 </Box>
               </AccordionSummary>
               {item?.children && (
@@ -146,7 +168,7 @@ export default function AdminSidebar() {
                         navigate(submenuItem.link);
                       }}
                     >
-                      {submenuItem.text}
+                      {getSidebarText(submenuItem.section, submenuItem.text)}
                     </Typography>
                   ))}
                 </AccordionDetails>

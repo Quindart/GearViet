@@ -19,7 +19,7 @@ const SimpleBar = () => {
       <CustomSimplebar className='2xl:block no-scrollbar pb-[60px]'>
         <Box className='text-[13px]'>
           <Typography className=' font-[600]' sx={{ color: theme.text_gray }}>
-            RECENT ACTIVITY
+            Hoạt động gần đây
           </Typography>
         </Box>
         {listActivity.map((item: ActivityItemTypes, index: number) => (

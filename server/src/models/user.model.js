@@ -74,7 +74,7 @@ const userSchema = new mongoose.Schema(
     },
     role: {
       type: String,
-      default: "user", //warehouse, mod, admin, user, owner
+      default: "user", //mod, admin, user, owner
       lowercase: true,
     },
     status: {

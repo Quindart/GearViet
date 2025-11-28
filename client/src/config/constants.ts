@@ -4,12 +4,12 @@
 
 export const APP_CONFIG = {
   // App meta
-  APP_NAME: "GearViet",
+  APP_NAME: "TheGioiGear",
   APP_DESCRIPTION: "Thế Giới Gaming hàng đầu Việt Nam",
   
   // Contact info
   HOTLINE: "02899998399",
-  EMAIL: "contact@gearviet.com",
+  EMAIL: "contact@thegioigear.com",
   
   // Business hours
   BUSINESS_HOURS: "T2 - CN 9:00 AM - 20:00 PM",
@@ -29,9 +29,9 @@ export const APP_CONFIG = {
   
   // URLs
   SOCIAL_MEDIA: {
-    FACEBOOK: "https://facebook.com/gearviet",
-    INSTAGRAM: "https://instagram.com/gearviet",
-    YOUTUBE: "https://youtube.com/gearviet",
+    FACEBOOK: "https://facebook.com/TheGioiGear",
+    INSTAGRAM: "https://instagram.com/TheGioiGear",
+    YOUTUBE: "https://youtube.com/TheGioiGear",
   },
   
   // File upload

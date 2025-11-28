@@ -1,65 +1,51 @@
 import Breadcrumb, { BreadcrumbItem } from "@/components/ui/Breadcrumb";
 import { FaList } from "react-icons/fa";
 import ProductsClient from "./ProductsClient";
+import { getAllProducts, filterProduct } from "@/services/productApi";
 
-// Mock function to get products - In real app, this would be an API call
-const getProducts = async () => {
-  // Simulate API delay
-  await new Promise((resolve) => setTimeout(resolve, 100));
+interface ProductsPageProps {
+  searchParams: Promise<{
+    category?: string;
+    brand?: string;
+    minPrice?: string;
+    maxPrice?: string;
+    sort?: string;
+    search?: string;
+  }>;
+}
 
-  return [
-    {
-      id: 1,
-      name: "Giá Treo Màn Hình - HyperWork T9 Pro III / 24 - 57inch",
-      slug: "gia-treo-man-hinh-hyperwork-t9-pro-iii-24-57inch",
-      brand: "Hyper Work",
-      category: "Giá treo màn hình",
-      price: 2390000,
-      originalPrice: 2790000,
-      discount: 14,
-      inStock: true,
-      rating: 4.8,
-      reviewCount: 127,
-      image: "https://placehold.co/300x300/png",
-      tags: ["Giá treo", "Màn hình", "HyperWork"],
-    },
-    {
-      id: 2,
-      name: "Bộ Vi Xử Lý - CPU AMD Ryzen 5 5600GT / 3.6GHz Boost 4.4GHz",
-      slug: "cpu-amd-ryzen-5-5600gt",
-      brand: "AMD",
-      category: "CPU",
-      price: 3890000,
-      originalPrice: 4200000,
-      discount: 7,
-      inStock: true,
-      rating: 4.6,
-      reviewCount: 89,
-      image: "https://placehold.co/300x300/png",
-      tags: ["CPU", "AMD", "Ryzen"],
-    },
-    {
-      id: 3,
-      name: "Bộ máy tính TGG GOLD I | 12TH",
-      slug: "bo-may-tinh-tgg-gold-i-12th",
-      brand: "TGG",
-      category: "PC Build",
-      price: 11790000,
-      originalPrice: 12490000,
-      discount: 6,
-      inStock: true,
-      rating: 4.9,
-      reviewCount: 203,
-      image: "https://placehold.co/300x300/png",
-      tags: ["PC Build", "Gaming", "TGG"],
-    },
-  ];
-};
+export default async function ProductsPage({ searchParams }: ProductsPageProps) {
+  const params = await searchParams;
+  let products;
 
-export default async function ProductsPage() {
-  const products = await getProducts();
+  if (params.search) {
+    const { searchProduct } = await import("@/services/productApi");
+    products = await searchProduct(params.search);
+  } else if (params.category || params.brand || params.minPrice || params.maxPrice) {
+    const filterParams: {
+      categoryId?: string;
+      brand?: string;
+      minPrice?: number;
+      maxPrice?: number;
+      sort?: string;
+    } = {};
+
+    if (params.category) filterParams.categoryId = params.category;
+    if (params.brand) filterParams.brand = params.brand;
+    if (params.minPrice) filterParams.minPrice = parseInt(params.minPrice);
+    if (params.maxPrice) filterParams.maxPrice = parseInt(params.maxPrice);
+    if (params.sort) filterParams.sort = params.sort;
+
+    products = await filterProduct(filterParams);
+  } else {
+    products = await getAllProducts({ page: 1, limit: 40 });
+  }
 
   const breadcrumbItems: BreadcrumbItem[] = [
+    {
+      label: "Trang chủ",
+      href: "/",
+    },
     {
       label: "Tất cả sản phẩm",
       icon: <FaList className="w-4 h-4" />,
@@ -85,7 +71,7 @@ export default async function ProductsPage() {
         </div>
 
         {/* Products Content */}
-        <ProductsClient initialProducts={products} />
+        <ProductsClient initialProducts={products} initialFilters={params} />
       </div>
     </div>
   );

@@ -1,40 +1,27 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import CartItemComponent, { type CartItem } from "./CartItem";
+import CartItemComponent from "./CartItem";
 import EmptyCart from "./EmptyCart";
+import { CartItem } from "@/store/useCartStore";
 
 interface CartListProps {
-  initialItems: CartItem[];
-  onUpdateQuantity?: (id: number, quantity: number) => void;
-  onRemoveItem?: (id: number) => void;
+  items: CartItem[];
+  onUpdateQuantity: (productId: string, quantity: number) => void;
+  onRemoveItem: (productId: string) => void;
 }
 
 export default function CartList({ 
-  initialItems, 
+  items: cartItems, 
   onUpdateQuantity, 
   onRemoveItem 
 }: CartListProps) {
-  const [cartItems, setCartItems] = useState<CartItem[]>(initialItems);
-
-  // Sync with parent state
-  useEffect(() => {
-    setCartItems(initialItems);
-  }, [initialItems]);
-
-  const updateQuantity = (id: number, newQuantity: number) => {
-    const updatedItems = cartItems.map((item) =>
-      item.id === id ? { ...item, quantity: newQuantity } : item
-    );
-    setCartItems(updatedItems);
-    onUpdateQuantity?.(id, newQuantity);
+  const updateQuantity = (productId: string, newQuantity: number) => {
+    onUpdateQuantity(productId, newQuantity);
   };
 
-  const removeItem = (id: number) => {
-    const updatedItems = cartItems.filter((item) => item.id !== id);
-    setCartItems(updatedItems);
-    onRemoveItem?.(id);
+  const removeItem = (productId: string) => {
+    onRemoveItem(productId);
   };
 
   return (
@@ -53,7 +40,7 @@ export default function CartList({
           <div className="space-y-4">
             {cartItems.map((item) => (
               <CartItemComponent
-                key={item.id}
+                key={item.product._id}
                 item={item}
                 onUpdateQuantity={updateQuantity}
                 onRemove={removeItem}

@@ -19,10 +19,6 @@ export const LIST_ROLE = [
     name: 'Mod',
     _id: 'mod',
   },
-  {
-    name: 'Warehouse',
-    _id: 'warehouse',
-  },
 ];
 
 export const LIST_STATUS = [
@@ -148,28 +144,20 @@ export const LIST_ORDER_STATUS = [
     _id: 'pending',
   },
   {
-    name: 'Assigned',
-    _id: 'assigned',
+    name: 'Confirmed',
+    _id: 'confirmed',
   },
   {
-    name: 'Picking',
-    _id: 'picking',
+    name: 'Processing',
+    _id: 'processing',
   },
   {
     name: 'Shipping',
     _id: 'shipping',
   },
   {
-    name: 'Returning',
-    _id: 'returning',
-  },
-  {
-    name: 'Returned',
-    _id: 'returned',
-  },
-  {
-    name: 'Finished',
-    _id: 'finished',
+    name: 'Completed',
+    _id: 'completed',
   },
   {
     name: 'Canceled',

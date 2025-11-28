@@ -1,0 +1,14 @@
+{
+  "home": "Home",
+  "categoryManagement": "Category management",
+  "productManagement": "Product management",
+  "allProduct": "All product",
+  "addProduct": "Add product",
+  "orderManagement": "Order management",
+  "allOrder": "All order",
+  "userManagement": "User management",
+  "allUser": "All user",
+  "couponManagement": "Coupon management",
+  "allCoupon": "All coupon"
+}
+

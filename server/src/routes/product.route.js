@@ -48,7 +48,7 @@ router.get(ROUTES.FILTER, filterProduct);
 router.get(
   ROUTES.PRODUCT_ADMIN,
   verifyToken,
-  checkRole([ROLE.OWNER, ROLE.ADMIN, ROLE.MOD, ROLE.WAREHOUSE]),
+  checkRole([ROLE.OWNER, ROLE.ADMIN, ROLE.MOD]),
   getAllProductAdmin
 );
 

@@ -1,68 +1,51 @@
-import { ProductDataType } from './product';
+import { Product } from './product';
 
-export interface ShipperDetailType {
-  fullname: string;
-  address: {
-    province: {
-      provinceId: number;
-      provinceName: string;
-    };
-    district: {
-      districtId: number;
-      districtName: string;
-    };
-    ward: {
-      wardId: number;
-      wardName: string;
-    };
-    detail: string;
-  };
-  phone: string;
-  email: string;
-}
-
-export interface OrderProductsType {
-  product: ProductDataType;
+export interface OrderProduct {
+  product: Product;
   quantity: number;
+  currentPrice: number;
   _id: string;
-  name?: string;
-  price?: string;
-  id?: string;
-  rating?: string;
-  total?: number;
 }
 
-export interface IOrder {
+export interface CustomerInfo {
+  fullname: string;
+  phone: string;
+  email?: string;
+  address: string;
+}
+
+export interface Order {
   _id: string;
   code: string;
   user: string;
-  products: OrderProductsType[];
-  shippingDetail: ShipperDetailType;
-  createdAt?: string;
-  updatedAt?: string;
+  products: OrderProduct[];
+  customerInfo: CustomerInfo;
+  status: string;
+  paymentType: string;
+  paymentStatus: string;
+  transactionNo?: number;
+  payDate?: string;
   coupon?: {
     _id: string;
     code: string;
     discount: number;
   };
-  status: string;
-  paymentStatus: string;
-  transactionNo: string;
-  payDate: string;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+export interface CreateOrderData {
+  products: {
+    product: string;
+    quantity: number;
+    currentPrice: number;
+  }[];
+  customerInfo: CustomerInfo;
   paymentType: string;
+  coupon?: string;
 }
 
-export interface ShippingOrderType {
-  weight: string;
-  length: string;
-  width: string;
-  height: string;
+export interface OrderStatus {
+  status: string;
 }
 
-export interface FilterOrderType {
-  status?: string;
-  warehouseUser?: string;
-  paymentStatus?: string;
-  code?: string;
-  paymentType?: string;
-}

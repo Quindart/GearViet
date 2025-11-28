@@ -6,15 +6,15 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import "./styles.css";
+import { Product as ProductType } from "@/types/product";
 
 interface Product {
-  id: number;
+  _id: string;
   name: string;
-  image: string;
-  originalPrice?: number;
-  salePrice: number;
-  discount?: number;
-  href: string;
+  images?: Array<{ url: string }>;
+  image?: { url: string };
+  price: number;
+  available: number;
 }
 
 interface CollectionSectionProps {
@@ -28,6 +28,13 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
   products,
   viewAllHref,
 }) => {
+  const getImageUrl = (product: Product) => {
+    return product.images?.[0]?.url || product.image?.url || "/images/placeholder-product.svg";
+  };
+
+  const formatPrice = (price: number) => {
+    return price.toLocaleString("vi-VN") + "đ";
+  };
   const settings = {
     dots: true,
     infinite: true,
@@ -62,19 +69,19 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
       <div className="relative">
         <Slider {...settings}>
           {products.map((product) => (
-            <div key={product.id} className="px-4 py-6">
-              <Link href={product.href} className="block group">
+            <div key={product._id} className="px-4 py-6">
+              <Link href={`/products/${product._id}`} className="block group">
                 <div className="relative mb-4">
                   <Image
-                    src={product.image}
+                    src={getImageUrl(product)}
                     alt={product.name}
                     width={300}
                     height={300}
                     className="w-full h-48 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                   />
-                  {product.discount && (
-                    <div className="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">
-                      -{product.discount}%
+                  {product.available === 0 && (
+                    <div className="absolute top-2 left-2 bg-gray-500 text-white px-2 py-1 rounded text-xs font-bold">
+                      Hết hàng
                     </div>
                   )}
                 </div>
@@ -86,13 +93,8 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
 
                   <div className="flex items-center gap-2">
                     <span className="text-red-500 font-bold text-lg">
-                      {product.salePrice.toLocaleString("vi-VN")}đ
+                      {formatPrice(product.price)}
                     </span>
-                    {product.originalPrice && (
-                      <span className="text-gray-400 line-through text-sm">
-                        {product.originalPrice.toLocaleString("vi-VN")}đ
-                      </span>
-                    )}
                   </div>
                 </div>
               </Link>

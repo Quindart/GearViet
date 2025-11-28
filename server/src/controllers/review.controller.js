@@ -31,7 +31,7 @@ export const getReviewByProductId = async (req, res) => {
     if (!reviews) return sendWarning(res, "Get review by product id failed");
     const stats = await Review.aggregate([
       {
-        $match: { product: mongoose.Types.ObjectId(productId) },
+        $match: { product: new mongoose.Types.ObjectId(productId) },
       },
       {
         $group: {
@@ -155,7 +155,7 @@ const checkUser = async (reviewId, userId) => {
 const updateAvgReview = async (productId) => {
   //caculate avg_review and update to product
   const result = await Review.aggregate([
-    { $match: { product: mongoose.Types.ObjectId(productId) } },
+    { $match: { product: new mongoose.Types.ObjectId(productId) } },
     { $group: { _id: "$product", avg_review: { $avg: "$score" } } },
   ]);
 

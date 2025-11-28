@@ -37,7 +37,13 @@ export interface IOrder {
   code: string;
   user: string;
   products: OrderProductsType[];
-  shippingDetail: ShipperDetailType;
+  shippingDetail?: ShipperDetailType;
+  customerInfo?: {
+    fullname: string;
+    phone: string;
+    email: string;
+    address: string;
+  };
   createdAt?: string;
   updatedAt?: string;
   coupon?: {
@@ -47,8 +53,8 @@ export interface IOrder {
   };
   status: string;
   paymentStatus: string;
-  transactionNo: string;
-  payDate: string;
+  transactionNo?: string;
+  payDate?: string;
   paymentType: string;
 }
 

@@ -13,7 +13,6 @@ import {
   changeOrderStatus,
   getTotalOrderByTime,
   getTotalRevenue,
-  assignOrderToWarehouse,
   filterOrder,
   getTotalRevenueId,
 } from "../controllers/order.controller.js";
@@ -23,7 +22,6 @@ import {
   checkValidProductQuantity,
   resolveDuplicateProduct,
   checkValidDate,
-  isWarehouseUser,
   isValidPaymentType,
 } from "../middlewares/orderValidation.js";
 import { validate } from "../middlewares/validation.js";
@@ -65,15 +63,6 @@ router.post(
   createOrder
 );
 
-//assign to warehouse user
-router.put(
-  ROUTES.ASSIGN_ORDER,
-  verifyToken,
-  checkRole([ROLE.OWNER, ROLE.ADMIN, ROLE.MOD]),
-  isWarehouseUser,
-  validate,
-  assignOrderToWarehouse
-);
 
 //change order status
 router.put(
@@ -89,7 +78,7 @@ router.put(
 router.get(
   "/",
   verifyToken,
-  checkRole([ROLE.OWNER, ROLE.ADMIN, ROLE.MOD, ROLE.WAREHOUSE]),
+  checkRole([ROLE.OWNER, ROLE.ADMIN, ROLE.MOD]),
   getAllOrder
 );
 

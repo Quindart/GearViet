@@ -19,7 +19,6 @@ import OrderDetailPage from './../pages/order/detail';
 import Category from 'pages/category';
 import ListAllUser from 'pages/listalluser/ListAllUser';
 import ListAllCoupon from 'pages/coupon/ListAllCoupon';
-import Warehouse from 'pages/warehouse';
 
 const Routing: React.FC = () => {
   return (
@@ -37,7 +36,6 @@ const Routing: React.FC = () => {
           <Route path={APP_ROUTES.CATEGORIES} element={<Category />} />
           <Route path={APP_ROUTES.ALL_USER} element={<ListAllUser />} />
           <Route path={APP_ROUTES.ALL_COUPON} element={<ListAllCoupon />} />
-          <Route path={APP_ROUTES.WAREHOUSE} element={<Warehouse />} />
         </Route>
         <Route path='/auth' element={<AuthLayout />}>
           <Route path={APP_ROUTES.LOGIN} element={<LoginPage />} />

@@ -1,62 +1,16 @@
 import { api } from "@/lib/api";
-
-interface Review {
-  id: number;
-  productId: number;
-  userId: number;
-  userName: string;
-  rating: number;
-  comment: string;
-  images?: string[];
-  videoLink?: string;
-  createdAt: string;
-  updatedAt: string;
-}
-
-export interface CreateReviewData {
-  productId: number;
-  rating: number;
-  comment: string;
-  images?: File[];
-  videoLink?: string;
-}
-
-export interface UpdateReviewData {
-  rating?: number;
-  comment?: string;
-  images?: File[];
-  videoLink?: string;
-}
+import { Review, CreateReviewData, UpdateReviewData } from "@/types/review";
+import { ReviewResponse, SingleReviewResponse } from "@/types/api-response";
 
 /**
  * Get reviews by product ID
  */
 export const getReviewsByProduct = async (productId: string): Promise<Review[]> => {
   try {
-    const result = await api.get<Review[]>(`/review/product/${productId}`);
-    return result.data || [];
+    const result = await api.get<ReviewResponse>(`/review/product/${productId}`);
+    return result.reviews || [];
   } catch (error) {
     console.error("Get reviews by product error:", error);
-    return [];
-  }
-};
-
-export interface UpdateReviewData {
-  rating?: number;
-  comment?: string;
-  images?: File[];
-  videoLink?: string;
-}
-
-/**
- * Get reviews by product ID
- */
-export const fetchReviewByProductId = async (productId: string | number): Promise<Review[]> => {
-  try {
-    const result = await api.get<Review[]>(`/review/product/${productId}`);
-    return result.data || [];
-  } catch (error) {
-    console.error("Fetch reviews by product ID error:", error);
     return [];
   }
 };
@@ -66,8 +20,8 @@ export const fetchReviewByProductId = async (productId: string | number): Promis
  */
 export const getReviewById = async (reviewId: string | number): Promise<Review | null> => {
   try {
-    const result = await api.get<Review>(`/review/${reviewId}`);
-    return result.data || null;
+    const result = await api.get<SingleReviewResponse>(`/review/${reviewId}`);
+    return result.review || null;
   } catch (error) {
     console.error("Get review by ID error:", error);
     return null;
@@ -79,34 +33,11 @@ export const getReviewById = async (reviewId: string | number): Promise<Review |
  */
 export const createReview = async (reviewData: CreateReviewData): Promise<Review | null> => {
   try {
-    // If there are images, we need to upload them first
-    if (reviewData.images && reviewData.images.length > 0) {
-      const formData = new FormData();
-      formData.append('productId', reviewData.productId.toString());
-      formData.append('rating', reviewData.rating.toString());
-      formData.append('comment', reviewData.comment);
-      
-      if (reviewData.videoLink) {
-        formData.append('videoLink', reviewData.videoLink);
-      }
-
-      // Add images to form data
-      reviewData.images.forEach((image) => {
-        formData.append(`images`, image);
-      });
-
-      const result = await api.upload<Review>('/review', formData);
-      return result.data || null;
-    } else {
-      // No images, send as JSON
-      const result = await api.post<Review>('/review', {
-        productId: reviewData.productId,
-        rating: reviewData.rating,
-        comment: reviewData.comment,
-        videoLink: reviewData.videoLink,
-      });
-      return result.data || null;
-    }
+    const result = await api.post<SingleReviewResponse>(
+      "/review",
+      reviewData as unknown as Record<string, unknown>
+    );
+    return result.review || null;
   } catch (error) {
     console.error("Create review error:", error);
     return null;
@@ -121,8 +52,11 @@ export const updateReview = async (
   reviewData: UpdateReviewData
 ): Promise<Review | null> => {
   try {
-    const result = await api.put<Review>(`/review/${reviewId}`, reviewData as Record<string, unknown>);
-    return result.data || null;
+    const result = await api.put<SingleReviewResponse>(
+      `/review/${reviewId}`,
+      reviewData as unknown as Record<string, unknown>
+    );
+    return result.review || null;
   } catch (error) {
     console.error("Update review error:", error);
     return null;

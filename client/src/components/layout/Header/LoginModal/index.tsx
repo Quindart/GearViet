@@ -1,6 +1,6 @@
 import {
   loginUser
-} from "@/services";
+} from "@/services/authService";
 import { useAuthStore } from "@/store/authStore";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -231,6 +231,17 @@ const LoginModal: React.FC<LoginModalProps> = ({
                 Đăng ký ngay
               </Link>
             </p>
+          </div>
+
+          {/* Link to Full Login Page */}
+          <div className="mt-4 text-center">
+            <Link
+              href="/login"
+              className="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+              onClick={onClose}
+            >
+              Hoặc đăng nhập bằng trang đầy đủ
+            </Link>
           </div>
         </div>
       </div>

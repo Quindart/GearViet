@@ -1,0 +1,14 @@
+{
+  "title": "User Management",
+  "allUsers": "All Users",
+  "username": "Username",
+  "name": "Name",
+  "email": "Email",
+  "phone": "Phone",
+  "address": "Address",
+  "role": "Role",
+  "status": "Status",
+  "gender": "Gender",
+  "searchPlaceholder": "Search for username, name, email ..."
+}
+

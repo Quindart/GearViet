@@ -47,18 +47,6 @@ export const checkValidDate = [
   },
 ];
 
-export const isWarehouseUser = [
-  check("warehouseUserId").custom(async (value) => {
-    const user = await User.findById(value);
-    if (!user) return Promise.reject("User not found");
-    if (user.role !== "warehouse")
-      return Promise.reject("User is not warehouse user");
-    return Promise.resolve();
-  }),
-  (req, res, next) => {
-    next();
-  },
-];
 
 export const isValidPaymentType = [
   check("paymentType").custom(async (value) => {

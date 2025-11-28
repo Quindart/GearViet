@@ -9,15 +9,15 @@ const flashSaleData = {
   items: [
     {
       name: "Chuột Gaming Logitech G305",
-      href: "/products/mouse-logitech-g305",
+      href: "#", // Temporarily disabled
     },
     {
       name: "Bàn Phím Cơ Corsair K65",
-      href: "/products/keyboard-corsair-k65",
+      href: "#", // Temporarily disabled
     },
     {
       name: "Tai Nghe SteelSeries Arctis 7P",
-      href: "/products/headset-arctis-7p",
+      href: "#", // Temporarily disabled
     },
   ],
   endTime: new Date("2025-06-30T23:59:59"),

@@ -1,6 +1,6 @@
 const color = {
-  indigo: '#405189',
-  dark_indigo: '#364574',
+  indigo: 'oklch(0.141 0.005 285.823)',
+  dark_indigo: 'oklch(0.141 0.005 285.823)',
   white: '#ffffff',
   gray: '#878a99',
   gray_light: '#f3f3f9',
@@ -15,8 +15,8 @@ const color = {
   gray_800: '#343a40',
   gray_900: '#212529',
   black: '#000000',
-  green: '#0ab39c',
-  dark_green: '#099885',
+  green: '#38bf57',
+  dark_green: '#01ff00',
   light_green: '#dbecf0',
   blue: '#3577f1',
   light_blue: '#299cdb',
@@ -29,7 +29,7 @@ const color = {
   orange: '#f1963b',
   yellow: '#f7b84b',
   dark_yellow: '#c6933c',
-  teal: '#02a8b5',
+  teal: '#38bf57',
   cyan: '#299cdb',
 };
 

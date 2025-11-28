@@ -2,6 +2,7 @@
 
 import { loginUser } from "@/services/authService";
 import { LoginFormData } from "@/types/auth";
+import { useAuthStore } from "@/store";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -31,6 +32,7 @@ const Login = () => {
     useState<boolean>(false);
   const router = useRouter();
   const searchParams = useSearchParams();
+  const setAuth = useAuthStore((state) => state.setAuth);
 
   useEffect(() => {
     // Check for registration success message
@@ -61,9 +63,25 @@ const Login = () => {
 
       const response = await loginUser(loginData);
 
-      if (response.success) {
-        // Redirect to dashboard or home page
-        router.push("/");
+      if (response.success && response.data) {
+        // Save auth state
+        setAuth(response.data.token, response.data.user as unknown as {
+          id: string;
+          firstName: string;
+          lastName: string;
+          email: string;
+          phone: string;
+          role: string;
+          status: string;
+        });
+        
+        // Check for returnUrl parameter
+        const returnUrl = searchParams.get("returnUrl");
+        if (returnUrl) {
+          router.push(decodeURIComponent(returnUrl));
+        } else {
+          router.push("/");
+        }
       } else {
         setSubmitError(
           response.message || "Đăng nhập thất bại. Vui lòng thử lại."

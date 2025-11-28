@@ -3,6 +3,7 @@ import { Box, FormHelperText, Typography } from '@mui/material';
 import Button from 'components/ui/Button';
 import { useSnackbar } from 'notistack';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { deleteFile, uploadFile } from 'services/appApi';
 import { InfoGroupWrapper } from '..';
 import NewProductContext from '../Context';
@@ -10,6 +11,7 @@ import LinearProgress from '@mui/material/LinearProgress';
 const fileExtensions: string[] = ['png', 'jpg', 'jpeg'];
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const { setFieldValue, values, errors, setFieldError } = React.useContext(NewProductContext);
   const { enqueueSnackbar } = useSnackbar();
   const [progress, setProgress] = React.useState(0);
@@ -33,7 +35,7 @@ const Gallery = () => {
         enqueueSnackbar(response.message, { variant: 'error' });
         return;
       }
-      enqueueSnackbar('Tải ảnh lên thành công', { variant: 'success' });
+      enqueueSnackbar(t('pages/products:uploadImageSuccess', { defaultValue: 'Image uploaded successfully' }), { variant: 'success' });
       const images = [...values.images, response.image];
       setFieldValue('images', images);
       setFieldError('images', '');
@@ -43,7 +45,7 @@ const Gallery = () => {
   function checkFileType(type: string) {
     const isImage = fileExtensions.some((ex: string) => type.includes(ex));
     if (!isImage) {
-      enqueueSnackbar('Chỉ nhấp nhận các file png, jpg, jpeg', { variant: 'error' });
+      enqueueSnackbar(t('pages/products:invalidImageType', { defaultValue: 'Only png, jpg, jpeg files are accepted' }), { variant: 'error' });
       return;
     }
   }
@@ -53,7 +55,7 @@ const Gallery = () => {
       enqueueSnackbar(response.message, { variant: 'error' });
       return;
     }
-    enqueueSnackbar('Xóa ảnh thành công', { variant: 'success' });
+    enqueueSnackbar(t('pages/products:deleteImageSuccess', { defaultValue: 'Image deleted successfully' }), { variant: 'success' });
     const images = values.images.filter((item: any) => item.public_id !== public_id);
     setFieldValue('images', images);
   };
@@ -68,10 +70,10 @@ const Gallery = () => {
   };
 
   return (
-    <InfoGroupWrapper heading='Product image'>
+    <InfoGroupWrapper heading={t('pages/products:productImage', { defaultValue: 'Product image' })}>
       <section className='flex flex-col mb-10 w-full '>
         <div className='file__bx text-center border-2 border-dashed'>
-          <div className='upload-file' title='Upload file '>
+          <div className='upload-file' title={t('pages/products:uploadFile', { defaultValue: 'Upload file' })}>
             {values.images.length < 4 ? (
               <label
                 htmlFor='upload-file'
@@ -79,7 +81,7 @@ const Gallery = () => {
                 onSubmit={() => {}}
               >
                 <Icon icon='ri:upload-cloud-2-fill' className='text-[50px]' />
-                <Typography className='text-lg font-medium text-[#495057]'>Select image</Typography>
+                <Typography className='text-lg font-medium text-[#495057]'>{t('pages/products:selectImage', { defaultValue: 'Select image' })}</Typography>
                 <input
                   type='file'
                   id='upload-file'
@@ -90,7 +92,7 @@ const Gallery = () => {
                 />
               </label>
             ) : (
-              <Typography className='text-lg font-medium text-[#495057]'>Tối đa 4 ảnh</Typography>
+              <Typography className='text-lg font-medium text-[#495057]'>{t('pages/products:maxImages', { defaultValue: 'Maximum 4 images' })}</Typography>
             )}
           </div>
         </div>
@@ -114,7 +116,7 @@ const Gallery = () => {
                 className='btn--danger h-8 font-normal text-[13px]'
                 onClick={() => deleteProductImage(item.public_id)}
               >
-                Delete
+                {t('shared/common:delete', { defaultValue: 'Delete' })}
               </Button>
             </Box>
           ))}

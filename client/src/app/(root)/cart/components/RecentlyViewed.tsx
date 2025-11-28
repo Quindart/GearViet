@@ -1,24 +1,22 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { getViewedProducts } from "@/utils/viewedProducts";
+import { formatVNDPrice } from "@/utils/product";
 
-export interface RecentProduct {
-  id: number;
-  name: string;
-  price: number;
-  originalPrice?: number;
-  image: string;
-  slug?: string;
-}
+export default function RecentlyViewed() {
+  const [viewedProducts, setViewedProducts] = useState(
+    getViewedProducts().map((item) => item.product)
+  );
 
-interface RecentlyViewedProps {
-  products: RecentProduct[];
-}
+  useEffect(() => {
+    const products = getViewedProducts().map((item) => item.product);
+    setViewedProducts(products);
+  }, []);
 
-const formatPrice = (price: number) => {
-  return price.toLocaleString("vi-VN") + "đ";
-};
-
-export default function RecentlyViewed({ products }: RecentlyViewedProps) {
-  if (!products || products.length === 0) {
+  if (!viewedProducts || viewedProducts.length === 0) {
     return null;
   }
 
@@ -30,14 +28,21 @@ export default function RecentlyViewed({ products }: RecentlyViewedProps) {
 
       <div className="p-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {products.map((product) => (
-            <div
-              key={product.id}
-              className="border border-gray-200 rounded-lg p-4 hover:border-green-300 transition-colors cursor-pointer"
+          {viewedProducts.slice(0, 3).map((product) => (
+            <Link
+              key={product._id}
+              href={`/products/${product._id}`}
+              className="border border-gray-200 rounded-lg p-4 hover:border-green-300 transition-colors"
             >
               <div className="aspect-square mb-3 relative">
                 <Image
-                  src={product.image}
+                  src={
+                    product.images && product.images[0]
+                      ? product.images[0].url
+                      : product.image
+                      ? product.image.url
+                      : "/images/placeholder-product.svg"
+                  }
                   alt={product.name}
                   fill
                   className="object-cover rounded-lg"
@@ -49,15 +54,10 @@ export default function RecentlyViewed({ products }: RecentlyViewedProps) {
               </h4>
               <div className="flex items-center gap-2">
                 <span className="text-red-600 font-bold">
-                  {formatPrice(product.price)}
+                  {formatVNDPrice(product.price)}
                 </span>
-                {product.originalPrice && (
-                  <span className="text-gray-500 text-sm line-through">
-                    {formatPrice(product.originalPrice)}
-                  </span>
-                )}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

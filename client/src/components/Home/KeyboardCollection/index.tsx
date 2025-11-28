@@ -2,15 +2,19 @@ import React from "react";
 import CollectionGroup from "../CollectionGroup";
 import {
   keyboardTags,
-  mockKeyboardProducts,
 } from "../CollectionGroup/mockCollectionData";
+import { Product } from "@/types/product";
 
-const KeyboardCollection: React.FC = () => {
+interface KeyboardCollectionProps {
+  products: Product[];
+}
+
+const KeyboardCollection: React.FC<KeyboardCollectionProps> = ({ products }) => {
   return (
     <CollectionGroup
       title="BÀN PHÍM CƠ"
       tags={keyboardTags}
-      products={mockKeyboardProducts}
+      products={products}
       viewAllHref="/keyboards"
     />
   );

@@ -1,10 +1,9 @@
 import axios, { AxiosResponse, AxiosError } from 'axios';
 import { ResponseType } from 'types';
-import { APP_ROUTES } from 'utils/app-config';
-import { getValueFromLocalStorage, removeValueInLocalStorage } from 'utils/helper';
+import { getValueFromLocalStorage } from 'utils/helper';
 
 const axiosConfig = axios.create({
-  baseURL: process.env.REACT_APP_BASE_URL || 'https://gearvietserver.onrender.com',
+  baseURL: process.env.REACT_APP_BASE_URL || 'http://localhost:5000/api',
   timeout: 30000,
   headers: {
     'Context-Type': 'application/json',
@@ -34,20 +33,20 @@ axiosConfig.interceptors.response.use(
     }
   },
   function (error: AxiosError<ResponseType>) {
-    if (error.code === 'ECONNABORTED') {
-      removeValueInLocalStorage('access_token');
-      window.location.assign('https://gearvietserver.onrender.com' + APP_ROUTES.LOGIN);
-      return;
-    }
-    if (error && error?.response?.data.msg === 'Unauthenticated') {
-      removeValueInLocalStorage('access_token');
-      window.location.assign('https://gearvietserver.onrender.com' + APP_ROUTES.LOGIN);
-      return;
-    }
+    // if (error.code === 'ECONNABORTED') {
+    //   removeValueInLocalStorage('access_token');
+    //   window.location.assign('https://gearvietserver.onrender.com' + APP_ROUTES.LOGIN);
+    //   return;
+    // }
+    // if (error && error?.response?.data.msg === 'Unauthenticated') {
+    //   removeValueInLocalStorage('access_token');
+    //   window.location.assign('https://gearvietserver.onrender.com' + APP_ROUTES.LOGIN);
+    //   return;
+    // }
 
-    if (error && error?.response?.data.msg === 'Unauthorized') {
-      window.location.assign('https://gearvietserver.onrender.com/404');
-    }
+    // if (error && error?.response?.data.msg === 'Unauthorized') {
+    //   window.location.assign('https://gearvietserver.onrender.com/404');
+    // }
     return Promise.reject(error?.response?.data);
   },
 );

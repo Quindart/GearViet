@@ -1,13 +1,12 @@
 import { Icon } from '@iconify/react';
-import { Badge, Box, IconButton, Toolbar, Typography } from '@mui/material';
+import { Box, IconButton, Toolbar, Typography } from '@mui/material';
 import useApp from 'hooks/useApp';
 import useUser from 'hooks/useUser';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { NavbarDropDownType } from 'types/enum';
-import Message from './Message';
-import Notification from './Notification';
 import ProfileMenu from './ProfileMenu';
+import LanguageSwitcher from './LanguageSwitcher';
 import AppbarCustom from './style';
 type showDropDownStateType = {
   open: boolean;
@@ -61,35 +60,16 @@ const Navbar: React.FC = () => {
             <Box className='relative'>
               <IconButton
                 size='medium'
-                onClick={() => handleDropDown(NavbarDropDownType.MESSAGE)}
+                onClick={() => handleDropDown(NavbarDropDownType.LANGUAGE)}
                 className={`nav_bar_item ${
-                  showDropDown.open && showDropDown.type === NavbarDropDownType.MESSAGE
-                    ? 'active'
-                    : ''
+                  showDropDown.open && showDropDown.type === NavbarDropDownType.LANGUAGE ? 'active' : ''
                 }`}
+                aria-label='Language switcher'
               >
-                <Badge badgeContent={3}>
-                  <Icon icon='ic:outline-message' />
-                </Badge>
+                <Icon icon='mdi:translate' />
               </IconButton>
-              {showDropDown.open && showDropDown.type === NavbarDropDownType.MESSAGE && <Message />}
-            </Box>
-            <Box className='relative'>
-              <IconButton
-                size='medium'
-                onClick={() => handleDropDown(NavbarDropDownType.NOTIFICATION)}
-                className={`nav_bar_item ${
-                  showDropDown.open && showDropDown.type === NavbarDropDownType.NOTIFICATION
-                    ? 'active'
-                    : ''
-                }`}
-              >
-                <Badge badgeContent={3}>
-                  <Icon icon='mdi:bell-outline' />
-                </Badge>
-              </IconButton>
-              {showDropDown.open && showDropDown.type === NavbarDropDownType.NOTIFICATION && (
-                <Notification />
+              {showDropDown.open && showDropDown.type === NavbarDropDownType.LANGUAGE && (
+                <LanguageSwitcher />
               )}
             </Box>
           </Box>

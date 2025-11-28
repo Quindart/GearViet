@@ -5,6 +5,7 @@ import Modal from 'components/ui/Modal';
 import Table from 'components/ui/Table';
 import useUser from 'hooks/useUser';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { IUser } from 'types/user';
 import DetailModal from './DetailModal';
 import EditModal from './EditModal';
@@ -31,6 +32,7 @@ type UserTablePropsType = {
 };
 
 const TableUsers = (props: UserTablePropsType) => {
+  const { t } = useTranslation();
   const { page, limit, handleChangeLimitPerPage, handleChangePage, totalRows, userList } = props;
   const { adminDetail } = useUser();
   const [tableState, setTableState] = useState<TableStateType>({
@@ -52,20 +54,20 @@ const TableUsers = (props: UserTablePropsType) => {
       field: 'username',
       sortable: false,
       minWidth: 180,
-      headerName: 'Username',
+      headerName: t('pages/users:username', { defaultValue: 'Username' }),
     },
     {
       field: 'name',
       sortable: false,
       minWidth: 180,
-      headerName: 'Name',
+      headerName: t('pages/users:name', { defaultValue: 'Name' }),
     },
     {
       field: 'address',
       sortable: false,
       minWidth: 400,
       flex: 1,
-      headerName: 'Address',
+      headerName: t('pages/users:address', { defaultValue: 'Address' }),
       renderCell: (_: GridRenderCellParams) => (
         <Typography
           className={' text-[13px] capitalize'}
@@ -76,26 +78,26 @@ const TableUsers = (props: UserTablePropsType) => {
       field: 'phone',
       sortable: false,
       minWidth: 150,
-      headerName: 'phone',
+      headerName: t('pages/users:phone', { defaultValue: 'Phone' }),
     },
     {
       field: 'email',
       sortable: false,
       minWidth: 250,
-      headerName: 'Email',
+      headerName: t('pages/users:email', { defaultValue: 'Email' }),
     },
     {
       field: 'gender',
       sortable: false,
       minWidth: 50,
-      headerName: 'Gender',
+      headerName: t('pages/users:gender', { defaultValue: 'Gender' }),
     },
 
     {
       field: 'role',
       sortable: false,
       minWidth: 50,
-      headerName: 'role',
+      headerName: t('pages/users:role', { defaultValue: 'Role' }),
       renderCell: (_: GridRenderCellParams) => (
         <Typography className={' text-[13px] capitalize'}>
           {_.value === null ? '' : _.value}
@@ -107,7 +109,7 @@ const TableUsers = (props: UserTablePropsType) => {
       minWidth: 50,
       sortable: false,
       align: 'left',
-      headerName: 'Status',
+      headerName: t('pages/users:status', { defaultValue: 'Status' }),
       renderCell: (_: GridRenderCellParams) => (
         <Box
           className={`px-2 py-[2px] rounded-md ${
@@ -126,7 +128,7 @@ const TableUsers = (props: UserTablePropsType) => {
     },
     {
       field: 'action',
-      headerName: 'Actions',
+      headerName: t('shared/common:actions', { defaultValue: 'Actions' }),
       minWidth: 120,
       align: 'center',
       renderCell: (params: GridRenderCellParams<IUser>) => {
@@ -136,12 +138,30 @@ const TableUsers = (props: UserTablePropsType) => {
               icon='ri:eye-fill'
               className='text-[#405189] cursor-pointer text-lg'
               onClick={() => handleOpenModal(params.row, ModalContents.DETAIL)}
+              role='button'
+              aria-label='View user details'
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  handleOpenModal(params.row, ModalContents.DETAIL);
+                }
+              }}
             />
             {hasAccessibility(params.row.role) && (
               <Icon
                 icon='ri:pencil-fill'
                 className='text-[#405189] cursor-pointer text-lg'
                 onClick={() => handleOpenModal(params.row, ModalContents.EDIT)}
+                role='button'
+                aria-label='Edit user'
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleOpenModal(params.row, ModalContents.EDIT);
+                  }
+                }}
               />
             )}
           </Box>

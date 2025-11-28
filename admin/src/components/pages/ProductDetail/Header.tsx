@@ -16,26 +16,26 @@ export default function Header(props: HeaderPropType) {
     {
       id: 1,
       icon: 'ri:money-dollar-circle-fill',
-      name: 'Price',
-      value: '$' + price,
+      name: 'Giá',
+      value: price + 'đ',
     },
     {
       id: 2,
       icon: 'ri:file-copy-2-fill',
-      name: 'No. of Orders :',
+      name: 'Tổng đơn đã bán :',
       value: selling,
     },
     {
       id: 3,
       icon: 'ri:stack-fill',
-      name: 'Available Stocks :',
+      name: 'Có sẵn trong kho :',
       value: available,
     },
     {
       id: 4,
       icon: 'ri:inbox-archive-fill',
-      name: 'Total Revenue :',
-      value: '$' + props.totalRevenue,
+      name: 'Tổng doanh thu :',
+      value: props.totalRevenue + "đ",
     },
   ];
   return (
@@ -46,7 +46,7 @@ export default function Header(props: HeaderPropType) {
         <Divider orientation='vertical' flexItem />
         <Typography className='header__text text-[#212529] font-medium'>
           <Typography component={'span'} className='header__text text-[#878A99]'>
-            Published:
+            Ngày đăng:
           </Typography>
           {dayjs(createdAt).format(' DD , MMM YYYY')}
         </Typography>

@@ -1,0 +1,28 @@
+{
+  "title": "Quản lý đơn hàng",
+  "allOrders": "Tất cả đơn hàng",
+  "orderCode": "Mã",
+  "name": "Tên",
+  "products": "Sản phẩm",
+  "status": "Trạng thái",
+  "dateCreated": "Ngày tạo",
+  "quantities": "Số lượng",
+  "paymentType": "Loại thanh toán",
+  "paymentStatus": "Trạng thái thanh toán",
+  "paymentStatusPaid": "Đã thanh toán",
+  "paymentStatusUnpaid": "Chưa thanh toán",
+  "searchPlaceholder": "Tìm kiếm theo mã đơn hàng, khách hàng, trạng thái đơn hàng hoặc ...",
+  "pending": "Đang chờ",
+  "confirmed": "Đã xác nhận",
+  "processing": "Đang xử lý",
+  "shipping": "Đang giao",
+  "completed": "Hoàn thành",
+  "canceled": "Đã hủy",
+  "orderStatus": "Trạng thái đơn hàng",
+  "orderStatusLabel": "Trạng thái đơn hàng",
+  "transactionNo": "Số hóa đơn thanh toán",
+  "payDate": "Ngày thanh toán",
+  "customerDetails": "Thông tin khách hàng",
+  "customer": "Khách hàng"
+}
+

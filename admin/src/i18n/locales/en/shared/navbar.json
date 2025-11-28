@@ -1,0 +1,10 @@
+{
+  "profile": "Profile",
+  "message": "Message",
+  "help": "Help",
+  "setting": "Setting",
+  "language": "Language",
+  "logout": "Logout",
+  "welcome": "Welcome {{name}}"
+}
+

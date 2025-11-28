@@ -36,3 +36,5 @@ pids/
 
 # Optional: nếu dùng typescript
 *.tsbuildinfo
+
+ignored/

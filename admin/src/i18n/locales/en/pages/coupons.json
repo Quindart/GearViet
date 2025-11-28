@@ -1,0 +1,24 @@
+{
+  "title": "Coupon management",
+  "allCoupons": "All Coupons",
+  "addCoupon": "Add Coupon",
+  "editCoupon": "Edit Coupon",
+  "couponDetail": "Coupon Detail",
+  "couponCode": "Code",
+  "discount": "Discount",
+  "startDate": "Start Date",
+  "endDate": "End Date",
+  "available": "Available",
+  "status": "Status",
+  "searchPlaceholder": "Search by coupon code",
+  "noCoupon": "No coupon here",
+  "deleteCoupon": "Are you sure you want to delete this coupon?",
+  "activateCoupon": "Are you sure you want to activate this coupon?",
+  "deactivateCoupon": "Are you sure you want to deactivate this coupon?",
+  "createCouponSuccess": "New coupon added successfully",
+  "enterCouponCode": "Enter coupon code",
+  "enterDiscountPercentage": "Enter discount percentage",
+  "enterAvailableQuantity": "Enter available quantity",
+  "changeCouponStatus": "Change coupon status"
+}
+

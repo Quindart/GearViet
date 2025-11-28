@@ -1,0 +1,16 @@
+{
+  "title": "Categories",
+  "categoryManagement": "Category Management",
+  "addCategory": "Add category",
+  "addSubcategory": "Add subcategory",
+  "editCategory": "Edit category",
+  "editSubcategory": "Edit subcategory",
+  "deleteCategory": "Delete category",
+  "deleteSubcategory": "Delete subcategory",
+  "categoryName": "Category Name",
+  "subcategoryName": "Subcategory name",
+  "addNew": "Add new",
+  "areYouSureDeleteCategory": "Are you sure you want to delete {{categoryName}}?",
+  "areYouSureDeleteSubcategory": "Are you sure you want to delete {{subcategoryName}}?"
+}
+

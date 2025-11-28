@@ -11,12 +11,19 @@ import { sendError, sendWarning } from "../utils/response.js";
 
 //[POST] login
 export const login = async (req, res) => {
-  const { username, password, remember } = req.body;
+  const { username, email, password, remember } = req.body;
   try {
-    // Find user by email only
-    const user = await User.findOne({
-      username: username.toLowerCase(),
-    }).select("username password email firstName lastName phone role status");
+    // Find user by email or username
+    let query = {};
+    if (email) {
+      query.email = email.toLowerCase();
+    } else if (username) {
+      query.username = username.toLowerCase();
+    } else {
+      return sendWarning(res, "Email or username is required");
+    }
+
+    const user = await User.findOne(query).select("username password email firstName lastName phone role status");
 
     if (!user) {
       return sendWarning(res, "Invalid email or password");

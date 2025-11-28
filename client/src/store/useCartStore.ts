@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { Product } from './useProductStore';
+import { Product } from '@/types/product';
 
 export interface CartItem {
   product: Product;
@@ -10,14 +10,13 @@ export interface CartItem {
 interface CartState {
   items: CartItem[];
   totalItems: number;
-  totalPrice: number;
-  shippingPrice: number;
-  taxPrice: number;
+  subtotal: number;
   
   addItem: (product: Product, quantity?: number) => void;
   removeItem: (productId: string) => void;
   updateQuantity: (productId: string, quantity: number) => void;
   clearCart: () => void;
+  getItemQuantity: (productId: string) => number;
   calculateTotals: () => void;
 }
 
@@ -26,9 +25,7 @@ export const useCartStore = create<CartState>()(
     (set, get) => ({
       items: [],
       totalItems: 0,
-      totalPrice: 0,
-      shippingPrice: 0,
-      taxPrice: 0,
+      subtotal: 0,
 
       addItem: (product, quantity = 1) => {
         const { items } = get();
@@ -56,7 +53,10 @@ export const useCartStore = create<CartState>()(
       },
 
       updateQuantity: (productId, quantity) => {
-        if (quantity < 1) return;
+        if (quantity < 1) {
+          get().removeItem(productId);
+          return;
+        }
 
         const { items } = get();
         const updatedItems = items.map(item =>
@@ -72,36 +72,30 @@ export const useCartStore = create<CartState>()(
         set({
           items: [],
           totalItems: 0,
-          totalPrice: 0,
-          shippingPrice: 0,
-          taxPrice: 0,
+          subtotal: 0,
         });
+      },
+
+      getItemQuantity: (productId) => {
+        const { items } = get();
+        const item = items.find(item => item.product._id === productId);
+        return item ? item.quantity : 0;
       },
 
       calculateTotals: () => {
         const { items } = get();
         const totalItems = items.reduce((total, item) => total + item.quantity, 0);
         const subtotal = items.reduce((total, item) => total + (item.product.price * item.quantity), 0);
-        
-        // Calculate shipping price (example logic)
-        const shippingPrice = subtotal > 100 ? 0 : 10;
-        
-        // Calculate tax (example: 10%)
-        const taxPrice = subtotal * 0.1;
-        
-        const totalPrice = subtotal + shippingPrice + taxPrice;
 
         set({
           totalItems,
-          totalPrice,
-          shippingPrice,
-          taxPrice,
+          subtotal,
         });
       },
     }),
     {
       name: 'shopping-cart',
-      skipHydration: true,
     }
   )
-); 
+);
+

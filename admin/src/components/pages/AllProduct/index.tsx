@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material';
 import { GridColDef, GridRenderCellParams } from '@mui/x-data-grid';
 import Button from 'components/ui/Button';
 import { useRef, useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import useProduct from './../../../hooks/useProduct';
 import Filter from './Filter';
 import CustomProduct from './style';
@@ -36,6 +37,7 @@ type AllProductModalType = {
 };
 
 const AllProductTemplate = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const searchTextRef = useRef<HTMLInputElement | null>(null);
   const productRenderType = useSelector((state: RootState) => state.product.productRenderType);
@@ -133,7 +135,7 @@ const AllProductTemplate = () => {
       sortable: false,
       flex: 1,
       minWidth: 300,
-      headerName: 'Product details',
+      headerName: t('pages/products:productDetails', { defaultValue: 'Product details' }),
       renderCell: (params: GridRenderCellParams) => (
         <Box
           className='flex cursor-pointer'
@@ -152,7 +154,7 @@ const AllProductTemplate = () => {
               {params.value.name}
             </Typography>
             <Typography className='text-[13px] text-[#878A99] font-medium'>
-              Category: {params.value.subcategory}
+              {t('pages/products:category', { defaultValue: 'Category' })}: {params.value.subcategory}
             </Typography>
           </Box>
         </Box>
@@ -162,13 +164,13 @@ const AllProductTemplate = () => {
       field: 'price',
       sortable: false,
       width: 80,
-      headerName: 'Price',
+      headerName: t('pages/products:price', { defaultValue: 'Price' }),
     },
     {
       field: 'code',
       sortable: false,
       width: 120,
-      headerName: 'Code',
+      headerName: t('pages/products:productCode', { defaultValue: 'Code' }),
       renderCell: (params: GridRenderCellParams) => (
         <Typography className='text-[13px] capitalize'>{params.value.toUpperCase()}</Typography>
       ),
@@ -177,13 +179,13 @@ const AllProductTemplate = () => {
       field: 'available',
       sortable: false,
       width: 100,
-      headerName: 'Stock',
+      headerName: t('pages/products:stock', { defaultValue: 'Stock' }),
     },
     {
       field: 'brand',
       sortable: false,
       width: 100,
-      headerName: 'Brand',
+      headerName: t('pages/products:brand', { defaultValue: 'Brand' }),
       renderCell: (params: GridRenderCellParams) => (
         <Typography className='text-[13px] capitalize'>{params.value}</Typography>
       ),
@@ -192,7 +194,7 @@ const AllProductTemplate = () => {
       field: 'totalComment',
       sortable: false,
       maxWidth: 100,
-      headerName: 'Comment',
+      headerName: t('pages/products:comment', { defaultValue: 'Comment' }),
       renderCell: (params: GridRenderCellParams) => (
         <Typography
           className='cursor-pointer text-[13px] text-[#405189] m-auto'
@@ -206,7 +208,7 @@ const AllProductTemplate = () => {
       field: 'avg_review',
       sortable: false,
       width: 100,
-      headerName: 'Rating',
+      headerName: t('pages/products:rating', { defaultValue: 'Rating' }),
       renderCell: (params: GridRenderCellParams) => (
         <Typography
           className='cursor-pointer text-[13px] text-[#405189] m-auto'
@@ -221,7 +223,7 @@ const AllProductTemplate = () => {
       sortable: false,
       width: 100,
       align: 'center',
-      headerName: 'Status',
+      headerName: t('pages/products:status', { defaultValue: 'Status' }),
       renderCell: (params: GridRenderCellParams) => (
         <Box
           className={`w-full p-1 rounded-md text-center cursor-pointer ${
@@ -241,7 +243,7 @@ const AllProductTemplate = () => {
     },
     {
       field: 'action',
-      headerName: 'Actions',
+      headerName: t('shared/common:actions', { defaultValue: 'Actions' }),
       width: 100,
       align: 'center',
       renderCell: (params: GridRenderCellParams) => (
@@ -267,22 +269,22 @@ const AllProductTemplate = () => {
 
   return (
     <CustomProduct className='xl:flex-row'>
-      <Box className='filterBx xl:max-w-[300px]  2xl:max-w-[384px]'>
+      <Box className='filterBx xl:max-w-[300px]  2xl:max-w-[320px]'>
         <Filter />
       </Box>
       <Box className='tableBx'>
-        <Box className='p-4 flex justify-between items-center flex-wrap'>
+        <Box className='p-2 flex justify-between items-center flex-wrap'>
           <Button
             className='btn--success '
             variant='contained'
             onClick={() => navigate('/products/new')}
           >
-            Add product
+            {t('pages/products:addNew', { defaultValue: 'Add product' })}
           </Button>
-          <Box className='w-full flex mt-2 gap-2'>
+          <Box className='w-full flex mt-2 gap-1'>
             <SearchBox
               inputRef={searchTextRef}
-              placeholder='Search for product code or product name'
+              placeholder={t('pages/products:searchPlaceholder', { defaultValue: 'Search for product code or product name' })}
             />
             <DropDown
               options={KeywordForSearchingProduct}
@@ -290,7 +292,7 @@ const AllProductTemplate = () => {
               onChange={handleChangeSearchKeyword}
             />
             <Button variant='contained' onClick={handleSearchProduct}>
-              Search
+              {t('shared/common:search', { defaultValue: 'Search' })}
             </Button>
           </Box>
         </Box>
@@ -308,7 +310,7 @@ const AllProductTemplate = () => {
               hasPagination
             />
           ) : (
-            <Typography className='text-center py-4'>No product here</Typography>
+            <Typography className='text-center py-4'>{t('pages/products:noProduct', { defaultValue: 'No product here' })}</Typography>
           )}
         </Box>
       </Box>
@@ -329,9 +331,9 @@ const AllProductTemplate = () => {
           updateProductStatus(modal.product._id);
           handleCloseModal();
         }}
-        message={`Are you sure you want ${
-          modal.product.status === 'active' ? 'DISABLE' : 'ACTIVE'
-        } this product?`}
+        message={modal.product.status === 'active'
+          ? t('pages/products:deactivateProduct', { defaultValue: 'Are you sure you want to deactivate this product?' })
+          : t('pages/products:activateProduct', { defaultValue: 'Are you sure you want to activate this product?' })}
       />
     </CustomProduct>
   );

@@ -3,9 +3,11 @@
 import SharedIcon from "@/components/shared/icons";
 import { IconName } from "@/constants/icons";
 import { useAuthStore } from "@/store/authStore";
+import { useCartStore } from "@/store";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useRef, useState, useCallback } from "react";
 import {
   FaChevronDown,
   FaChevronRight,
@@ -15,7 +17,24 @@ import {
   FaUser,
 } from "react-icons/fa";
 import LoginModal from "./LoginModal";
+import SearchResults from "./SearchResults";
 import { headerData } from "./mockHeaderData";
+import { searchProduct } from "@/services/productApi";
+import { Product } from "@/types/product";
+
+const CartBadge = () => {
+  const totalItems = useCartStore((state) => state.totalItems);
+
+  if (totalItems === 0) {
+    return null;
+  }
+
+  return (
+    <div className="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold">
+      {totalItems > 99 ? "99+" : totalItems}
+    </div>
+  );
+};
 
 const MegaMenu = () => {
   // Map category icons to available SharedIcon names
@@ -128,12 +147,18 @@ const MegaMenu = () => {
 };
 
 const Header = () => {
+  const router = useRouter();
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<Product[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const [showSearchResults, setShowSearchResults] = useState(false);
   const loginTriggerRef = useRef<HTMLDivElement>(null);
   const userDropdownRef = useRef<HTMLDivElement>(null);
+  const searchRef = useRef<HTMLDivElement>(null);
+  const searchTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Get auth state from Zustand store
   const { isAuthenticated, user, logout } = useAuthStore();
@@ -141,6 +166,51 @@ const Header = () => {
   const handleLogout = () => {
     logout();
     setShowUserDropdown(false);
+  };
+
+  const performSearch = useCallback(async (query: string) => {
+    if (!query.trim()) {
+      setSearchResults([]);
+      setIsSearching(false);
+      return;
+    }
+
+    setIsSearching(true);
+    try {
+      const results = await searchProduct(query);
+      setSearchResults(results);
+    } catch (error) {
+      console.error("Search error:", error);
+      setSearchResults([]);
+    } finally {
+      setIsSearching(false);
+    }
+  }, []);
+
+  const handleSearchChange = (value: string) => {
+    setSearchQuery(value);
+    setShowSearchResults(true);
+
+    if (searchTimeoutRef.current) {
+      clearTimeout(searchTimeoutRef.current);
+    }
+
+    if (value.trim()) {
+      searchTimeoutRef.current = setTimeout(() => {
+        performSearch(value);
+      }, 300);
+    } else {
+      setSearchResults([]);
+      setIsSearching(false);
+    }
+  };
+
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      setShowSearchResults(false);
+      router.push(`/products?search=${encodeURIComponent(searchQuery.trim())}`);
+    }
   };
 
   // Close user dropdown when clicking outside
@@ -152,16 +222,26 @@ const Header = () => {
       ) {
         setShowUserDropdown(false);
       }
+
+      if (
+        searchRef.current &&
+        !searchRef.current.contains(event.target as Node)
+      ) {
+        setShowSearchResults(false);
+      }
     };
 
-    if (showUserDropdown) {
+    if (showUserDropdown || showSearchResults) {
       document.addEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      if (searchTimeoutRef.current) {
+        clearTimeout(searchTimeoutRef.current);
+      }
     };
-  }, [showUserDropdown]);
+  }, [showUserDropdown, showSearchResults]);
 
   return (
     <>
@@ -180,7 +260,7 @@ const Header = () => {
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 w-[220px] h-[60px]">
               <Image
-                src="/images/logo.webp"
+                src="/assets/images/logo.webp"
                 alt="The Gioi Gear"
                 width={220}
                 height={60}
@@ -189,19 +269,35 @@ const Header = () => {
             </Link>
 
             {/* Search Bar */}
-            <div className="flex-1 max-w-[600px]">
-              <div className="relative">
+            <div className="flex-1 max-w-[600px] relative" ref={searchRef}>
+              <form onSubmit={handleSearchSubmit} className="relative">
                 <input
                   type="text"
                   placeholder="Bạn đang tìm gì..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) => handleSearchChange(e.target.value)}
+                  onFocus={() => {
+                    if (searchQuery.trim() && searchResults.length > 0) {
+                      setShowSearchResults(true);
+                    }
+                  }}
                   className="w-full h-10 px-3 py-2 rounded-md bg-white text-gray-800 focus:outline-none placeholder:text-gray-500"
                 />
-                <button className="absolute right-1 top-1/2 -translate-y-1/2 bg-black h-[90%] w-[80px] flex items-center justify-center rounded-md">
+                <button
+                  type="submit"
+                  className="absolute right-1 top-1/2 -translate-y-1/2 bg-black h-[90%] w-[80px] flex items-center justify-center rounded-md hover:bg-gray-800 transition-colors"
+                >
                   <FaSearch className="text-white" />
                 </button>
-              </div>
+              </form>
+              {showSearchResults && (
+                <SearchResults
+                  products={searchResults}
+                  loading={isSearching}
+                  query={searchQuery}
+                  onClose={() => setShowSearchResults(false)}
+                />
+              )}
             </div>
 
             {/* Right Menu */}
@@ -311,7 +407,7 @@ const Header = () => {
               {/* Cart */}
               <Link
                 href="/cart"
-                className="flex items-center gap-2 bg-black border border-white rounded-lg px-4 py-2"
+                className="flex items-center gap-2 bg-black border border-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
               >
                 <div className="relative">
                   <SharedIcon
@@ -319,9 +415,7 @@ const Header = () => {
                     type="ICON"
                     className="text-white"
                   />
-                  <div className="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
-                    0
-                  </div>
+                  <CartBadge />
                 </div>
                 <span className="text-green-500 text-sm font-medium">
                   Giỏ hàng
@@ -374,7 +468,7 @@ const Header = () => {
                       iconName="PAYMENT"
                       width={20}
                       height={20}
-                      type="IMAGE"
+                      type="ICON"
                       className="text-gray-400"
                     />
                     <span>Hình Thức Thanh Toán</span>
@@ -387,7 +481,7 @@ const Header = () => {
                       iconName="SHIPPING"
                       width={20}
                       height={20}
-                      type="IMAGE"
+                      type="ICON"
                       className="text-gray-400"
                     />
                     <span>Chính Sách Giao Hàng</span>
@@ -400,7 +494,7 @@ const Header = () => {
                       iconName="INSTALLMENT"
                       width={20}
                       height={20}
-                      type="IMAGE"
+                      type="ICON"
                       className="text-gray-400"
                     />
                     <span>Hỗ trợ trả góp lãi suất 0%</span>

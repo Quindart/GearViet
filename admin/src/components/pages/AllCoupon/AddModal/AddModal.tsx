@@ -7,6 +7,7 @@ import DropDown from 'components/ui/Dropdown';
 import TextField from 'components/ui/TextField';
 import { FormikHelpers, FormikProps, useFormik } from 'formik';
 import { useSnackbar } from 'notistack';
+import { useTranslation } from 'react-i18next';
 import { addNewCoupon } from 'services/couponApi';
 import { ResponseType } from 'types';
 import { CouponFormDataType } from 'types/coupon';
@@ -20,6 +21,7 @@ type EditModalTypes = {
   onClose?: () => void;
 };
 const AddModal = (props: EditModalTypes) => {
+  const { t } = useTranslation();
   const { onClose } = props;
   const { enqueueSnackbar } = useSnackbar();
   const { getAllCoupon } = useCoupon();
@@ -34,7 +36,7 @@ const AddModal = (props: EditModalTypes) => {
 
         return;
       }
-      enqueueSnackbar('Thêm mã giảm giá mới thành công', {
+      enqueueSnackbar(t('pages/coupons:createCouponSuccess', { defaultValue: 'New coupon added successfully' }), {
         variant: 'success',
       });
       actions.resetForm({
@@ -52,16 +54,16 @@ const AddModal = (props: EditModalTypes) => {
   return (
     <CustomModal>
       <Box className='header'>
-        <Typography>Coupon Detail</Typography>
-        <Icon icon='ph:x-duotone' onClick={onClose} />
+        <Typography>{t('pages/coupons:couponDetail', { defaultValue: 'Coupon Detail' })}</Typography>
+        <Icon icon='ph:x-duotone' onClick={onClose} aria-label={t('shared/common:close', { defaultValue: 'Close' })} />
       </Box>
       <form className='content__bx' autoComplete='on' onSubmit={handleSubmit}>
         <TextField
           type='text'
-          label='Code'
+          label={t('pages/coupons:couponCode', { defaultValue: 'Code' })}
           name='code'
           value={values.code}
-          placeholder='Nhập mã giảm giá'
+          placeholder={t('pages/coupons:enterCouponCode', { defaultValue: 'Enter coupon code' })}
           error={touched.code && Boolean(errors.code)}
           helperText={touched.code && errors.code}
           id='code'
@@ -71,10 +73,10 @@ const AddModal = (props: EditModalTypes) => {
         />
         <TextField
           type='number'
-          label='Discount'
+          label={t('pages/coupons:discount', { defaultValue: 'Discount' })}
           name='discount'
           value={values.discount}
-          placeholder='Nhập giá trị mã giảm giá'
+          placeholder={t('pages/coupons:enterDiscountPercentage', { defaultValue: 'Enter discount percentage' })}
           error={touched.discount && Boolean(errors.discount)}
           helperText={touched.discount && errors.discount}
           id='discount'
@@ -83,10 +85,10 @@ const AddModal = (props: EditModalTypes) => {
         />
         <TextField
           type='number'
-          label='Available'
+          label={t('pages/coupons:available', { defaultValue: 'Available' })}
           name='available'
           value={values.available}
-          placeholder='Nhập giá trị mã giảm giá'
+          placeholder={t('pages/coupons:enterAvailableQuantity', { defaultValue: 'Enter available quantity' })}
           error={touched.available && Boolean(errors.available)}
           helperText={touched.available && errors.available}
           id='available'
@@ -94,7 +96,7 @@ const AddModal = (props: EditModalTypes) => {
           onChange={handleChange}
         />
         <Calendar
-          label='Start Date'
+          label={t('pages/coupons:startDate', { defaultValue: 'Start Date' })}
           value={values.startDate}
           onChange={(newValue: Dayjs) => handleChangeDate(newValue, 'startDate')}
           renderInput={(params: any) => (
@@ -109,11 +111,11 @@ const AddModal = (props: EditModalTypes) => {
           )}
         />
         <Calendar
-          label='End Date'
+          label={t('pages/coupons:endDate', { defaultValue: 'End Date' })}
           value={values.endDate}
           renderInput={(params: any) => (
             <TextField
-              value={values.startDate}
+              value={values.endDate}
               name='endDate'
               onBlur={handleBlur}
               error={touched.endDate && Boolean(errors.endDate)}
@@ -126,10 +128,10 @@ const AddModal = (props: EditModalTypes) => {
         <Box>
           <DropDown
             name='status'
-            label='Status'
+            label={t('pages/coupons:status', { defaultValue: 'Status' })}
             value={values.status}
             options={LIST_STATUS}
-            placeholder='Thay đổi trạng thái của mã sản phẩm'
+            placeholder={t('pages/coupons:changeCouponStatus', { defaultValue: 'Change coupon status' })}
             fullWidth
             error={touched.status && Boolean(errors.status)}
             helperText={touched.status ? errors.status : ''}
@@ -140,10 +142,10 @@ const AddModal = (props: EditModalTypes) => {
 
         <Box className='btn__bx'>
           <Button variant='contained' className='btn__close' onClick={onClose}>
-            Close
+            {t('shared/common:close', { defaultValue: 'Close' })}
           </Button>
           <Button variant='contained' className='btn--success' type='submit'>
-            Update
+            {t('shared/common:submit', { defaultValue: 'Submit' })}
           </Button>
         </Box>
       </form>

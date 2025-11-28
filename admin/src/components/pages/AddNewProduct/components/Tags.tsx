@@ -1,9 +1,11 @@
 import Tag from 'components/ui/Tag';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import NewProductContext from '../Context';
 import TextField from 'components/ui/TextField';
 
 const Tags = () => {
+  const { t } = useTranslation();
   const { values, setFieldValue } = React.useContext(NewProductContext);
   const [newTag, setNewTag] = useState<string>('');
   const [error, setError] = useState(false);
@@ -44,13 +46,13 @@ const Tags = () => {
           type='text'
           value={newTag}
           error={Boolean(error)}
-          helperText={Boolean(error) && 'Tag is exist!'}
+          helperText={Boolean(error) && t('pages/products:tagExists', { defaultValue: 'Tag already exists!' })}
           onChange={inputChangeHandler}
           onKeyDown={onKeyDownHandler}
         />
         {newTag && !error && (
           <div className='tag_tooltip'>
-            <div className='tag_tooltip-text'>Press Enter to add</div>
+            <div className='tag_tooltip-text'>{t('pages/products:pressEnterToAdd', { defaultValue: 'Press Enter to add' })}</div>
           </div>
         )}
       </div>

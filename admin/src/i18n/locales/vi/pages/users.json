@@ -1,0 +1,14 @@
+{
+  "title": "Quản lý người dùng",
+  "allUsers": "Tất cả người dùng",
+  "username": "Tên đăng nhập",
+  "name": "Tên",
+  "email": "Email",
+  "phone": "Số điện thoại",
+  "address": "Địa chỉ",
+  "role": "Vai trò",
+  "status": "Trạng thái",
+  "gender": "Giới tính",
+  "searchPlaceholder": "Tìm kiếm theo tên đăng nhập, tên, email ..."
+}
+

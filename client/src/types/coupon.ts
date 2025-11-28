@@ -1,6 +1,4 @@
-import { Dayjs } from 'dayjs';
-
-export interface ICoupon {
+export interface Coupon {
   _id: string;
   code: string;
   discount: number;
@@ -8,13 +6,17 @@ export interface ICoupon {
   endDate: string;
   available: number;
   status: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
-export interface CouponFormDataType {
+export interface ValidateCouponData {
   code: string;
-  discount: number;
-  available: number;
-  startDate: Dayjs;
-  endDate: Dayjs;
-  status: string;
 }
+
+export interface ValidateCouponResponse {
+  valid: boolean;
+  discount?: number;
+  message?: string;
+}
+

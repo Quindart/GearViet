@@ -1,14 +1,16 @@
 import TextField from 'components/ui/TextField';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import NewProductContext from '../Context';
 
 const Size = () => {
+  const { t } = useTranslation();
   const { values, errors, touched, handleBlur, handleChange } = React.useContext(NewProductContext);
 
   return (
     <section className='flex gap-4'>
       <TextField
-        label='Witdh'
+        label={t('pages/products:width', { defaultValue: 'Width' })}
         value={values.width}
         className='border-0 mb-2'
         type='number'
@@ -22,7 +24,7 @@ const Size = () => {
         onChange={handleChange}
       />
       <TextField
-        label='Length'
+        label={t('pages/products:length', { defaultValue: 'Length' })}
         value={values.length}
         className='border-0 mb-2'
         type='number'
@@ -36,7 +38,7 @@ const Size = () => {
         onChange={handleChange}
       />
       <TextField
-        label='Height'
+        label={t('pages/products:height', { defaultValue: 'Height' })}
         value={values.height}
         className='border-0 mb-2'
         type='number'
@@ -50,7 +52,7 @@ const Size = () => {
         onChange={handleChange}
       />
       <TextField
-        label='Weight'
+        label={t('pages/products:weight', { defaultValue: 'Weight' })}
         value={values.weight}
         className='border-0 mb-2'
         type='number'
